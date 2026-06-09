@@ -49,6 +49,16 @@ def adaptive_preference_questions(
                 examples=profile.roles[:4],
             )
         )
+    if not prefs.job_types:
+        questions.append(
+            PreferenceQuestion(
+                id="job_types",
+                field="job_types",
+                prompt="Are you looking for full-time roles, internships, or both?",
+                reason="This decides whether internships are included. Full-time is assumed when unanswered, with internships ranked lower.",
+                examples=("full-time", "internship", "both"),
+            )
+        )
     if not prefs.preferred_locations:
         questions.append(
             PreferenceQuestion(

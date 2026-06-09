@@ -21,17 +21,18 @@ Use this skill when a user wants help searching for jobs from a resume, homepage
    - Use `profile.evidence["portfolio_highlights"]` to inspect the strongest resume/homepage/GitHub points.
    - Use `adaptive_preference_questions(profile)` to identify missing user preferences.
    - Ask focused intake questions before search, in this order when relevant:
+     - **Full-time, internship, or both.** Ask this early — it is one of the first questions. Never infer it silently: a resume saying "PhD student" or "research intern" does NOT mean the candidate wants an internship. Record the answer in `job_types`.
      - Which portfolio highlights should be emphasized most.
      - Which role tracks should be prioritized from the inferred options.
      - Preferred locations and remote/hybrid/onsite preference.
-     - Preferred industries, company stages, job types, salary floor, and visa needs.
+     - Preferred industries, company stages, salary floor, and visa needs.
      - How many jobs to return.
      - Output format. Default to TSV when the user does not choose a format.
    - Present the questions as concrete choices derived from the profile, not as generic open-ended homework for the user.
    - Record answers with `update_preferences` and `save_preferences`, then rebuild or reuse the profile with those preferences.
    - If the profile is clearly missing core facts, ask one concise clarification before running a broad search.
    - If the user only asked for intake, stop after the questions and wait for answers.
-   - If the user wants autonomous progress or explicitly asks to search immediately, proceed with inferred preferences and state the assumptions.
+   - If the user wants autonomous progress or explicitly asks to search immediately, proceed with inferred preferences and state the assumptions. **Default to full-time when the user has not answered** — internship postings are ranked lower (set `job_types="full-time"` to make this explicit), unless the candidate clearly signals they want internships.
 
 3. Select sources.
    - Prefer free structured sources first: `RemotivePlatform` and `RemoteOKPlatform` for remote roles, `HackerNewsWhoIsHiringPlatform` for HN Who's Hiring.
@@ -125,6 +126,7 @@ Expected behavior:
 
 - Analyze the material first.
 - Show inferred roles, skills, locations, and portfolio highlights.
+- Ask early whether the candidate wants full-time, internship, or both; default to full-time and rank internships lower when unanswered.
 - Ask the user which inferred highlights and role tracks to prioritize.
 - Ask location, remote, industry, stage, salary, and visa questions only when missing.
 - Ask how many jobs to return and which output format to use; use TSV by default.

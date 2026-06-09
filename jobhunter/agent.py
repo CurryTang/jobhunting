@@ -367,6 +367,15 @@ def score_job(job: JobPosting, profile: UserProfile, query: SearchQuery) -> JobM
     if profile.preferences.remote is False and _is_remote_only_location(job.location):
         score -= 3.0
         matched.append("remote-only but onsite preferred")
+    if _is_internship_posting(job):
+        if _wants_only_internship(profile):
+            score += 1.0
+            matched.append("internship")
+        elif not _wants_internship(profile):
+            # Full-time is the default; internships rank lower but are not
+            # excluded, so they still surface when little else fits.
+            score -= 3.0
+            matched.append("internship (full-time preferred)")
 
     unique_terms = tuple(dict.fromkeys(matched))
     rationale = "Matched " + ", ".join(unique_terms[:8]) if unique_terms else "Weak keyword fit"
@@ -461,9 +470,37 @@ def _has_quant_evidence(haystack: str) -> bool:
 def _should_score_seniority(profile: UserProfile) -> bool:
     if profile.seniority != "intern":
         return True
+    return _wants_internship(profile)
+
+
+_INTERN_TERMS = ("intern", "internship", "co-op", "coop", "co op")
+_FULL_TIME_TERMS = ("full-time", "full time", "fulltime", "permanent", "new grad", "new-grad", "entry level", "entry-level")
+
+
+def _wants_internship(profile: UserProfile) -> bool:
+    """True when the candidate has opted into internships (default is full-time)."""
+
+    text = _normalize(" ".join((*profile.preferences.job_types, profile.preferences.notes or "")))
+    if any(term in text for term in ("both", "either", "any role", "any type")):
+        return True
+    return any(term in text for term in _INTERN_TERMS)
+
+
+def _wants_only_internship(profile: UserProfile) -> bool:
     job_type_text = _normalize(" ".join(profile.preferences.job_types))
-    preference_text = _normalize(" ".join((*profile.preferences.target_roles, profile.preferences.notes or "")))
-    return any(term in job_type_text or term in preference_text for term in ("intern", "internship"))
+    if not job_type_text:
+        return False
+    has_intern = any(term in job_type_text for term in _INTERN_TERMS)
+    has_full_time = any(term in job_type_text for term in (*_FULL_TIME_TERMS, "both", "either"))
+    return has_intern and not has_full_time
+
+
+def _is_internship_posting(job: JobPosting) -> bool:
+    title = _normalize(job.title)
+    tags = _normalize(" ".join(job.tags))
+    if any(term in title for term in _INTERN_TERMS):
+        return True
+    return any(_contains_term(tags, term) for term in ("intern", "internship"))
 
 
 def _has_role_family_fit(job: JobPosting, profile: UserProfile) -> bool:

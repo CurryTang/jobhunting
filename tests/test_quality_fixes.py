@@ -137,6 +137,65 @@ def test_canonical_url_sorts_params_and_strips_tracking():
     assert third != fourth
 
 
+def test_internship_postings_rank_lower_for_full_time_default():
+    profile = build_user_profile("Machine Learning Engineer with Python LLM. United States.")
+    query = SearchQuery(text="machine learning engineer python", role="machine learning engineer", skills=("python",))
+    full_time = JobPosting(
+        source="company:amazon",
+        source_id="ft",
+        title="Machine Learning Engineer",
+        company="Acme",
+        url="https://example.com/ft",
+        description="python machine learning",
+    )
+    intern = JobPosting(
+        source="company:amazon",
+        source_id="intern",
+        title="Machine Learning Engineer Intern",
+        company="Acme",
+        url="https://example.com/intern",
+        description="python machine learning",
+    )
+
+    ft_score = score_job(full_time, profile, query).score
+    intern_match = score_job(intern, profile, query)
+    assert intern_match.score < ft_score
+    assert "internship (full-time preferred)" in intern_match.matched_terms
+
+
+def test_internship_preference_boosts_internships():
+    profile = build_user_profile(
+        "Machine Learning Engineer with Python. United States.",
+        preferences=JobPreferences(job_types=("internship",)),
+    )
+    query = SearchQuery(text="machine learning engineer python", role="machine learning engineer", skills=("python",))
+    intern = JobPosting(
+        source="company:amazon",
+        source_id="intern",
+        title="Machine Learning Intern",
+        company="Acme",
+        url="https://example.com/intern",
+        description="python machine learning",
+    )
+
+    match = score_job(intern, profile, query)
+    assert "internship" in match.matched_terms
+    assert "internship (full-time preferred)" not in match.matched_terms
+
+
+def test_phd_student_is_not_inferred_as_intern():
+    profile = build_user_profile("Zhikai Chen, CS PhD student. Machine Learning with Python and LLM research.")
+    assert profile.seniority != "intern"
+
+
+def test_job_types_question_asked_when_missing():
+    from jobhunter.preferences import adaptive_preference_questions
+
+    profile = build_user_profile("Machine Learning Engineer and Research Scientist with Python LLM graphs.")
+    question_ids = [q.id for q in adaptive_preference_questions(profile)]
+    assert "job_types" in question_ids
+
+
 def test_remote_region_must_match_remote_us_preference():
     from jobhunter.agent import has_location_mismatch
 

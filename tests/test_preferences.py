@@ -15,7 +15,7 @@ def test_adaptive_questions_reflect_missing_preferences():
 
     question_ids = [question.id for question in questions]
 
-    assert question_ids[:3] == ["target_roles", "preferred_locations", "remote"]
+    assert question_ids[:4] == ["target_roles", "job_types", "preferred_locations", "remote"]
     assert "result_count" in question_ids
     assert "output_format" in question_ids
 

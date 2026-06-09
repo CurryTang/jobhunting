@@ -536,7 +536,9 @@ def _infer_seniority(normalized: str) -> str | None:
         return "staff+"
     if re.search(r"\b(senior|sr\.)\b", normalized):
         return "senior"
-    if re.search(r"\b(intern|internship|student)\b", normalized):
+    if re.search(r"\b(seeking|looking for|want|wants|open to)\b.{0,30}\b(intern|internship)\b", normalized):
+        return "intern"
+    if re.search(r"\b(intern|internship)\b", normalized) and not re.search(r"\b(phd|ph\.d|doctoral|postdoc|professor|faculty)\b", normalized):
         return "intern"
     if re.search(r"\b(junior|entry[- ]level|new grad)\b", normalized):
         return "junior"
