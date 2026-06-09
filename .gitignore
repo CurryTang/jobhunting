@@ -17,3 +17,8 @@ dist/
 .DS_Store
 .idea/
 .vscode/
+
+# Generated run artifacts (keep local, never in repo)
+logs/
+docs/search-results/
+docs/agentic-trajectories/
