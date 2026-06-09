@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+
+# Local runtime state
+.jobhunter/
+*.sqlite
+*.stderr
+
+# Editor
+.DS_Store
+.idea/
+.vscode/

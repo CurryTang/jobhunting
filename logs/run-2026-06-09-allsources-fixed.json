@@ -1,0 +1,3223 @@
+{
+  "profile": {
+    "raw_text": "Zhikai Chen\nMichigan State University\nEast Lansing\nhttps://github.com/CurryTang\nGitHub profile self-introduction:\nHi there \ud83d\udc4b\n\nI'm currently a CS PhD student at Michigan State University. My CV\n\n Research & Projects\n\n 1. DL Infra, Agent, Long Context Modeling (2026-present)\nCurrently working on new directions.\n\n Publications \n Exploring Cross-Scenario Generality of Agentic Memory Systems: Diagnostics and a Strong Baseline Zhikai Chen , Jialiang Gu, Junyu Yin, Xianxuan Long, Shenglai Zeng, Xiaoze Liu, Kai Guo, Keren Zhou, Jiliang Tang; arXiv 2026\n Do Proactive Agents Really Need an LLM to Decide When to Wake and What to Anchor? Xiaoze Liu, Ruowang Zhang, Amir H. Abdi, Michel Galley, Zhikai Chen , Siheng Xiong, Xiaoqian Wang, Jing Gao; arXiv 2026\n\n Projects \n Amadeus: AI-powered research assistant for paper discovery, reading, and analysis\n Slack GPU Monitor: A slack bot to manage your server's GPU.\n\n Writings \n A tutorial on DL Infra (Chinese version)\n Notes on optimization\n\n 2. Relational Deep Learning (2025-present)\n\n OpenRFM: Dissecting Relational In-Context Learning Zhikai Chen , Junyu Yin, Jialiang Gu, Siheng Xiong, Xiaoze Liu, Ruowang Zhang, Keren Zhou, Kai Guo; arXiv 2026\n RFMBench: Towards Principled Benchmarking of Relational Foundation Models.pdf) Zhikai Chen , Han Xie, Jian Zhang, Haiyang Yu, Huzefa Rangwala, Xiang Song; preprint 2026\n AutoG: Towards automatic graph construction from tabular data Zhikai Chen , Han Xie, Jian Zhang, Xiang Song, Jiliang Tang, Huzefa Rangwala, George Karypis; ICLR 2025 (poster) Code\n A Pre-training Framework for Relational Data with Information-theoretic Principles Quang Truong, Zhikai Chen , Mingxuan Ju, Tong Zhao, Neil Shah, Jiliang Tang, NeurIPS 2025\n Relatron: Automating Relational Machine Learning over Relational Databases, ICLR 2026 Zhikai Chen , Han Xie, Jian Zhang, Jiliang Tang, Xiang Song, Huzefa Rangwala Paper Code\n\n 3. Graph Foundation Models and Large Language Models (2023-2025)\n\n Note: In the past, I worked on graph foundation models (especially on text-attributed graphs) for a while, these related libraries won't be maintained any more. I personally don't recommend newcomers working on these settings and datasets.\n\n Graph Foundation Models Haitao Mao\\ , Zhikai Chen\\ , Wenzhuo Tang, Jianan Zhao, Yao Ma, Tong Zhao, Neil Shah, Michael Galkin, Jiliang Tang 2024 [Paper lists]; ICML 2024 (Spotlight); means equal contribution\n Text-space Graph Foundation Models: Comprehensive Benchmarks and New Insights Zhikai Chen , Haitao Mao, Jingzhe Liu, Yu Song, Bingheng Li, Wei Jin, Bahare Fatemi, Anton Tsitsulin, Bryan Perozzi, Hui Liu, Jiliang Tang Code; NeurIPS 2024 Datasets and Benchmarks Track (poster)\n Exploring the Potential of Large Language Models (LLMs) in Learning on Graphs\npreprint version journal version, Zhikai Chen , Haitao Mao, Hang Li, Wei Jin, Hongzhi Wen, Xiaochi Wei, Shuaiqiang Wang, Dawei Yin, Wenqi Fan, Hui Liu, Jiliang Tang 2023 Code; SIGKDD Explorations and NeurIPS GLFrontiers 2023\n Label-free Node Classification on Graphs with Large Language Models (LLMS), Zhikai Chen , Haitao Mao, Hongzhi Wen, Haoyu Han, Wei Jin, Haiyang Zhang, Hui Liu, Jiliang Tang Code; ICLR 2024(poster)\n Neural Scaling Laws on Graphs Jingzhe Liu, Haitao Mao, Zhikai Chen , Tong Zhao, Neil Shah, Jiliang Tang; LOG 2024\n A Pure Transformer Pretraining Framework on Text-attributed Graphs Yu Song, Haitao Mao, Jiachen Xiao, Jingzhe Liu, Zhikai Chen , Wei Jin, Carl Yang, Jiliang Tang, Hui Liu, LOG 2024\n\n 4. Security and Information Security (2021-2022)\n\n Projects \n Fake News Detection\n\n Publications \n Leveraging diversity-aware context attention networks for fake news detection on social platforms\n\n 5. Full-stack Development (2018-present)\n\n Projects \n Blog System: Backend Management, Frontend\n Scheme Interpreter\n QEMU-based Toy Operating System\n An Android controller-app, you may use your mobile to control a screen remotely.\nRecent public GitHub repositories, sorted by pushed time:\nRepository: CurryTang; Pushed: 2026-06-04T01:34:53Z; Updated: 2026-06-04T01:34:56Z\nRepository: slack-gpu-monitor; Language: JavaScript; Pushed: 2026-04-04T16:47:33Z; Updated: 2026-04-04T16:47:38Z\nRepository: Amadeus; Language: JavaScript; Description: Your personal AI research assistant that automatically reads, summarizes, organizes, and acts on academic papers.; Pushed: 2026-03-25T16:56:44Z; Updated: 2026-05-01T10:22:29Z\nRepository: MLSYS_tutorial; Language: JavaScript; Description: A newbie-friendly intro to MLSYS topics like kernel design, LLM inference, LLM post-training; Pushed: 2026-03-09T02:10:21Z; Updated: 2026-05-03T04:02:27Z\nRepository: imagebed; Description: Image hosting for blog posts and notes; Pushed: 2026-03-07T03:51:11Z; Updated: 2026-03-07T03:51:14Z\nRepository: Graph-LLM; Language: Python; Description: Exploring the Potential of Large Language Models (LLMs) in Learning on Graphs; Pushed: 2025-03-10T05:30:05Z; Updated: 2026-05-26T07:43:10Z\nRepository: TSGFM; Language: Python; Description: NIPS 24: Text-space Graph Foundation Models: Comprehensive Benchmarks and New Insights; Pushed: 2024-12-21T22:59:23Z; Updated: 2026-05-21T14:46:00Z\nRepository: gfm_webpage; Language: HTML; Pushed: 2024-07-23T05:38:16Z; Updated: 2024-07-23T05:38:19Z\nRepository: LLM4Graph; Language: Python; Description: Ongoing project: a library for graph foundation model; Pushed: 2024-02-07T00:00:19Z; Updated: 2024-06-23T06:27:27Z\nRepository: LLMGNN; Language: Python; Description: Label-free Node Classification on Graphs with Large Language Models (LLMS); Pushed: 2023-11-24T06:49:21Z; Updated: 2026-03-13T17:27:32Z\nRepository: Awesome-efficient-and-scalable-graph; Pushed: 2023-11-03T19:22:36Z; Updated: 2024-12-05T07:15:57Z\nRepository: Towards-graph-foundation-models; Pushed: 2023-10-23T19:23:49Z; Updated: 2026-03-22T11:00:43Z\nRepository: awesome-fake-news-detection; Description: Collection of fake news detection methods and a practical evaluation framework; Pushed: 2023-06-15T07:40:06Z; Updated: 2025-02-19T10:19:56Z\nGitHub languages: Python, JavaScript, HTML",
+    "name": "Zhikai Chen",
+    "headline": "Research Scientist",
+    "roles": [
+      "research scientist",
+      "machine learning engineer",
+      "software engineer",
+      "research engineer"
+    ],
+    "skills": [
+      "agentic memory",
+      "agentic",
+      "memory systems",
+      "proactive agents",
+      "agents",
+      "llm",
+      "graph",
+      "tabular data",
+      "relational in-context learning",
+      "relational foundation models",
+      "machine learning",
+      "javascript",
+      "research",
+      "dl infra",
+      "long context modeling",
+      "long context",
+      "gpu",
+      "optimization",
+      "relational deep learning",
+      "deep learning",
+      "graphs",
+      "node",
+      "security",
+      "full stack",
+      "backend",
+      "frontend",
+      "mlsys",
+      "llm inference",
+      "post-training",
+      "python"
+    ],
+    "locations": [
+      "michigan",
+      "east lansing",
+      "united states"
+    ],
+    "links": [
+      "https://github.com/CurryTang"
+    ],
+    "seniority": "intern",
+    "keywords": [
+      "iclr",
+      "abdi",
+      "academic",
+      "acts",
+      "amir",
+      "anchor",
+      "assistant",
+      "autog",
+      "automatic",
+      "automatically",
+      "awesome-fake-news-detection",
+      "collection",
+      "large",
+      "llms",
+      "neurips",
+      "poster",
+      "version",
+      "construction",
+      "contribution",
+      "cross-scenario"
+    ],
+    "preferences": {
+      "focus_highlights": [],
+      "target_roles": [],
+      "preferred_locations": [],
+      "remote": null,
+      "job_types": [],
+      "company_stages": [],
+      "industries": [],
+      "min_salary": null,
+      "visa_sponsorship": null,
+      "sources": [],
+      "excluded_terms": [],
+      "result_count": null,
+      "output_format": null,
+      "notes": null
+    },
+    "evidence": {
+      "heuristics": {
+        "roles": [
+          "research scientist",
+          "machine learning engineer",
+          "software engineer",
+          "research engineer"
+        ],
+        "skills": [
+          "agentic memory",
+          "agentic",
+          "memory systems",
+          "proactive agents",
+          "agents",
+          "llm",
+          "graph",
+          "tabular data",
+          "relational in-context learning",
+          "relational foundation models",
+          "machine learning",
+          "javascript",
+          "research",
+          "dl infra",
+          "long context modeling",
+          "long context",
+          "gpu",
+          "optimization",
+          "relational deep learning",
+          "deep learning",
+          "graphs",
+          "node",
+          "security",
+          "full stack",
+          "backend",
+          "frontend",
+          "mlsys",
+          "llm inference",
+          "post-training",
+          "python"
+        ],
+        "locations": [
+          "michigan",
+          "east lansing",
+          "united states"
+        ],
+        "seniority": "intern"
+      },
+      "portfolio_highlights": [
+        {
+          "text": "Exploring Cross-Scenario Generality of Agentic Memory Systems: Diagnostics and a Strong Baseline Zhikai Chen , Jialiang Gu, Junyu Yin, Xianxuan Long, Shenglai Zeng, Xiaoze Liu, Kai Guo, Keren Zhou, Jiliang Tang; arXiv 2026",
+          "score": 11.75,
+          "reasons": [
+            "dated_work",
+            "publication_or_venue",
+            "technical_relevance"
+          ]
+        },
+        {
+          "text": "Do Proactive Agents Really Need an LLM to Decide When to Wake and What to Anchor? Xiaoze Liu, Ruowang Zhang, Amir H. Abdi, Michel Galley, Zhikai Chen , Siheng Xiong, Xiaoqian Wang, Jing Gao; arXiv 2026",
+          "score": 11.75,
+          "reasons": [
+            "dated_work",
+            "publication_or_venue",
+            "technical_relevance"
+          ]
+        },
+        {
+          "text": "A Pre-training Framework for Relational Data with Information-theoretic Principles Quang Truong, Zhikai Chen , Mingxuan Ju, Tong Zhao, Neil Shah, Jiliang Tang, NeurIPS 2025",
+          "score": 10.0,
+          "reasons": [
+            "dated_work",
+            "publication_or_venue",
+            "project_or_system",
+            "technical_relevance"
+          ]
+        },
+        {
+          "text": "AutoG: Towards automatic graph construction from tabular data Zhikai Chen , Han Xie, Jian Zhang, Xiang Song, Jiliang Tang, Huzefa Rangwala, George Karypis; ICLR 2025 (poster) Code",
+          "score": 8.75,
+          "reasons": [
+            "dated_work",
+            "publication_or_venue",
+            "technical_relevance"
+          ]
+        },
+        {
+          "text": "OpenRFM: Dissecting Relational In-Context Learning Zhikai Chen , Junyu Yin, Jialiang Gu, Siheng Xiong, Xiaoze Liu, Ruowang Zhang, Keren Zhou, Kai Guo; arXiv 2026",
+          "score": 7.75,
+          "reasons": [
+            "dated_work",
+            "publication_or_venue"
+          ]
+        },
+        {
+          "text": "RFMBench: Towards Principled Benchmarking of Relational Foundation Models.pdf) Zhikai Chen , Han Xie, Jian Zhang, Haiyang Yu, Huzefa Rangwala, Xiang Song; preprint 2026",
+          "score": 7.75,
+          "reasons": [
+            "dated_work",
+            "publication_or_venue"
+          ]
+        },
+        {
+          "text": "Relatron: Automating Relational Machine Learning over Relational Databases, ICLR 2026 Zhikai Chen , Han Xie, Jian Zhang, Jiliang Tang, Xiang Song, Huzefa Rangwala Paper Code",
+          "score": 7.75,
+          "reasons": [
+            "dated_work",
+            "publication_or_venue"
+          ]
+        },
+        {
+          "text": "Repository: Amadeus; Language: JavaScript; Description: Your personal AI research assistant that automatically reads, summarizes, organizes, and acts on academic papers.; Pushed: 2026-03-25T16:56:44Z; Updated: 2026-05-01T10:22:29Z",
+          "score": 5.0,
+          "reasons": [
+            "dated_work",
+            "project_or_system",
+            "technical_relevance"
+          ]
+        },
+        {
+          "text": "Repository: awesome-fake-news-detection; Description: Collection of fake news detection methods and a practical evaluation framework; Pushed: 2023-06-15T07:40:06Z; Updated: 2025-02-19T10:19:56Z",
+          "score": 4.0,
+          "reasons": [
+            "dated_work",
+            "project_or_system"
+          ]
+        },
+        {
+          "text": "Graph Foundation Models Haitao Mao\\ , Zhikai Chen\\ , Wenzhuo Tang, Jianan Zhao, Yao Ma, Tong Zhao, Neil Shah, Michael Galkin, Jiliang Tang 2024 [Paper lists]; ICML 2024 (Spotlight); means equal contribution",
+          "score": 3.75,
+          "reasons": [
+            "dated_work",
+            "publication_or_venue"
+          ]
+        }
+      ]
+    }
+  },
+  "adaptive_questions": [
+    {
+      "id": "focus_highlights",
+      "prompt": "Which portfolio strengths should I emphasize most?",
+      "field": "focus_highlights",
+      "reason": "Your materials contain several strong points; choosing a focus improves query design and ranking.",
+      "examples": [
+        "Exploring Cross-Scenario Generality of Agentic Memory Systems: Diagnostics and a Strong Baseline",
+        "Do Proactive Agents Really Need an LLM to Decide When to Wake and What to Anchor?",
+        "A Pre-training Framework for Relational Data with Information-theoretic Principles",
+        "AutoG: Towards automatic graph construction from tabular data"
+      ]
+    },
+    {
+      "id": "target_roles",
+      "prompt": "Which roles should I prioritize?",
+      "field": "target_roles",
+      "reason": "Your profile supports multiple role tracks.",
+      "examples": [
+        "research scientist",
+        "machine learning engineer",
+        "software engineer",
+        "research engineer"
+      ]
+    },
+    {
+      "id": "preferred_locations",
+      "prompt": "Where do you want to work?",
+      "field": "preferred_locations",
+      "reason": "Location affects source queries and ranking.",
+      "examples": [
+        "Remote US",
+        "San Francisco",
+        "New York",
+        "Seattle"
+      ]
+    },
+    {
+      "id": "remote",
+      "prompt": "Are remote roles acceptable or preferred?",
+      "field": "remote",
+      "reason": "Remote preference is a strong filter for startup boards.",
+      "examples": [
+        "remote preferred",
+        "hybrid ok",
+        "onsite only"
+      ]
+    },
+    {
+      "id": "company_stages",
+      "prompt": "What company stages do you prefer?",
+      "field": "company_stages",
+      "reason": "Startup boards expose stage and funding signals.",
+      "examples": [
+        "seed",
+        "series a",
+        "growth",
+        "public-company ok"
+      ]
+    },
+    {
+      "id": "industries",
+      "prompt": "Which industries or domains should I favor?",
+      "field": "industries",
+      "reason": "Domain preferences help rank broad engineering roles.",
+      "examples": [
+        "AI",
+        "developer tools",
+        "healthcare",
+        "fintech"
+      ]
+    },
+    {
+      "id": "result_count",
+      "prompt": "How many jobs should I return?",
+      "field": "result_count",
+      "reason": "Result count controls search breadth and how much detail to include.",
+      "examples": [
+        "10",
+        "25",
+        "50"
+      ]
+    },
+    {
+      "id": "output_format",
+      "prompt": "What output format should I use? TSV is the default.",
+      "field": "output_format",
+      "reason": "TSV is the default because it is easy to paste into spreadsheets and databases.",
+      "examples": [
+        "tsv",
+        "json",
+        "markdown"
+      ]
+    }
+  ],
+  "matches": [
+    {
+      "job": {
+        "source": "hackernews",
+        "source_id": "48361574",
+        "title": "Staff Software Engineer",
+        "company": "Obsidian Security",
+        "url": "https://news.ycombinator.com/item?id=48361574",
+        "location": null,
+        "description": "Obsidian Security | Staff Software Engineer | REMOTE (US) | Full-time | $176k-$196k + equity + 401k | https://job-boards.greenhouse.io/obsidiansecurity/jobs/51527...\nWe secure the SaaS apps companies actually run on: M365, Salesforce, and hundreds more. You\u2019d be on the Threat product team working full-stack. That means browser extension code (content/background scripts, manifest v3, message passing), backend services chewing through millions of events, and the data pipelines feeding our detection engine. One day you\u2019re in TypeScript debugging why a content script won\u2019t capture form submissions on some vendor\u2019s weird SPA. The next you\u2019re in Python fixing a Kafka consumer that\u2019s falling behind. Sometimes you\u2019re in Rust optimizing a hot path in the telemetry collector.\nBig current focus is shadow AI, i.e. catching when employees paste sensitive data into ChatGPT, Claude, or whatever LLM showed up this week. You\u2019d build the systems that detect it.\nLooking for ~8+ yrs experience, real browser knowledge (DOM, event loop, SPA routing, CORS, not just \u201cI used React\u201d), prior browser extension work, strong TypeScript, comfortable in Python, willing to write Rust, plus data-at-scale chops (event streaming, Postgres, Elasticsearch, Kafka). Bonus: AI security (prompt injection, exfiltration), detection engineering/SIEM, or security tooling.\nApply via the link above, or see all our open roles at https://www.obsidiansecurity.com/careers",
+        "tags": [
+          "who-is-hiring"
+        ],
+        "salary": null,
+        "posted_at": "2026-06-01T19:36:50+00:00",
+        "raw": {
+          "_highlightResult": {
+            "author": {
+              "matchLevel": "none",
+              "matchedWords": [],
+              "value": "volker48"
+            },
+            "comment_text": {
+              "fullyHighlighted": false,
+              "matchLevel": "full",
+              "matchedWords": [
+                "software",
+                "engineer",
+                "python",
+                "backend"
+              ],
+              "value": "Obsidian Security | Staff <em>Software</em> <em>Engineer</em> | REMOTE (US) | Full-time | $176k-$196k + equity + 401k | <a href=\"https://job-boards.greenhouse.io/obsidiansecurity/jobs/5152706008\" rel=\"nofollow\">https://job-boards.greenhouse.io/obsidiansecurity/jobs/51527...</a><p>We secure the SaaS apps companies actually run on: M365, Salesforce, and hundreds more. You\u2019d be on the Threat product team working full-stack. That means browser extension code (content/background scripts, manifest v3, message passing), <em>backend</em> services chewing through millions of events, and the data pipelines feeding our detection engine. One day you\u2019re in TypeScript debugging why a content script won\u2019t capture form submissions on some vendor\u2019s weird SPA. The next you\u2019re in <em>Python</em> fixing a Kafka consumer that\u2019s falling behind. Sometimes you\u2019re in Rust optimizing a hot path in the telemetry collector.<p>Big current focus is shadow AI, i.e. catching when employees paste sensitive data into ChatGPT, Claude, or whatever LLM showed up this week. You\u2019d build the systems that detect it.<p>Looking for ~8+ yrs experience, real browser knowledge (DOM, event loop, SPA routing, CORS, not just \u201cI used React\u201d), prior browser extension work, strong TypeScript, comfortable in <em>Python</em>, willing to write Rust, plus data-at-scale chops (event streaming, Postgres, Elasticsearch, Kafka). Bonus: AI security (prompt injection, exfiltration), detection engineering/SIEM, or security tooling.<p>Apply via the link above, or see all our open roles at <a href=\"https://www.obsidiansecurity.com/careers\" rel=\"nofollow\">https://www.obsidiansecurity.com/careers</a>"
+            },
+            "story_title": {
+              "matchLevel": "none",
+              "matchedWords": [],
+              "value": "Ask HN: Who is hiring? (June 2026)"
+            }
+          },
+          "_tags": [
+            "comment",
+            "author_volker48",
+            "story_48357725"
+          ],
+          "author": "volker48",
+          "comment_text": "Obsidian Security | Staff Software Engineer | REMOTE (US) | Full-time | $176k-$196k + equity + 401k | <a href=\"https:&#x2F;&#x2F;job-boards.greenhouse.io&#x2F;obsidiansecurity&#x2F;jobs&#x2F;5152706008\" rel=\"nofollow\">https:&#x2F;&#x2F;job-boards.greenhouse.io&#x2F;obsidiansecurity&#x2F;jobs&#x2F;51527...</a><p>We secure the SaaS apps companies actually run on: M365, Salesforce, and hundreds more. You\u2019d be on the Threat product team working full-stack. That means browser extension code (content&#x2F;background scripts, manifest v3, message passing), backend services chewing through millions of events, and the data pipelines feeding our detection engine. One day you\u2019re in TypeScript debugging why a content script won\u2019t capture form submissions on some vendor\u2019s weird SPA. The next you\u2019re in Python fixing a Kafka consumer that\u2019s falling behind. Sometimes you\u2019re in Rust optimizing a hot path in the telemetry collector.<p>Big current focus is shadow AI, i.e. catching when employees paste sensitive data into ChatGPT, Claude, or whatever LLM showed up this week. You\u2019d build the systems that detect it.<p>Looking for ~8+ yrs experience, real browser knowledge (DOM, event loop, SPA routing, CORS, not just \u201cI used React\u201d), prior browser extension work, strong TypeScript, comfortable in Python, willing to write Rust, plus data-at-scale chops (event streaming, Postgres, Elasticsearch, Kafka). Bonus: AI security (prompt injection, exfiltration), detection engineering&#x2F;SIEM, or security tooling.<p>Apply via the link above, or see all our open roles at <a href=\"https:&#x2F;&#x2F;www.obsidiansecurity.com&#x2F;careers\" rel=\"nofollow\">https:&#x2F;&#x2F;www.obsidiansecurity.com&#x2F;careers</a>",
+          "created_at": "2026-06-01T19:36:50Z",
+          "created_at_i": 1780342610,
+          "objectID": "48361574",
+          "parent_id": 48357725,
+          "story_id": 48357725,
+          "story_title": "Ask HN: Who is hiring? (June 2026)",
+          "updated_at": "2026-06-02T14:58:42Z"
+        }
+      },
+      "score": 11.0,
+      "matched_terms": [
+        "software engineer",
+        "llm",
+        "security",
+        "backend",
+        "python"
+      ],
+      "query": {
+        "text": "software engineer python backend",
+        "role": "software engineer",
+        "skills": [
+          "python",
+          "backend",
+          "infrastructure",
+          "distributed systems"
+        ],
+        "location": "michigan",
+        "remote": false
+      },
+      "rationale": "Matched software engineer, llm, security, backend, python"
+    },
+    {
+      "job": {
+        "source": "hackernews",
+        "source_id": "48441385",
+        "title": "Founding Engineer (CTO for the right person)",
+        "company": "Quin",
+        "url": "https://news.ycombinator.com/item?id=48441385",
+        "location": null,
+        "description": "Quin | Founding Engineer (CTO for the right person) | REMOTE (US), preference for Bay Area (tech), Chicago (consumer), or NYC (finance) | Full-time\nQuin is an agentic platform to (finally!) solve personal finance for people. It is a consumer-focused company.\nhttps://iamquin.ai\nI spent 13 years in private banking and have been working on Quin alone for about 15 months. I built 6 different prototypes to test different approaches. I've spent the last few weeks working with testers on the latest version and solidifying GTM. I need someone to take over engineering with a focus on building the backend and data layers that will support our agentic approach to personal finance.\nGeorgetown. UCLA (MBA). Ex-JPMorgan.\nTraction: Prototype with testers\nThe role: You're the first engineering hire. This is about shipping the workflows that will become the product that users will trust and the data layer that can support an agent in the future.\nYou'll own backend architecture decisions from day one. Contract-first development (TypeScript contracts repo as source of truth), FastAPI, Supabase/Postgres, Groq for LLM inference. The stack is clean and the codebase is small.\nWho I'm looking for: A full-stack engineer with a preference for backend. 5+ years backend engineering; Python / FastAPI preferred. Strong data modeling instincts \u2014 you've designed schemas that had to scale. Experience with multi-tenant data architectures. Comfort operating without process. Finance domain familiarity a plus, not a requirement. Comfort and experience using AI tools and incorporating new ideas quickly.\nFor the right person, this is an opportunity to take a CTO/co-founder role and define the full technical path.\nComp: Salary post-raise and meaningful equity. TBH, finding this role (either version) will be important for rasisng capital given that I do not have a technical background and fintech is complicated by regulations. I'm ok with part-time in the meantime if that's what it requires.\nEmail quin@iamquin.ai with the primary reason this interests you and the top two reasons why you should be considered (don't worry about a resume at this point).",
+        "tags": [
+          "who-is-hiring"
+        ],
+        "salary": null,
+        "posted_at": "2026-06-08T04:37:38+00:00",
+        "raw": {
+          "_highlightResult": {
+            "author": {
+              "matchLevel": "none",
+              "matchedWords": [],
+              "value": "quinAI"
+            },
+            "comment_text": {
+              "fullyHighlighted": false,
+              "matchLevel": "full",
+              "matchedWords": [
+                "llm",
+                "agentic"
+              ],
+              "value": "Quin | Founding Engineer (CTO for the right person) | REMOTE (US), preference for Bay Area (tech), Chicago (consumer), or NYC (finance) | Full-time<p>Quin is an <em>agentic</em> platform to (finally!) solve personal finance for people. It is a consumer-focused company.<p><a href=\"https://iamquin.ai\" rel=\"nofollow\">https://iamquin.ai</a><p>I spent 13 years in private banking and have been working on Quin alone for about 15 months. I built 6 different prototypes to test different approaches. I've spent the last few weeks working with testers on the latest version and solidifying GTM. I need someone to take over engineering with a focus on building the backend and data layers that will support our <em>agentic</em> approach to personal finance.<p>Georgetown. UCLA (MBA). Ex-JPMorgan.<p>Traction: Prototype with testers<p>The role: You're the first engineering hire. This is about shipping the workflows that will become the product that users will trust and the data layer that can support an agent in the future.<p>You'll own backend architecture decisions from day one. Contract-first development (TypeScript contracts repo as source of truth), FastAPI, Supabase/Postgres, Groq for <em>LLM</em> inference. The stack is clean and the codebase is small.<p>Who I'm looking for: A full-stack engineer with a preference for backend. 5+ years backend engineering; Python / FastAPI preferred. Strong data modeling instincts \u2014 you've designed schemas that had to scale. Experience with multi-tenant data architectures. Comfort operating without process. Finance domain familiarity a plus, not a requirement. Comfort and experience using AI tools and incorporating new ideas quickly.<p>For the right person, this is an opportunity to take a CTO/co-founder role and define the full technical path.<p>Comp: Salary post-raise and meaningful equity. TBH, finding this role (either version) will be important for rasisng capital given that I do not have a technical background and fintech is complicated by regulations. I'm ok with part-time in the meantime if that's what it requires.<p>Email quin@iamquin.ai with the primary reason this interests you and the top two reasons why you should be considered (don't worry about a resume at this point)."
+            },
+            "story_title": {
+              "matchLevel": "none",
+              "matchedWords": [],
+              "value": "Ask HN: Who is hiring? (June 2026)"
+            }
+          },
+          "_tags": [
+            "comment",
+            "author_quinAI",
+            "story_48357725"
+          ],
+          "author": "quinAI",
+          "comment_text": "Quin | Founding Engineer (CTO for the right person) | REMOTE (US), preference for Bay Area (tech), Chicago (consumer), or NYC (finance) | Full-time<p>Quin is an agentic platform to (finally!) solve personal finance for people. It is a consumer-focused company.<p><a href=\"https:&#x2F;&#x2F;iamquin.ai\" rel=\"nofollow\">https:&#x2F;&#x2F;iamquin.ai</a><p>I spent 13 years in private banking and have been working on Quin alone for about 15 months. I built 6 different prototypes to test different approaches. I&#x27;ve spent the last few weeks working with testers on the latest version and solidifying GTM. I need someone to take over engineering with a focus on building the backend and data layers that will support our agentic approach to personal finance.<p>Georgetown. UCLA (MBA). Ex-JPMorgan.<p>Traction: Prototype with testers<p>The role: You&#x27;re the first engineering hire. This is about shipping the workflows that will become the product that users will trust and the data layer that can support an agent in the future.<p>You&#x27;ll own backend architecture decisions from day one. Contract-first development (TypeScript contracts repo as source of truth), FastAPI, Supabase&#x2F;Postgres, Groq for LLM inference. The stack is clean and the codebase is small.<p>Who I&#x27;m looking for: A full-stack engineer with a preference for backend. 5+ years backend engineering; Python &#x2F; FastAPI preferred. Strong data modeling instincts \u2014 you&#x27;ve designed schemas that had to scale. Experience with multi-tenant data architectures. Comfort operating without process. Finance domain familiarity a plus, not a requirement. Comfort and experience using AI tools and incorporating new ideas quickly.<p>For the right person, this is an opportunity to take a CTO&#x2F;co-founder role and define the full technical path.<p>Comp: Salary post-raise and meaningful equity. TBH, finding this role (either version) will be important for rasisng capital given that I do not have a technical background and fintech is complicated by regulations. I&#x27;m ok with part-time in the meantime if that&#x27;s what it requires.<p>Email quin@iamquin.ai with the primary reason this interests you and the top two reasons why you should be considered (don&#x27;t worry about a resume at this point).",
+          "created_at": "2026-06-08T04:37:38Z",
+          "created_at_i": 1780893458,
+          "objectID": "48441385",
+          "parent_id": 48357725,
+          "story_id": 48357725,
+          "story_title": "Ask HN: Who is hiring? (June 2026)",
+          "updated_at": "2026-06-08T04:41:44Z"
+        }
+      },
+      "score": 10.0,
+      "matched_terms": [
+        "agentic",
+        "llm",
+        "backend",
+        "llm inference",
+        "python"
+      ],
+      "query": {
+        "text": "llm agentic",
+        "role": null,
+        "skills": [
+          "llm",
+          "agentic"
+        ],
+        "location": null,
+        "remote": true
+      },
+      "rationale": "Matched agentic, llm, backend, llm inference, python"
+    },
+    {
+      "job": {
+        "source": "hackernews",
+        "source_id": "48406760",
+        "title": "Software Engineer",
+        "company": "Tetsuwan Scientific",
+        "url": "https://news.ycombinator.com/item?id=48406760",
+        "location": null,
+        "description": "Tetsuwan Scientific | Software Engineer | San Francisco (SoMa) | ONSITE | Full-time | $140K\u2013$180K + equity | https://tetsuwan.com\nWe work with robots that run biology experiments. The robots are accurate, but programming them by hand takes so long that most labs don't bother. So we wrote a compiler and visual editor a scientist can use. They describe their protocol in plain language, we parse it into a structured format, and compile that to optimized code. Our end goal is to build the infrastructure for autonomous science and a centralized cloud lab. Short demo: https://tinyurl.com/mrx63phb\nThe team is three software engineers, an automation engineer, the founders, and soon a designer. The codebase is one monorepo containing an OCaml compiler, Python backend services, and a TypeScript/React editor. The challenges come in the form of eliciting scientific context and tacit knowledge and in the fact that a protocol has to deterministically run correctly.\nWe are looking for at least 3 years of experience. OCaml isn't a requirement, just a willingness to learn it. Nice if you've done DSLs, compilers, life sciences or lab automation, an ML-family language, or LLM parsing and evals.\nApply: https://jobs.ashbyhq.com/tetsuwan/ad583fec-dc0a-4b6c-8171-41...",
+        "tags": [
+          "who-is-hiring"
+        ],
+        "salary": null,
+        "posted_at": "2026-06-05T01:03:54+00:00",
+        "raw": {
+          "_highlightResult": {
+            "author": {
+              "matchLevel": "none",
+              "matchedWords": [],
+              "value": "m0jibak3"
+            },
+            "comment_text": {
+              "fullyHighlighted": false,
+              "matchLevel": "full",
+              "matchedWords": [
+                "software",
+                "engineer",
+                "python",
+                "backend"
+              ],
+              "value": "Tetsuwan Scientific | <em>Software</em> <em>Engineer</em> | San Francisco (SoMa) | ONSITE | Full-time | $140K\u2013$180K + equity | <a href=\"https://tetsuwan.com\" rel=\"nofollow\">https://tetsuwan.com</a><p>We work with robots that run biology experiments. The robots are accurate, but programming them by hand takes so long that most labs don't bother. So we wrote a compiler and visual editor a scientist can use. They describe their protocol in plain language, we parse it into a structured format, and compile that to optimized code. Our end goal is to build the infrastructure for autonomous science and a centralized cloud lab. Short demo: <a href=\"https://tinyurl.com/mrx63phb\" rel=\"nofollow\">https://tinyurl.com/mrx63phb</a><p>The team is three <em>software</em> engineers, an automation <em>engineer</em>, the founders, and soon a designer. The codebase is one monorepo containing an OCaml compiler, <em>Python</em> <em>backend</em> services, and a TypeScript/React editor. The challenges come in the form of eliciting scientific context and tacit knowledge and in the fact that a protocol has to deterministically run correctly.<p>We are looking for at least 3 years of experience. OCaml isn't a requirement, just a willingness to learn it. Nice if you've done DSLs, compilers, life sciences or lab automation, an ML-family language, or LLM parsing and evals.<p>Apply: <a href=\"https://jobs.ashbyhq.com/tetsuwan/ad583fec-dc0a-4b6c-8171-416403a0e7ed/application\" rel=\"nofollow\">https://jobs.ashbyhq.com/tetsuwan/ad583fec-dc0a-4b6c-8171-41...</a>"
+            },
+            "story_title": {
+              "matchLevel": "none",
+              "matchedWords": [],
+              "value": "Ask HN: Who is hiring? (June 2026)"
+            }
+          },
+          "_tags": [
+            "comment",
+            "author_m0jibak3",
+            "story_48357725"
+          ],
+          "author": "m0jibak3",
+          "comment_text": "Tetsuwan Scientific | Software Engineer | San Francisco (SoMa) | ONSITE | Full-time | $140K\u2013$180K + equity | <a href=\"https:&#x2F;&#x2F;tetsuwan.com\" rel=\"nofollow\">https:&#x2F;&#x2F;tetsuwan.com</a><p>We work with robots that run biology experiments. The robots are accurate, but programming them by hand takes so long that most labs don&#x27;t bother. So we wrote a compiler and visual editor a scientist can use. They describe their protocol in plain language, we parse it into a structured format, and compile that to optimized code. Our end goal is to build the infrastructure for autonomous science and a centralized cloud lab. Short demo: <a href=\"https:&#x2F;&#x2F;tinyurl.com&#x2F;mrx63phb\" rel=\"nofollow\">https:&#x2F;&#x2F;tinyurl.com&#x2F;mrx63phb</a><p>The team is three software engineers, an automation engineer, the founders, and soon a designer. The codebase is one monorepo containing an OCaml compiler, Python backend services, and a TypeScript&#x2F;React editor. The challenges come in the form of eliciting scientific context and tacit knowledge and in the fact that a protocol has to deterministically run correctly.<p>We are looking for at least 3 years of experience. OCaml isn&#x27;t a requirement, just a willingness to learn it. Nice if you&#x27;ve done DSLs, compilers, life sciences or lab automation, an ML-family language, or LLM parsing and evals.<p>Apply: <a href=\"https:&#x2F;&#x2F;jobs.ashbyhq.com&#x2F;tetsuwan&#x2F;ad583fec-dc0a-4b6c-8171-416403a0e7ed&#x2F;application\" rel=\"nofollow\">https:&#x2F;&#x2F;jobs.ashbyhq.com&#x2F;tetsuwan&#x2F;ad583fec-dc0a-4b6c-8171-41...</a>",
+          "created_at": "2026-06-05T01:03:54Z",
+          "created_at_i": 1780621434,
+          "objectID": "48406760",
+          "parent_id": 48357725,
+          "story_id": 48357725,
+          "story_title": "Ask HN: Who is hiring? (June 2026)",
+          "updated_at": "2026-06-06T02:02:21Z"
+        }
+      },
+      "score": 10.0,
+      "matched_terms": [
+        "software engineer",
+        "llm",
+        "backend",
+        "python",
+        "infrastructure"
+      ],
+      "query": {
+        "text": "software engineer python backend",
+        "role": "software engineer",
+        "skills": [
+          "python",
+          "backend",
+          "infrastructure",
+          "distributed systems"
+        ],
+        "location": "michigan",
+        "remote": false
+      },
+      "rationale": "Matched software engineer, llm, backend, python, infrastructure"
+    },
+    {
+      "job": {
+        "source": "hackernews",
+        "source_id": "48385146",
+        "title": "Lead AI Engineer + Agent Builder + Platform Engineer",
+        "company": "Catalyst\u00b7Wayfare AI",
+        "url": "https://news.ycombinator.com/item?id=48385146",
+        "location": null,
+        "description": "Catalyst\u00b7Wayfare AI | Lead AI Engineer + Agent Builder + Platform Engineer | Remote (US) | Full-time / Part-time / Contract | https://catalystwayfare.ai/careers\nAI transformation firm shipping production AI systems for mid-market enterprises in regulated and technical domains \u2014 finance, energy, industrials, healthcare. We do not stop at PowerPoint AI strategy. We ship working systems alongside our clients' engineering teams. Small teams, deep expertise, real autonomy on real work.\nHiring:\n[1] Lead AI Engineer, Agentic Systems \u2014 Embedded technical lead on a multi-agent orchestration build for one of the country's leading power engineering firms. Architect the engine; design the patterns we replicate at the next client. 6+ yrs eng, 2+ shipping LLM/agentic systems in production. Strong Python; opinions on agent frameworks. Monthly US travel to one major metro. https://catalystwayfare.ai/jd-lead\n[2] AI Engineer, Agent Builder \u2014 Hands-on builder embedded on the same engagement. End-to-end ownership of individual capability agents \u2014 prompts, tools, retrieval, evals, monitoring. 3\u20135 yrs strong Python, real production LLM API experience, shipped at least one agent system end-to-end. 1099 contract, ~30\u201340 hrs/wk. Occasional US travel. https://catalystwayfare.ai/jd-builder\n[3]Platform Manager (Engineering), Trust.ML \u2014 Founding platform engineer on our productized governance, evaluation, and deployment surface. Own the roadmap, write the code, set the operational posture (SLOs, on-call, audit). 5+ yrs, prior engineer-in-charge experience. Quarterly US travel. Compensation competitive with senior platform roles at venture-funded AI infrastructure companies; equity reflects the founding nature of the seat. https://catalystwayfare.ai/jd-platform\nStack: Claude + OpenAI + Gemini + Perplexity APIs in production, open-source models when the math points there. Cursor and Claude Code daily. Vercel, Neon, Sentry. Evals as first-class artifacts.\nApply: per each JD's instructions, to talent+hn@cwai.co. Short cover note matters more than a resume.",
+        "tags": [
+          "who-is-hiring"
+        ],
+        "salary": null,
+        "posted_at": "2026-06-03T15:08:14+00:00",
+        "raw": {
+          "_highlightResult": {
+            "author": {
+              "matchLevel": "none",
+              "matchedWords": [],
+              "value": "catalystwayfare"
+            },
+            "comment_text": {
+              "fullyHighlighted": false,
+              "matchLevel": "full",
+              "matchedWords": [
+                "llm",
+                "agentic"
+              ],
+              "value": "Catalyst\u00b7Wayfare AI | Lead AI Engineer + Agent Builder + Platform Engineer | Remote (US) | Full-time / Part-time / Contract | <a href=\"https://catalystwayfare.ai/careers\" rel=\"nofollow\">https://catalystwayfare.ai/careers</a><p>AI transformation firm shipping production AI systems for mid-market enterprises in regulated and technical domains \u2014 finance, energy, industrials, healthcare. We do not stop at PowerPoint AI strategy. We ship working systems alongside our clients' engineering teams. Small teams, deep expertise, real autonomy on real work.<p>Hiring:<p>[1] Lead AI Engineer, <em>Agentic</em> Systems \u2014 Embedded technical lead on a multi-agent orchestration build for one of the country's leading power engineering firms. Architect the engine; design the patterns we replicate at the next client. 6+ yrs eng, 2+ shipping <em>LLM</em>/<em>agentic</em> systems in production. Strong Python; opinions on agent frameworks. Monthly US travel to one major metro. <a href=\"https://catalystwayfare.ai/jd-lead\" rel=\"nofollow\">https://catalystwayfare.ai/jd-lead</a><p>[2] AI Engineer, Agent Builder \u2014 Hands-on builder embedded on the same engagement. End-to-end ownership of individual capability agents \u2014 prompts, tools, retrieval, evals, monitoring. 3\u20135 yrs strong Python, real production <em>LLM</em> API experience, shipped at least one agent system end-to-end. 1099 contract, ~30\u201340 hrs/wk. Occasional US travel. <a href=\"https://catalystwayfare.ai/jd-builder\" rel=\"nofollow\">https://catalystwayfare.ai/jd-builder</a><p>[3]Platform Manager (Engineering), Trust.ML \u2014 Founding platform engineer on our productized governance, evaluation, and deployment surface. Own the roadmap, write the code, set the operational posture (SLOs, on-call, audit). 5+ yrs, prior engineer-in-charge experience. Quarterly US travel. Compensation competitive with senior platform roles at venture-funded AI infrastructure companies; equity reflects the founding nature of the seat. <a href=\"https://catalystwayfare.ai/jd-platform\" rel=\"nofollow\">https://catalystwayfare.ai/jd-platform</a><p>Stack: Claude + OpenAI + Gemini + Perplexity APIs in production, open-source models when the math points there. Cursor and Claude Code daily. Vercel, Neon, Sentry. Evals as first-class artifacts.<p>Apply: per each JD's instructions, to talent+hn@cwai.co. Short cover note matters more than a resume."
+            },
+            "story_title": {
+              "matchLevel": "none",
+              "matchedWords": [],
+              "value": "Ask HN: Who is hiring? (June 2026)"
+            }
+          },
+          "_tags": [
+            "comment",
+            "author_catalystwayfare",
+            "story_48357725"
+          ],
+          "author": "catalystwayfare",
+          "comment_text": "Catalyst\u00b7Wayfare AI | Lead AI Engineer + Agent Builder + Platform Engineer | Remote (US) | Full-time &#x2F; Part-time &#x2F; Contract | <a href=\"https:&#x2F;&#x2F;catalystwayfare.ai&#x2F;careers\" rel=\"nofollow\">https:&#x2F;&#x2F;catalystwayfare.ai&#x2F;careers</a><p>AI transformation firm shipping production AI systems for mid-market enterprises in regulated and technical domains \u2014 finance, energy, industrials, healthcare. We do not stop at PowerPoint AI strategy. We ship working systems alongside our clients&#x27; engineering teams. Small teams, deep expertise, real autonomy on real work.<p>Hiring:<p>[1] Lead AI Engineer, Agentic Systems \u2014 Embedded technical lead on a multi-agent orchestration build for one of the country&#x27;s leading power engineering firms. Architect the engine; design the patterns we replicate at the next client. 6+ yrs eng, 2+ shipping LLM&#x2F;agentic systems in production. Strong Python; opinions on agent frameworks. Monthly US travel to one major metro. <a href=\"https:&#x2F;&#x2F;catalystwayfare.ai&#x2F;jd-lead\" rel=\"nofollow\">https:&#x2F;&#x2F;catalystwayfare.ai&#x2F;jd-lead</a><p>[2] AI Engineer, Agent Builder \u2014 Hands-on builder embedded on the same engagement. End-to-end ownership of individual capability agents \u2014 prompts, tools, retrieval, evals, monitoring. 3\u20135 yrs strong Python, real production LLM API experience, shipped at least one agent system end-to-end. 1099 contract, ~30\u201340 hrs&#x2F;wk. Occasional US travel. <a href=\"https:&#x2F;&#x2F;catalystwayfare.ai&#x2F;jd-builder\" rel=\"nofollow\">https:&#x2F;&#x2F;catalystwayfare.ai&#x2F;jd-builder</a><p>[3]Platform Manager (Engineering), Trust.ML \u2014 Founding platform engineer on our productized governance, evaluation, and deployment surface. Own the roadmap, write the code, set the operational posture (SLOs, on-call, audit). 5+ yrs, prior engineer-in-charge experience. Quarterly US travel. Compensation competitive with senior platform roles at venture-funded AI infrastructure companies; equity reflects the founding nature of the seat. <a href=\"https:&#x2F;&#x2F;catalystwayfare.ai&#x2F;jd-platform\" rel=\"nofollow\">https:&#x2F;&#x2F;catalystwayfare.ai&#x2F;jd-platform</a><p>Stack: Claude + OpenAI + Gemini + Perplexity APIs in production, open-source models when the math points there. Cursor and Claude Code daily. Vercel, Neon, Sentry. Evals as first-class artifacts.<p>Apply: per each JD&#x27;s instructions, to talent+hn@cwai.co. Short cover note matters more than a resume.",
+          "created_at": "2026-06-03T15:08:14Z",
+          "created_at_i": 1780499294,
+          "objectID": "48385146",
+          "parent_id": 48357725,
+          "story_id": 48357725,
+          "story_title": "Ask HN: Who is hiring? (June 2026)",
+          "updated_at": "2026-06-03T19:49:29Z"
+        }
+      },
+      "score": 8.0,
+      "matched_terms": [
+        "agentic",
+        "agents",
+        "llm",
+        "python"
+      ],
+      "query": {
+        "text": "llm agentic",
+        "role": null,
+        "skills": [
+          "llm",
+          "agentic"
+        ],
+        "location": null,
+        "remote": true
+      },
+      "rationale": "Matched agentic, agents, llm, python"
+    },
+    {
+      "job": {
+        "source": "hackernews",
+        "source_id": "48365790",
+        "title": "Forward Deployed Engineer + Senior Applied AI Engineer (Agentic Systems)",
+        "company": "Puntt AI",
+        "url": "https://news.ycombinator.com/item?id=48365790",
+        "location": null,
+        "description": "Puntt AI | Forward Deployed Engineer + Senior Applied AI Engineer (Agentic Systems) | Onsite SF | Full-time\nPuntt AI is the system of record for enterprise marketing compliance. Our AI agents turn hours of manual brand and packaging review into minutes of automated precision. Danone, Nestl\u00e9, and Kenvue are live customers. The product works. Now we scale.\nForward Deployed Engineer | $190k + equity\nhttps://wellfound.com/l/2CiVyv\nThe FDE is the person in the room when an enterprise customer shows you their actual broken process. You run discovery, figure out what's really going wrong, configure and ship against it, and bring that signal back to product in a way the team can actually use. You work directly alongside our CEO in live enterprise cycles. What you learn shapes what we build next.\nBest fit: solutions engineering, field engineering, or technical founder background. You've been in enterprise rooms, you get to the real problem fast, and you can build the thing that proves the fix. Full stack, AI-native, 7+ years.\nSenior Applied AI Engineer | $185k-$210k + 0.75%-1.25% equity\nhttps://wellfound.com/l/2C3WzL\nThis role owns the agentic core -- multi-agent orchestration, RAG and retrieval, stateful async workflows (Temporal), and the eval frameworks that make compliance AI trustworthy at scale. If you've spent real time thinking about failure modes, observability, and what reliable actually means when LLMs are in the loop, that's who we're looking for.\n5-7+ years production engineering. 1-2+ years building with LLMs in real applications. Strong Python. Hands-on RAG.",
+        "tags": [
+          "who-is-hiring"
+        ],
+        "salary": null,
+        "posted_at": "2026-06-02T03:49:55+00:00",
+        "raw": {
+          "_highlightResult": {
+            "author": {
+              "matchLevel": "none",
+              "matchedWords": [],
+              "value": "StephK"
+            },
+            "comment_text": {
+              "fullyHighlighted": false,
+              "matchLevel": "full",
+              "matchedWords": [
+                "llm",
+                "agentic"
+              ],
+              "value": "Puntt AI | Forward Deployed Engineer + Senior Applied AI Engineer (<em>Agentic</em> Systems) | Onsite SF | Full-time<p>Puntt AI is the system of record for enterprise marketing compliance. Our AI agents turn hours of manual brand and packaging review into minutes of automated precision. Danone, Nestl\u00e9, and Kenvue are live customers. The product works. Now we scale.<p>Forward Deployed Engineer | $190k + equity\n<a href=\"https://wellfound.com/l/2CiVyv\" rel=\"nofollow\">https://wellfound.com/l/2CiVyv</a><p>The FDE is the person in the room when an enterprise customer shows you their actual broken process. You run discovery, figure out what's really going wrong, configure and ship against it, and bring that signal back to product in a way the team can actually use. You work directly alongside our CEO in live enterprise cycles. What you learn shapes what we build next.<p>Best fit: solutions engineering, field engineering, or technical founder background. You've been in enterprise rooms, you get to the real problem fast, and you can build the thing that proves the fix. Full stack, AI-native, 7+ years.<p>Senior Applied AI Engineer | $185k-$210k + 0.75%-1.25% equity\n<a href=\"https://wellfound.com/l/2C3WzL\" rel=\"nofollow\">https://wellfound.com/l/2C3WzL</a><p>This role owns the <em>agentic</em> core -- multi-agent orchestration, RAG and retrieval, stateful async workflows (Temporal), and the eval frameworks that make compliance AI trustworthy at scale. If you've spent real time thinking about failure modes, observability, and what reliable actually means when <em>LLMs</em> are in the loop, that's who we're looking for.<p>5-7+ years production engineering. 1-2+ years building with <em>LLMs</em> in real applications. Strong Python. Hands-on RAG."
+            },
+            "story_title": {
+              "matchLevel": "none",
+              "matchedWords": [],
+              "value": "Ask HN: Who is hiring? (June 2026)"
+            }
+          },
+          "_tags": [
+            "comment",
+            "author_StephK",
+            "story_48357725"
+          ],
+          "author": "StephK",
+          "comment_text": "Puntt AI | Forward Deployed Engineer + Senior Applied AI Engineer (Agentic Systems) | Onsite SF | Full-time<p>Puntt AI is the system of record for enterprise marketing compliance. Our AI agents turn hours of manual brand and packaging review into minutes of automated precision. Danone, Nestl\u00e9, and Kenvue are live customers. The product works. Now we scale.<p>Forward Deployed Engineer | $190k + equity\n<a href=\"https:&#x2F;&#x2F;wellfound.com&#x2F;l&#x2F;2CiVyv\" rel=\"nofollow\">https:&#x2F;&#x2F;wellfound.com&#x2F;l&#x2F;2CiVyv</a><p>The FDE is the person in the room when an enterprise customer shows you their actual broken process. You run discovery, figure out what&#x27;s really going wrong, configure and ship against it, and bring that signal back to product in a way the team can actually use. You work directly alongside our CEO in live enterprise cycles. What you learn shapes what we build next.<p>Best fit: solutions engineering, field engineering, or technical founder background. You&#x27;ve been in enterprise rooms, you get to the real problem fast, and you can build the thing that proves the fix. Full stack, AI-native, 7+ years.<p>Senior Applied AI Engineer | $185k-$210k + 0.75%-1.25% equity\n<a href=\"https:&#x2F;&#x2F;wellfound.com&#x2F;l&#x2F;2C3WzL\" rel=\"nofollow\">https:&#x2F;&#x2F;wellfound.com&#x2F;l&#x2F;2C3WzL</a><p>This role owns the agentic core -- multi-agent orchestration, RAG and retrieval, stateful async workflows (Temporal), and the eval frameworks that make compliance AI trustworthy at scale. If you&#x27;ve spent real time thinking about failure modes, observability, and what reliable actually means when LLMs are in the loop, that&#x27;s who we&#x27;re looking for.<p>5-7+ years production engineering. 1-2+ years building with LLMs in real applications. Strong Python. Hands-on RAG.",
+          "created_at": "2026-06-02T03:49:55Z",
+          "created_at_i": 1780372195,
+          "objectID": "48365790",
+          "parent_id": 48357725,
+          "story_id": 48357725,
+          "story_title": "Ask HN: Who is hiring? (June 2026)",
+          "updated_at": "2026-06-02T13:47:23Z"
+        }
+      },
+      "score": 8.0,
+      "matched_terms": [
+        "agentic",
+        "agents",
+        "full stack",
+        "python"
+      ],
+      "query": {
+        "text": "llm agentic",
+        "role": null,
+        "skills": [
+          "llm",
+          "agentic"
+        ],
+        "location": null,
+        "remote": true
+      },
+      "rationale": "Matched agentic, agents, full stack, python"
+    },
+    {
+      "job": {
+        "source": "hackernews",
+        "source_id": "48359257",
+        "title": "Who is Hiring opportunity",
+        "company": "Forward (getfwd.com)",
+        "url": "https://news.ycombinator.com/item?id=48359257",
+        "location": "Austin, TX",
+        "description": "Forward (getfwd.com) | Austin, TX | ONSITE | Full-time\nRebuilding payments for software platforms: transparent economics, no lock-in, hands-on execution. Modern TypeScript stack, real-time streaming, AWS, and heavy investment in agentic AI / LLM orchestration in production.\nHiring (all onsite Austin):\n- Sr Software Engineer (7+ yrs, expert TS full-stack)\n- Director of Engineering (12+ yrs, scaled 10->50+)\n- Risk Data Scientist\n- Incident Management Lead\n- Risk Intelligence Lead\n- Founding Growth Marketing Director\n- Senior Partner Sales Consultant\nAll roles + apply: https://www.getfwd.com/careers/\nQuestions: amays+hn@getfwd.com (mention HN)",
+        "tags": [
+          "who-is-hiring"
+        ],
+        "salary": null,
+        "posted_at": "2026-06-01T16:43:37+00:00",
+        "raw": {
+          "_highlightResult": {
+            "author": {
+              "matchLevel": "none",
+              "matchedWords": [],
+              "value": "amays_fwd"
+            },
+            "comment_text": {
+              "fullyHighlighted": false,
+              "matchLevel": "full",
+              "matchedWords": [
+                "llm",
+                "agentic"
+              ],
+              "value": "Forward (getfwd.com) | Austin, TX | ONSITE | Full-time<p>Rebuilding payments for software platforms: transparent economics, no lock-in, hands-on execution. Modern TypeScript stack, real-time streaming, AWS, and heavy investment in <em>agentic</em> AI / <em>LLM</em> orchestration in production.<p>Hiring (all onsite Austin):<p>- Sr Software Engineer (7+ yrs, expert TS full-stack)<p>- Director of Engineering (12+ yrs, scaled 10-&gt;50+)<p>- Risk Data Scientist<p>- Incident Management Lead<p>- Risk Intelligence Lead<p>- Founding Growth Marketing Director<p>- Senior Partner Sales Consultant<p>All roles + apply: <a href=\"https://www.getfwd.com/careers/\" rel=\"nofollow\">https://www.getfwd.com/careers/</a><p>Questions: amays+hn@getfwd.com (mention HN)"
+            },
+            "story_title": {
+              "matchLevel": "none",
+              "matchedWords": [],
+              "value": "Ask HN: Who is hiring? (June 2026)"
+            }
+          },
+          "_tags": [
+            "comment",
+            "author_amays_fwd",
+            "story_48357725"
+          ],
+          "author": "amays_fwd",
+          "children": [
+            48361843
+          ],
+          "comment_text": "Forward (getfwd.com) | Austin, TX | ONSITE | Full-time<p>Rebuilding payments for software platforms: transparent economics, no lock-in, hands-on execution. Modern TypeScript stack, real-time streaming, AWS, and heavy investment in agentic AI &#x2F; LLM orchestration in production.<p>Hiring (all onsite Austin):<p>- Sr Software Engineer (7+ yrs, expert TS full-stack)<p>- Director of Engineering (12+ yrs, scaled 10-&gt;50+)<p>- Risk Data Scientist<p>- Incident Management Lead<p>- Risk Intelligence Lead<p>- Founding Growth Marketing Director<p>- Senior Partner Sales Consultant<p>All roles + apply: <a href=\"https:&#x2F;&#x2F;www.getfwd.com&#x2F;careers&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;www.getfwd.com&#x2F;careers&#x2F;</a><p>Questions: amays+hn@getfwd.com (mention HN)",
+          "created_at": "2026-06-01T16:43:37Z",
+          "created_at_i": 1780332217,
+          "objectID": "48359257",
+          "parent_id": 48357725,
+          "story_id": 48357725,
+          "story_title": "Ask HN: Who is hiring? (June 2026)",
+          "updated_at": "2026-06-01T22:17:05Z"
+        }
+      },
+      "score": 7.0,
+      "matched_terms": [
+        "software engineer",
+        "agentic",
+        "llm"
+      ],
+      "query": {
+        "text": "llm agentic",
+        "role": null,
+        "skills": [
+          "llm",
+          "agentic"
+        ],
+        "location": null,
+        "remote": true
+      },
+      "rationale": "Matched software engineer, agentic, llm"
+    },
+    {
+      "job": {
+        "source": "hackernews",
+        "source_id": "48402188",
+        "title": "Staff Software Engineer",
+        "company": "Pelotech",
+        "url": "https://news.ycombinator.com/item?id=48402188",
+        "location": null,
+        "description": "Pelotech | Staff Software Engineer | REMOTE (US Only) | Full-Time\nWe're Pelotech ( https://www.pelotech.com ), a software consulting company. We are deeply technical but also deeply human: approachable, adaptable, curious, and helpful. We aren't here to blindly build features; we're here to solve problems thoughtfully.\nWe're looking for a Staff Software Engineer who enjoys working directly with clients, mentoring engineers, and solving messy real-world problems.\nYou might call yourself a passionate polyglot, versatile specialist, or curious expert. We're looking for engineers with 5+ years of experience, strong backend skills, proficiency in languages such as TypeScript, Go, Python, Java, or Rust, and familiarity with Kubernetes, Terraform, ArgoCD, AWS, and GCP.\nWe value curiosity, pragmatism, kindness, autonomy, and people who enjoy learning new technologies.\nCompensation: $160k\u2013$210k base salary + 10\u201320% profit sharing + full benefits.\nContact:\n[henry.anderson@pelo.tech](mailto:henry.anderson@pelo.tech)\nhttps://www.linkedin.com/in/henryanderson9/",
+        "tags": [
+          "who-is-hiring"
+        ],
+        "salary": null,
+        "posted_at": "2026-06-04T17:57:13+00:00",
+        "raw": {
+          "_highlightResult": {
+            "author": {
+              "matchLevel": "none",
+              "matchedWords": [],
+              "value": "henryand"
+            },
+            "comment_text": {
+              "fullyHighlighted": false,
+              "matchLevel": "full",
+              "matchedWords": [
+                "software",
+                "engineer",
+                "python",
+                "backend"
+              ],
+              "value": "Pelotech | Staff <em>Software</em> <em>Engineer</em> | REMOTE (US Only) | Full-Time<p>We're Pelotech (<a href=\"https://www.pelotech.com\" rel=\"nofollow\">https://www.pelotech.com</a>), a <em>software</em> consulting company. We are deeply technical but also deeply human: approachable, adaptable, curious, and helpful. We aren't here to blindly build features; we're here to solve problems thoughtfully.<p>We're looking for a Staff <em>Software</em> <em>Engineer</em> who enjoys working directly with clients, mentoring engineers, and solving messy real-world problems.<p>You might call yourself a passionate polyglot, versatile specialist, or curious expert. We're looking for engineers with 5+ years of experience, strong <em>backend</em> skills, proficiency in languages such as TypeScript, Go, <em>Python</em>, Java, or Rust, and familiarity with Kubernetes, Terraform, ArgoCD, AWS, and GCP.<p>We value curiosity, pragmatism, kindness, autonomy, and people who enjoy learning new technologies.<p>Compensation: $160k\u2013$210k base salary + 10\u201320% profit sharing + full benefits.<p>Contact:\n[henry.anderson@pelo.tech](mailto:henry.anderson@pelo.tech)\n<a href=\"https://www.linkedin.com/in/henryanderson9/\" rel=\"nofollow\">https://www.linkedin.com/in/henryanderson9/</a>"
+            },
+            "story_title": {
+              "matchLevel": "none",
+              "matchedWords": [],
+              "value": "Ask HN: Who is hiring? (June 2026)"
+            }
+          },
+          "_tags": [
+            "comment",
+            "author_henryand",
+            "story_48357725"
+          ],
+          "author": "henryand",
+          "comment_text": "Pelotech | Staff Software Engineer | REMOTE (US Only) | Full-Time<p>We&#x27;re Pelotech (<a href=\"https:&#x2F;&#x2F;www.pelotech.com\" rel=\"nofollow\">https:&#x2F;&#x2F;www.pelotech.com</a>), a software consulting company. We are deeply technical but also deeply human: approachable, adaptable, curious, and helpful. We aren&#x27;t here to blindly build features; we&#x27;re here to solve problems thoughtfully.<p>We&#x27;re looking for a Staff Software Engineer who enjoys working directly with clients, mentoring engineers, and solving messy real-world problems.<p>You might call yourself a passionate polyglot, versatile specialist, or curious expert. We&#x27;re looking for engineers with 5+ years of experience, strong backend skills, proficiency in languages such as TypeScript, Go, Python, Java, or Rust, and familiarity with Kubernetes, Terraform, ArgoCD, AWS, and GCP.<p>We value curiosity, pragmatism, kindness, autonomy, and people who enjoy learning new technologies.<p>Compensation: $160k\u2013$210k base salary + 10\u201320% profit sharing + full benefits.<p>Contact:\n[henry.anderson@pelo.tech](mailto:henry.anderson@pelo.tech)\n<a href=\"https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;henryanderson9&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;henryanderson9&#x2F;</a>",
+          "created_at": "2026-06-04T17:57:13Z",
+          "created_at_i": 1780595833,
+          "objectID": "48402188",
+          "parent_id": 48357725,
+          "story_id": 48357725,
+          "story_title": "Ask HN: Who is hiring? (June 2026)",
+          "updated_at": "2026-06-04T17:58:32Z"
+        }
+      },
+      "score": 7.0,
+      "matched_terms": [
+        "software engineer",
+        "backend",
+        "python"
+      ],
+      "query": {
+        "text": "software engineer python backend",
+        "role": "software engineer",
+        "skills": [
+          "python",
+          "backend",
+          "infrastructure",
+          "distributed systems"
+        ],
+        "location": "michigan",
+        "remote": false
+      },
+      "rationale": "Matched software engineer, backend, python"
+    },
+    {
+      "job": {
+        "source": "hackernews",
+        "source_id": "48357777",
+        "title": "Head of Engineering",
+        "company": "BIT Capital",
+        "url": "https://news.ycombinator.com/item?id=48357777",
+        "location": null,
+        "description": "BIT Capital | Head of Engineering | Berlin, Germany | ONSITE (2 days/week) | Full-time\nLooking for the key engineering leader to build and scale infrastructure and data platforms for a Berlin asset management fund. We are betting big on AI to drive investment returns and build the best infrastructure to support our high alpha targets (track record >35% p.a. since inception; https://bitcap.com/en/bit-global-technology-opportunities-ai ...).\nYou'll design large-scale data pipelines, evolve our lakehouse architecture, strengthen data quality and observability, and build infrastructure for AI/LLM workflows (agentic scaffolding, RAG, LLMOps, AI for engineering). We are looking for a hands-on technical leader, that is steering initiatives end-to-end while staying deep in implementation.\nWe have our roots in tech entrepreneurship (Jan Beckers), and this mindset still dominates our work culture, even as a regulated financial institution. We are a team of 45 tech- & investment experts with a flat hierarchy, hands-on leadership, fast-paced decisions, and a little nerdy culture as people are actually passionate about their work. Stack: AWS, Databricks/Spark, Python, PostgreSQL, Agentic AI.\nIf the complexity of financial markets excites you as much as the complexity of distributed systems, you'll love it here. Competitive comp, relocation & visa support, stellar team.\nReach out via: marc.thanhaeuser@bitcap.com",
+        "tags": [
+          "who-is-hiring"
+        ],
+        "salary": null,
+        "posted_at": "2026-06-01T15:03:28+00:00",
+        "raw": {
+          "_highlightResult": {
+            "author": {
+              "matchLevel": "none",
+              "matchedWords": [],
+              "value": "marcthanhaeuser"
+            },
+            "comment_text": {
+              "fullyHighlighted": false,
+              "matchLevel": "full",
+              "matchedWords": [
+                "llm",
+                "agentic"
+              ],
+              "value": "BIT Capital | Head of Engineering | Berlin, Germany | ONSITE (2 days/week) | Full-time<p>Looking for the key engineering leader to build and scale infrastructure and data platforms for a Berlin asset management fund. We are betting big on AI to drive investment returns and build the best infrastructure to support our high alpha targets (track record &gt;35% p.a. since inception; <a href=\"https://bitcap.com/en/bit-global-technology-opportunities-ai\" rel=\"nofollow\">https://bitcap.com/en/bit-global-technology-opportunities-ai</a>...).<p>You'll design large-scale data pipelines, evolve our lakehouse architecture, strengthen data quality and observability, and build infrastructure for AI/<em>LLM</em> workflows (<em>agentic</em> scaffolding, RAG, LLMOps, AI for engineering). We are looking for a hands-on technical leader, that is steering initiatives end-to-end while staying deep in implementation.<p>We have our roots in tech entrepreneurship (Jan Beckers), and this mindset still dominates our work culture, even as a regulated financial institution. We are a team of 45 tech- &amp; investment experts with a flat hierarchy, hands-on leadership, fast-paced decisions, and a little nerdy culture as people are actually passionate about their work. Stack: AWS, Databricks/Spark, Python, PostgreSQL, <em>Agentic</em> AI.<p>If the complexity of financial markets excites you as much as the complexity of distributed systems, you'll love it here. Competitive comp, relocation &amp; visa support, stellar team.<p>Reach out via: marc.thanhaeuser@bitcap.com"
+            },
+            "story_title": {
+              "matchLevel": "none",
+              "matchedWords": [],
+              "value": "Ask HN: Who is hiring? (June 2026)"
+            }
+          },
+          "_tags": [
+            "comment",
+            "author_marcthanhaeuser",
+            "story_48357725"
+          ],
+          "author": "marcthanhaeuser",
+          "children": [
+            48360741
+          ],
+          "comment_text": "BIT Capital | Head of Engineering | Berlin, Germany | ONSITE (2 days&#x2F;week) | Full-time<p>Looking for the key engineering leader to build and scale infrastructure and data platforms for a Berlin asset management fund. We are betting big on AI to drive investment returns and build the best infrastructure to support our high alpha targets (track record &gt;35% p.a. since inception; <a href=\"https:&#x2F;&#x2F;bitcap.com&#x2F;en&#x2F;bit-global-technology-opportunities-ai\" rel=\"nofollow\">https:&#x2F;&#x2F;bitcap.com&#x2F;en&#x2F;bit-global-technology-opportunities-ai</a>...).<p>You&#x27;ll design large-scale data pipelines, evolve our lakehouse architecture, strengthen data quality and observability, and build infrastructure for AI&#x2F;LLM workflows (agentic scaffolding, RAG, LLMOps, AI for engineering). We are looking for a hands-on technical leader, that is steering initiatives end-to-end while staying deep in implementation.<p>We have our roots in tech entrepreneurship (Jan Beckers), and this mindset still dominates our work culture, even as a regulated financial institution. We are a team of 45 tech- &amp; investment experts with a flat hierarchy, hands-on leadership, fast-paced decisions, and a little nerdy culture as people are actually passionate about their work. Stack: AWS, Databricks&#x2F;Spark, Python, PostgreSQL, Agentic AI.<p>If the complexity of financial markets excites you as much as the complexity of distributed systems, you&#x27;ll love it here. Competitive comp, relocation &amp; visa support, stellar team.<p>Reach out via: marc.thanhaeuser@bitcap.com",
+          "created_at": "2026-06-01T15:03:28Z",
+          "created_at_i": 1780326208,
+          "objectID": "48357777",
+          "parent_id": 48357725,
+          "story_id": 48357725,
+          "story_title": "Ask HN: Who is hiring? (June 2026)",
+          "updated_at": "2026-06-03T18:00:18Z"
+        }
+      },
+      "score": 6.0,
+      "matched_terms": [
+        "agentic",
+        "llm",
+        "python"
+      ],
+      "query": {
+        "text": "llm agentic",
+        "role": null,
+        "skills": [
+          "llm",
+          "agentic"
+        ],
+        "location": null,
+        "remote": true
+      },
+      "rationale": "Matched agentic, llm, python"
+    },
+    {
+      "job": {
+        "source": "a16z",
+        "source_id": "620632cd-94f6-4cb5-8dea-3c62de1f20f7",
+        "title": "Site Reliability Engineer, Client Platform",
+        "company": "Hadrian",
+        "url": "https://jobs.ashbyhq.com/hadrian-automation/620632cd-94f6-4cb5-8dea-3c62de1f20f7?utm_source=jobs.a16z.com",
+        "location": "Los Angeles, California, United States / Los Angeles, CA",
+        "description": "Infrastructure, IT & Security Site Reliability Engineer (SRE) Engineering 100-1000 employees American Dynamism Enterprise {'id': 'resume:Ansible', 'label': 'Ansible', 'value': 'resume:Ansible'} {'id': 'resume:Intune', 'label': 'Intune', 'value': 'resume:Intune'} {'id': 'resume:Aerospace', 'label': 'Aerospace', 'value': 'resume:Aerospace'} {'id': 'resume:IaC', 'label': 'Infrastructure as Code (IaC)', 'value': 'resume:IaC'} {'id': 'resume:Pulumi', 'label': 'Pulumi', 'value': 'resume:Pulumi'} {'id': 'resume:Full Stack Development', 'label': 'Full Stack Development', 'value': 'resume:Full Stack Development'} {'id': 'resume:Analytics', 'label': 'Analytics', 'value': 'resume:Analytics'} {'id': 'resume:Budgeting', 'label': 'Budgeting', 'value': 'resume:Budgeting'} {'id': 'resume:MDM', 'label': 'MDM', 'value': 'resume:MDM'} {'id': 'resume:Chef', 'label': 'Chef', 'value': 'resume:Chef'} {'id': 'resume:Puppet', 'label': 'Puppet', 'value': 'resume:Puppet'} {'id': 'resume:User Experience', 'label': 'User Experience', 'value': 'resume:User Experience'} {'id': 'resume:Device Management', 'label': 'Device Management', 'value': 'resume:Device Management'} {'id': 'resume:JAMF', 'label': 'JAMF', 'value': 'resume:JAMF'} {'id': 'resume:Department of State', 'label': 'Department of State', 'value': 'resume:Department of State'} {'id': 'resume:Terraform', 'label': 'Terraform', 'value': 'resume:Terraform'} {'id': 'resume:Scalability', 'label': 'Scalability', 'value': 'resume:Scalability'} {'id': 'resume:Robotics', 'label': 'Robotics', 'value': 'resume:Robotics'} {'id': 'resume:Configuration Management', 'label': 'Configuration Management', 'value': 'resume:Configuration Management'} {'id': 'resume:Space Technology', 'label': 'Space Technology', 'value': 'resume:Space Technology'}",
+        "tags": [
+          "Site Reliability Engineer (SRE)",
+          "Engineering",
+          "100-1000 employees",
+          "American Dynamism",
+          "Enterprise",
+          "{'id': 'resume:Ansible', 'label': 'Ansible', 'value': 'resume:Ansible'}",
+          "{'id': 'resume:Intune', 'label': 'Intune', 'value': 'resume:Intune'}",
+          "{'id': 'resume:Aerospace', 'label': 'Aerospace', 'value': 'resume:Aerospace'}",
+          "{'id': 'resume:IaC', 'label': 'Infrastructure as Code (IaC)', 'value': 'resume:IaC'}",
+          "{'id': 'resume:Pulumi', 'label': 'Pulumi', 'value': 'resume:Pulumi'}",
+          "{'id': 'resume:Full Stack Development', 'label': 'Full Stack Development', 'value': 'resume:Full Stack Development'}",
+          "{'id': 'resume:Analytics', 'label': 'Analytics', 'value': 'resume:Analytics'}",
+          "{'id': 'resume:Budgeting', 'label': 'Budgeting', 'value': 'resume:Budgeting'}",
+          "{'id': 'resume:MDM', 'label': 'MDM', 'value': 'resume:MDM'}",
+          "{'id': 'resume:Chef', 'label': 'Chef', 'value': 'resume:Chef'}",
+          "{'id': 'resume:Puppet', 'label': 'Puppet', 'value': 'resume:Puppet'}",
+          "{'id': 'resume:User Experience', 'label': 'User Experience', 'value': 'resume:User Experience'}",
+          "{'id': 'resume:Device Management', 'label': 'Device Management', 'value': 'resume:Device Management'}",
+          "{'id': 'resume:JAMF', 'label': 'JAMF', 'value': 'resume:JAMF'}",
+          "{'id': 'resume:Department of State', 'label': 'Department of State', 'value': 'resume:Department of State'}",
+          "{'id': 'resume:Terraform', 'label': 'Terraform', 'value': 'resume:Terraform'}",
+          "{'id': 'resume:Scalability', 'label': 'Scalability', 'value': 'resume:Scalability'}",
+          "{'id': 'resume:Robotics', 'label': 'Robotics', 'value': 'resume:Robotics'}",
+          "{'id': 'resume:Configuration Management', 'label': 'Configuration Management', 'value': 'resume:Configuration Management'}",
+          "{'id': 'resume:Space Technology', 'label': 'Space Technology', 'value': 'resume:Space Technology'}"
+        ],
+        "salary": "USD 164000-270000 / Year",
+        "posted_at": "2026-06-09T00:00:00+00:00",
+        "raw": {
+          "applyUrl": "https://jobs.ashbyhq.com/hadrian-automation/620632cd-94f6-4cb5-8dea-3c62de1f20f7?utm_source=jobs.a16z.com",
+          "companyDomain": "hadrian.co",
+          "companyLogos": {
+            "manual": {
+              "height": 160,
+              "src": "https://dzh2zima160vx.cloudfront.net/logo/427812c64a1bce81b1e7e7c1257c2ee3_288_160?Expires=1861920000&Signature=jFQPISk0wWz8HhrOjZWCF~GkSaBdpQ~SBkCxoBweBGzvA~IIOWVOjdEzmBfALM9vTavOQgULp~ZXdJxWxbhvsXuUTd~i~JQOR9xKmId3o0CCJNheNdZjur7ImlTZv0G4VBiJvvfFuQLbHwaxkgXHtqDNLSN1h86DaGXMi85KFltQSJKAI8TAeLFhO3niOVu8AL0DuMcETHYA1vEzZ7fXYaME909wMI91j72IJCE2h~QREU~IoCb6cWp393jfFjnwIZpfeIh9zxRKxIBGTHor6AqhQCY6k4GejOgsasbi44Vt4dHzELUw43B9UbDACUmenxFQ~VpEVHibUp2ABhnkfw__&Key-Pair-Id=APKAII5OVX4LZ3WT422Q",
+              "width": 288
+            },
+            "linkedin": {
+              "height": 100,
+              "src": "https://dzh2zima160vx.cloudfront.net/profile/a81b52e5091bd050ec9dbf3a33e3ecf7_100_100?Expires=1893456000&Signature=SIulOnwNGzCQmirwB67jVD9nE-0iyTm8OTTFQRWVKn5k81dEKgb67mTqVN3~D8kHXZiWIGdiqjd~40IcCsuH6FUeZOoi7rPxJyxonhVQ0vXVVhUAf4tYbffWPfaZeHDHcb-1SzUAAyTLLRaIL1sxR0KTf5gn72VaEErdjcsSYYHP0enjbHXOD0LN68uSOERW6~O2-unDPZ2scTIvE588pdiPO8XUCF43uYvriNlIjXIg-r50olbmKjcKcanCleGJ8Vkg2G--NTCGkmkUaABHCZ6RZuWcjFVROPv5x8dlC0gpnacFMpCEXuWYSdobya1tpB7INuo6e~Dyx7aSzG6BgQ__&Key-Pair-Id=APKAII5OVX4LZ3WT422Q",
+              "width": 100
+            }
+          },
+          "companyId": "Hadrian",
+          "companySlug": "hadrian",
+          "companyName": "Hadrian",
+          "companyStaffCount": 420,
+          "considerHosted": false,
+          "departments": [
+            "Infrastructure, IT & Security"
+          ],
+          "jobTypes": [
+            {
+              "id": "site-reliability-engineer",
+              "label": "Site Reliability Engineer (SRE)",
+              "value": "site-reliability-engineer"
+            }
+          ],
+          "jobFunctions": [
+            {
+              "id": "Engineering",
+              "label": "Engineering",
+              "value": "Engineering"
+            }
+          ],
+          "locations": [
+            "Los Angeles, California, United States",
+            "Los Angeles, CA"
+          ],
+          "normalizedLocations": [
+            {
+              "id": "Los Angeles, California",
+              "label": "Los Angeles, California",
+              "value": "Los Angeles, California"
+            },
+            {
+              "id": "Greater Los Angeles Area",
+              "label": "Greater Los Angeles Area",
+              "value": "Greater Los Angeles Area"
+            }
+          ],
+          "salary": {
+            "period": {
+              "label": "Year",
+              "value": "year"
+            },
+            "minValue": 164000,
+            "maxValue": 270000,
+            "currency": {
+              "label": "USD",
+              "value": "USD"
+            },
+            "isOriginal": true
+          },
+          "skills": [
+            {
+              "id": "resume:Ansible",
+              "label": "Ansible",
+              "value": "resume:Ansible"
+            },
+            {
+              "id": "resume:Intune",
+              "label": "Intune",
+              "value": "resume:Intune"
+            },
+            {
+              "id": "resume:Aerospace",
+              "label": "Aerospace",
+              "value": "resume:Aerospace"
+            },
+            {
+              "id": "resume:IaC",
+              "label": "Infrastructure as Code (IaC)",
+              "value": "resume:IaC"
+            },
+            {
+              "id": "resume:Pulumi",
+              "label": "Pulumi",
+              "value": "resume:Pulumi"
+            },
+            {
+              "id": "resume:Full Stack Development",
+              "label": "Full Stack Development",
+              "value": "resume:Full Stack Development"
+            },
+            {
+              "id": "resume:Analytics",
+              "label": "Analytics",
+              "value": "resume:Analytics"
+            },
+            {
+              "id": "resume:Budgeting",
+              "label": "Budgeting",
+              "value": "resume:Budgeting"
+            },
+            {
+              "id": "resume:MDM",
+              "label": "MDM",
+              "value": "resume:MDM"
+            },
+            {
+              "id": "resume:Chef",
+              "label": "Chef",
+              "value": "resume:Chef"
+            },
+            {
+              "id": "resume:Puppet",
+              "label": "Puppet",
+              "value": "resume:Puppet"
+            },
+            {
+              "id": "resume:User Experience",
+              "label": "User Experience",
+              "value": "resume:User Experience"
+            },
+            {
+              "id": "resume:Device Management",
+              "label": "Device Management",
+              "value": "resume:Device Management"
+            },
+            {
+              "id": "resume:JAMF",
+              "label": "JAMF",
+              "value": "resume:JAMF"
+            },
+            {
+              "id": "resume:Department of State",
+              "label": "Department of State",
+              "value": "resume:Department of State"
+            },
+            {
+              "id": "resume:Terraform",
+              "label": "Terraform",
+              "value": "resume:Terraform"
+            },
+            {
+              "id": "resume:Scalability",
+              "label": "Scalability",
+              "value": "resume:Scalability"
+            },
+            {
+              "id": "resume:Robotics",
+              "label": "Robotics",
+              "value": "resume:Robotics"
+            },
+            {
+              "id": "resume:Configuration Management",
+              "label": "Configuration Management",
+              "value": "resume:Configuration Management"
+            },
+            {
+              "id": "resume:Space Technology",
+              "label": "Space Technology",
+              "value": "resume:Space Technology"
+            }
+          ],
+          "requiredSkills": [
+            {
+              "id": "resume:Ansible",
+              "label": "Ansible",
+              "value": "resume:Ansible"
+            },
+            {
+              "id": "resume:Intune",
+              "label": "Intune",
+              "value": "resume:Intune"
+            },
+            {
+              "id": "resume:Aerospace",
+              "label": "Aerospace",
+              "value": "resume:Aerospace"
+            }
+          ],
+          "preferredSkills": [
+            {
+              "id": "resume:IaC",
+              "label": "Infrastructure as Code (IaC)",
+              "value": "resume:IaC"
+            },
+            {
+              "id": "resume:Pulumi",
+              "label": "Pulumi",
+              "value": "resume:Pulumi"
+            },
+            {
+              "id": "resume:Full Stack Development",
+              "label": "Full Stack Development",
+              "value": "resume:Full Stack Development"
+            },
+            {
+              "id": "resume:Analytics",
+              "label": "Analytics",
+              "value": "resume:Analytics"
+            },
+            {
+              "id": "resume:Budgeting",
+              "label": "Budgeting",
+              "value": "resume:Budgeting"
+            },
+            {
+              "id": "resume:MDM",
+              "label": "MDM",
+              "value": "resume:MDM"
+            },
+            {
+              "id": "resume:Chef",
+              "label": "Chef",
+              "value": "resume:Chef"
+            },
+            {
+              "id": "resume:Puppet",
+              "label": "Puppet",
+              "value": "resume:Puppet"
+            },
+            {
+              "id": "resume:User Experience",
+              "label": "User Experience",
+              "value": "resume:User Experience"
+            },
+            {
+              "id": "resume:Device Management",
+              "label": "Device Management",
+              "value": "resume:Device Management"
+            },
+            {
+              "id": "resume:JAMF",
+              "label": "JAMF",
+              "value": "resume:JAMF"
+            },
+            {
+              "id": "resume:Department of State",
+              "label": "Department of State",
+              "value": "resume:Department of State"
+            },
+            {
+              "id": "resume:Terraform",
+              "label": "Terraform",
+              "value": "resume:Terraform"
+            },
+            {
+              "id": "resume:Scalability",
+              "label": "Scalability",
+              "value": "resume:Scalability"
+            },
+            {
+              "id": "resume:Robotics",
+              "label": "Robotics",
+              "value": "resume:Robotics"
+            },
+            {
+              "id": "resume:Configuration Management",
+              "label": "Configuration Management",
+              "value": "resume:Configuration Management"
+            },
+            {
+              "id": "resume:Space Technology",
+              "label": "Space Technology",
+              "value": "resume:Space Technology"
+            }
+          ],
+          "manager": false,
+          "consultant": false,
+          "contractor": false,
+          "considerLevels": [
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "regions": [
+            {
+              "id": "Pacific States",
+              "label": "Pacific States",
+              "value": "Pacific States"
+            },
+            {
+              "id": "West Coast",
+              "label": "West Coast",
+              "value": "West Coast"
+            },
+            {
+              "id": "North America",
+              "label": "North America",
+              "value": "North America"
+            }
+          ],
+          "stages": [
+            {
+              "id": "100-1000 employees",
+              "label": "100-1000 employees",
+              "value": "100-1000 employees"
+            }
+          ],
+          "markets": [
+            {
+              "id": "American Dynamism",
+              "label": "American Dynamism",
+              "value": "American Dynamism"
+            },
+            {
+              "id": "Enterprise",
+              "label": "Enterprise",
+              "value": "Enterprise"
+            }
+          ],
+          "timeStamp": "2026-06-09T00:00:00Z",
+          "title": "Site Reliability Engineer, Client Platform",
+          "url": "https://jobs.ashbyhq.com/hadrian-automation/620632cd-94f6-4cb5-8dea-3c62de1f20f7",
+          "jobId": "620632cd-94f6-4cb5-8dea-3c62de1f20f7",
+          "remote": false,
+          "hybrid": false,
+          "scores": {
+            "score": 1001.1715591286343,
+            "matchScore": 0,
+            "ageScore": 0.9715591286342593,
+            "richnessScore": 2
+          },
+          "atsJobs": [],
+          "matchingTalent": {
+            "count": 0,
+            "matches": []
+          },
+          "jobSeniorities": [
+            {
+              "id": "mid",
+              "label": "Mid",
+              "value": "mid"
+            }
+          ],
+          "jobSeniorityIds": [
+            "mid"
+          ],
+          "isFeatured": false
+        }
+      },
+      "score": 5.25,
+      "matched_terms": [
+        "security",
+        "full stack",
+        "infrastructure"
+      ],
+      "query": {
+        "text": "software engineer python backend",
+        "role": "software engineer",
+        "skills": [
+          "python",
+          "backend",
+          "infrastructure",
+          "distributed systems"
+        ],
+        "location": "michigan",
+        "remote": false
+      },
+      "rationale": "Matched security, full stack, infrastructure"
+    },
+    {
+      "job": {
+        "source": "yc",
+        "source_id": "80177",
+        "title": "Senior Software Engineer  ",
+        "company": "Method Financial",
+        "url": "https://www.ycombinator.com/companies/method-financial/jobs/XQmFunZ-senior-software-engineer",
+        "location": "New York, NY, US / Austin, TX, US / Washington, DC, US",
+        "description": "Financial connectivity API for consumer liabilities Engineering Full stack",
+        "tags": [
+          "Full-time",
+          "Engineering",
+          "Full stack"
+        ],
+        "salary": "$185K - $225K",
+        "posted_at": null,
+        "raw": {
+          "id": 80177,
+          "title": "Senior Software Engineer  ",
+          "url": "/companies/method-financial/jobs/XQmFunZ-senior-software-engineer",
+          "applyUrl": "https://account.ycombinator.com/authenticate?continue=https%3A%2F%2Fwww.workatastartup.com%2Fapplication%3Fsignup_job_id%3D80177&defaults%5BsignUpActive%5D=true",
+          "location": "New York, NY, US / Austin, TX, US / Washington, DC, US",
+          "askUs": true,
+          "type": "Full-time",
+          "role": "eng",
+          "roleSpecificType": "Full stack",
+          "prettyRole": "Engineering",
+          "salaryRange": "$185K - $225K",
+          "equityRange": "",
+          "minExperience": "3+ years",
+          "minSchoolYear": null,
+          "visa": "Will sponsor",
+          "skills": [],
+          "isIncomplete": false,
+          "companyUrl": "/companies/method-financial",
+          "companyLogoUrl": "https://bookface-images.s3.amazonaws.com/small_logos/8fe82c6fb65a41c32500091074e518f40adc2538.png",
+          "companyName": "Method Financial",
+          "companyBatchName": "S19",
+          "companyOneLiner": "Financial connectivity API for consumer liabilities",
+          "hiringManager": null,
+          "createdAt": "10 months",
+          "lastActive": "about 6 hours",
+          "ctaText": "Apply",
+          "ctaUrl": "https://account.ycombinator.com/authenticate?continue=https%3A%2F%2Fwww.workatastartup.com%2Fapplication%3Fsignup_job_id%3D80177&defaults%5BsignUpActive%5D=true&defaults%5Bwaas_company%5D=12545"
+        }
+      },
+      "score": 5.25,
+      "matched_terms": [
+        "software engineer",
+        "full stack"
+      ],
+      "query": {
+        "text": "research scientist machine learning python",
+        "role": "research scientist",
+        "skills": [
+          "machine learning",
+          "research",
+          "python",
+          "llm"
+        ],
+        "location": "michigan",
+        "remote": false
+      },
+      "rationale": "Matched software engineer, full stack"
+    },
+    {
+      "job": {
+        "source": "jobspy:linkedin",
+        "source_id": "li-4424701380",
+        "title": "Freelance Machine Learning Engineer",
+        "company": "Mindrift",
+        "url": "https://www.linkedin.com/jobs/view/4424701380",
+        "location": "Michigan, United States",
+        "description": "",
+        "tags": [],
+        "salary": null,
+        "posted_at": "2026-06-05T00:00:00",
+        "raw": {
+          "id": "li-4424701380",
+          "site": "linkedin",
+          "job_url": "https://www.linkedin.com/jobs/view/4424701380",
+          "job_url_direct": null,
+          "title": "Freelance Machine Learning Engineer",
+          "company": "Mindrift",
+          "location": "Michigan, United States",
+          "date_posted": "2026-06-05",
+          "job_type": null,
+          "salary_source": null,
+          "interval": null,
+          "min_amount": null,
+          "max_amount": null,
+          "currency": null,
+          "is_remote": false,
+          "job_level": "",
+          "job_function": null,
+          "listing_type": null,
+          "emails": null,
+          "description": null,
+          "company_industry": null,
+          "company_url": "https://www.linkedin.com/company/mindrift-ai",
+          "company_logo": null,
+          "company_url_direct": null,
+          "company_addresses": null,
+          "company_num_employees": null,
+          "company_revenue": null,
+          "company_description": null,
+          "skills": null,
+          "experience_range": null,
+          "company_rating": null,
+          "company_reviews_count": null,
+          "vacancy_count": null,
+          "work_from_home_type": null
+        }
+      },
+      "score": 5.0,
+      "matched_terms": [
+        "machine learning engineer",
+        "machine learning"
+      ],
+      "query": {
+        "text": "machine learning engineer python llm",
+        "role": "machine learning engineer",
+        "skills": [
+          "machine learning",
+          "python",
+          "llm",
+          "agentic memory"
+        ],
+        "location": "michigan",
+        "remote": false
+      },
+      "rationale": "Matched machine learning engineer, machine learning"
+    },
+    {
+      "job": {
+        "source": "a16z",
+        "source_id": "5159698007",
+        "title": "GNC Engineer",
+        "company": "Anduril Industries",
+        "url": "https://boards.greenhouse.io/andurilindustries/jobs/5159698007?gh_jid=5159698007",
+        "location": "Seattle, Washington, United States",
+        "description": "Tactical Recon & Strike Engineer Engineering 1000+ employees Growth American Dynamism Enterprise {'id': 'resume:Vehicles', 'label': 'Vehicles', 'value': 'resume:Vehicles'} {'id': 'resume:Radar', 'label': 'Radar', 'value': 'resume:Radar'} {'id': 'resume:Mobile', 'label': 'Mobile', 'value': 'resume:Mobile'} {'id': 'resume:3D', 'label': '3D', 'value': 'resume:3D'} {'id': 'resume:Front-end Development', 'label': 'Frontend Web Development', 'value': 'resume:Front-end Development'} {'id': 'resume:Physics', 'label': 'Physics', 'value': 'resume:Physics'} {'id': 'resume:dynamic system', 'label': 'Dynamic Systems', 'value': 'resume:dynamic system'} {'id': 'resume:Optical Flow', 'label': 'Optical Flow', 'value': 'resume:Optical Flow'} {'id': 'resume:Kalman filtering', 'label': 'Kalman filtering', 'value': 'resume:Kalman filtering'} {'id': 'resume:Aerospace', 'label': 'Aerospace', 'value': 'resume:Aerospace'} {'id': 'resume:Information Retrieval', 'label': 'Information Retrieval', 'value': 'resume:Information Retrieval'} {'id': 'resume:Test Automation', 'label': 'Test Automation', 'value': 'resume:Test Automation'} {'id': 'resume:Sensors', 'label': 'Sensors', 'value': 'resume:Sensors'} {'id': 'resume:Modeling', 'label': 'Modeling', 'value': 'resume:Modeling'} {'id': 'resume:Top Secret', 'label': 'Clearance', 'value': 'resume:Top Secret'} {'id': 'resume:Python', 'label': 'Python', 'value': 'resume:Python'} {'id': 'resume:Operating Systems', 'label': 'Operating Systems', 'value': 'resume:Operating Systems'} {'id': 'resume:GPS', 'label': 'GPS', 'value': 'resume:GPS'} {'id': 'resume:CI/CD', 'label': 'CI/CD', 'value': 'resume:CI/CD'} {'id': 'resume:Algorithms', 'label': 'Algorithms', 'value': 'resume:Algorithms'} {'id': 'resume:Sensor Fusion', 'label': 'Sensor Fusion', 'value': 'resume:Sensor Fusion'} {'id': 'resume:gnc', 'label': 'gnc', 'value': 'resume:gnc'} {'id': 'resume:Fusion', 'label': 'Fusion', 'value': 'resume:Fusion'} {'id': 'resume:C/C++', 'label': 'C/C++', 'value': 'resume:C/C++'} {'id': 'resume:Networking', 'label': 'Networking Technologies', 'value': 'resume:Networking'} {'id': 'resume:Ideation', 'label': 'Ideation', 'value': 'resume:Ideation'} {'id': 'resume:Quality Assurance', 'label': 'Quality Assurance', 'value': 'resume:Quality Assurance'} {'id': 'resume:Embedded Systems', 'label': 'Embedded Systems', 'value': 'resume:Embedded Systems'} {'id': 'resume:Grant Writing', 'label': 'Grant Writing', 'value': 'resume:Grant Writing'} {'id': 'resume:Computer Vision', 'label': 'Computer Vision', 'value': 'resume:Computer Vision'} {'id': 'resume:Git', 'label': 'Git', 'value': 'resume:Git'} {'id': 'resume:Drones', 'label': 'Drones', 'value': 'resume:Drones'} {'id': 'resume:Robotics', 'label': 'Robotics', 'value': 'resume:Robotics'} {'id': 'resume:Equity', 'label': 'Equity', 'value': 'resume:Equity'} {'id': 'resume:Localization', 'label': 'Localization', 'value': 'resume:Localization'} {'id': 'resume:Artificial Intelligence', 'label': 'Artificial Intelligence', 'value': 'resume:Artificial Intelligence'}",
+        "tags": [
+          "Engineer",
+          "Engineering",
+          "1000+ employees",
+          "Growth",
+          "American Dynamism",
+          "Enterprise",
+          "{'id': 'resume:Vehicles', 'label': 'Vehicles', 'value': 'resume:Vehicles'}",
+          "{'id': 'resume:Radar', 'label': 'Radar', 'value': 'resume:Radar'}",
+          "{'id': 'resume:Mobile', 'label': 'Mobile', 'value': 'resume:Mobile'}",
+          "{'id': 'resume:3D', 'label': '3D', 'value': 'resume:3D'}",
+          "{'id': 'resume:Front-end Development', 'label': 'Frontend Web Development', 'value': 'resume:Front-end Development'}",
+          "{'id': 'resume:Physics', 'label': 'Physics', 'value': 'resume:Physics'}",
+          "{'id': 'resume:dynamic system', 'label': 'Dynamic Systems', 'value': 'resume:dynamic system'}",
+          "{'id': 'resume:Optical Flow', 'label': 'Optical Flow', 'value': 'resume:Optical Flow'}",
+          "{'id': 'resume:Kalman filtering', 'label': 'Kalman filtering', 'value': 'resume:Kalman filtering'}",
+          "{'id': 'resume:Aerospace', 'label': 'Aerospace', 'value': 'resume:Aerospace'}",
+          "{'id': 'resume:Information Retrieval', 'label': 'Information Retrieval', 'value': 'resume:Information Retrieval'}",
+          "{'id': 'resume:Test Automation', 'label': 'Test Automation', 'value': 'resume:Test Automation'}",
+          "{'id': 'resume:Sensors', 'label': 'Sensors', 'value': 'resume:Sensors'}",
+          "{'id': 'resume:Modeling', 'label': 'Modeling', 'value': 'resume:Modeling'}",
+          "{'id': 'resume:Top Secret', 'label': 'Clearance', 'value': 'resume:Top Secret'}",
+          "{'id': 'resume:Python', 'label': 'Python', 'value': 'resume:Python'}",
+          "{'id': 'resume:Operating Systems', 'label': 'Operating Systems', 'value': 'resume:Operating Systems'}",
+          "{'id': 'resume:GPS', 'label': 'GPS', 'value': 'resume:GPS'}",
+          "{'id': 'resume:CI/CD', 'label': 'CI/CD', 'value': 'resume:CI/CD'}",
+          "{'id': 'resume:Algorithms', 'label': 'Algorithms', 'value': 'resume:Algorithms'}",
+          "{'id': 'resume:Sensor Fusion', 'label': 'Sensor Fusion', 'value': 'resume:Sensor Fusion'}",
+          "{'id': 'resume:gnc', 'label': 'gnc', 'value': 'resume:gnc'}",
+          "{'id': 'resume:Fusion', 'label': 'Fusion', 'value': 'resume:Fusion'}",
+          "{'id': 'resume:C/C++', 'label': 'C/C++', 'value': 'resume:C/C++'}",
+          "{'id': 'resume:Networking', 'label': 'Networking Technologies', 'value': 'resume:Networking'}",
+          "{'id': 'resume:Ideation', 'label': 'Ideation', 'value': 'resume:Ideation'}",
+          "{'id': 'resume:Quality Assurance', 'label': 'Quality Assurance', 'value': 'resume:Quality Assurance'}",
+          "{'id': 'resume:Embedded Systems', 'label': 'Embedded Systems', 'value': 'resume:Embedded Systems'}",
+          "{'id': 'resume:Grant Writing', 'label': 'Grant Writing', 'value': 'resume:Grant Writing'}",
+          "{'id': 'resume:Computer Vision', 'label': 'Computer Vision', 'value': 'resume:Computer Vision'}",
+          "{'id': 'resume:Git', 'label': 'Git', 'value': 'resume:Git'}",
+          "{'id': 'resume:Drones', 'label': 'Drones', 'value': 'resume:Drones'}",
+          "{'id': 'resume:Robotics', 'label': 'Robotics', 'value': 'resume:Robotics'}",
+          "{'id': 'resume:Equity', 'label': 'Equity', 'value': 'resume:Equity'}",
+          "{'id': 'resume:Localization', 'label': 'Localization', 'value': 'resume:Localization'}",
+          "{'id': 'resume:Artificial Intelligence', 'label': 'Artificial Intelligence', 'value': 'resume:Artificial Intelligence'}"
+        ],
+        "salary": "USD 166000-220000 / Year",
+        "posted_at": "2026-06-09T09:59:36+00:00",
+        "raw": {
+          "applyUrl": "https://boards.greenhouse.io/andurilindustries/jobs/5159698007?gh_jid=5159698007",
+          "companyDomain": "anduril.com",
+          "companyLogos": {
+            "manual": {
+              "height": 160,
+              "src": "https://dzh2zima160vx.cloudfront.net/logo/1d88ae975c1da94cefaeb3234d6fb00f_238_160?Expires=1861920000&Signature=nPYp1JlJZNMHspk2VuS1aXOsrIHWSiYZCa1mo5aQgLIbL2xCLdDD0ah74~4a2t7rD6I3KgPurNlAc4iivudXNrOvYEM3gBjnaYrb-FS4aQoPfSZUDEL56HNS3xR2~KWzMgtFBD-gLwwNyoJImP71XarhrC7UdIGjzixjHWuwUp08n5Dls4mVWBB4bK0cjkkdX2wduKzAHNXcoP5biK8ePSRbs35xOtf-JKiP~NAOIfEkXGiFdKvH3cWcr2r30i50XEHYS18vL~3BHQzUw68ImjHN0XlvZdNfeZbvDXnZlHHiE1ZkDNDkzgPvN09FOPq4DmsckqZHFyVD74suwVDXmA__&Key-Pair-Id=APKAII5OVX4LZ3WT422Q",
+              "width": 238
+            },
+            "linkedin": {
+              "height": 100,
+              "src": "https://dzh2zima160vx.cloudfront.net/profile/affcb7816a395c687eabbfcc9ef2c1fc_100_100?Expires=1893456000&Signature=HBfcXNZlmxmF41oyE3r0iFOR1S~AdV5j2oNjQTXHs-rahW5doix2SeEi9gFjDNG9~qui7RW7O~J4aNy-konDrH1HzMmxa~X5j~mYgTmZVS6DXRhlQUwBc-mqsZxQtQbxN7tlbt5eQ7My0IPlsCqja-3FuEQT9CBznVOWbpvtUGwR2fHAQUMLBuozhvDDZtOQCgQSeslstcLZFwiZG5hhu-zeKNtPJXQbLPeoMOy38Be2J1Dx2lytf7sqE8q2eO9uO4n~1hBXf9u4iUuMI7ywOUeLAIBUUviWz~BdumFlK99v~zJUZYSGC~m68CPMM4AfPD5dI7cwjflPJ1s79QtBbg__&Key-Pair-Id=APKAII5OVX4LZ3WT422Q",
+              "width": 100
+            }
+          },
+          "companyId": "Anduril Industries",
+          "companySlug": "anduril-industries",
+          "companyName": "Anduril Industries",
+          "companyStaffCount": 8279,
+          "considerHosted": false,
+          "departments": [
+            "Tactical Recon & Strike"
+          ],
+          "jobTypes": [
+            {
+              "id": "engineer",
+              "label": "Engineer",
+              "value": "engineer"
+            }
+          ],
+          "jobFunctions": [
+            {
+              "id": "Engineering",
+              "label": "Engineering",
+              "value": "Engineering"
+            }
+          ],
+          "locations": [
+            "Seattle, Washington, United States"
+          ],
+          "normalizedLocations": [
+            {
+              "id": "Seattle, Washington",
+              "label": "Seattle, Washington",
+              "value": "Seattle, Washington"
+            }
+          ],
+          "salary": {
+            "period": {
+              "label": "Year",
+              "value": "year"
+            },
+            "minValue": 166000,
+            "maxValue": 220000,
+            "currency": {
+              "label": "USD",
+              "value": "USD"
+            },
+            "isOriginal": true
+          },
+          "skills": [
+            {
+              "id": "resume:Vehicles",
+              "label": "Vehicles",
+              "value": "resume:Vehicles"
+            },
+            {
+              "id": "resume:Radar",
+              "label": "Radar",
+              "value": "resume:Radar"
+            },
+            {
+              "id": "resume:Mobile",
+              "label": "Mobile",
+              "value": "resume:Mobile"
+            },
+            {
+              "id": "resume:3D",
+              "label": "3D",
+              "value": "resume:3D"
+            },
+            {
+              "id": "resume:Front-end Development",
+              "label": "Frontend Web Development",
+              "value": "resume:Front-end Development"
+            },
+            {
+              "id": "resume:Physics",
+              "label": "Physics",
+              "value": "resume:Physics"
+            },
+            {
+              "id": "resume:dynamic system",
+              "label": "Dynamic Systems",
+              "value": "resume:dynamic system"
+            },
+            {
+              "id": "resume:Optical Flow",
+              "label": "Optical Flow",
+              "value": "resume:Optical Flow"
+            },
+            {
+              "id": "resume:Kalman filtering",
+              "label": "Kalman filtering",
+              "value": "resume:Kalman filtering"
+            },
+            {
+              "id": "resume:Aerospace",
+              "label": "Aerospace",
+              "value": "resume:Aerospace"
+            },
+            {
+              "id": "resume:Information Retrieval",
+              "label": "Information Retrieval",
+              "value": "resume:Information Retrieval"
+            },
+            {
+              "id": "resume:Test Automation",
+              "label": "Test Automation",
+              "value": "resume:Test Automation"
+            },
+            {
+              "id": "resume:Sensors",
+              "label": "Sensors",
+              "value": "resume:Sensors"
+            },
+            {
+              "id": "resume:Modeling",
+              "label": "Modeling",
+              "value": "resume:Modeling"
+            },
+            {
+              "id": "resume:Top Secret",
+              "label": "Clearance",
+              "value": "resume:Top Secret"
+            },
+            {
+              "id": "resume:Python",
+              "label": "Python",
+              "value": "resume:Python"
+            },
+            {
+              "id": "resume:Operating Systems",
+              "label": "Operating Systems",
+              "value": "resume:Operating Systems"
+            },
+            {
+              "id": "resume:GPS",
+              "label": "GPS",
+              "value": "resume:GPS"
+            },
+            {
+              "id": "resume:CI/CD",
+              "label": "CI/CD",
+              "value": "resume:CI/CD"
+            },
+            {
+              "id": "resume:Algorithms",
+              "label": "Algorithms",
+              "value": "resume:Algorithms"
+            },
+            {
+              "id": "resume:Sensor Fusion",
+              "label": "Sensor Fusion",
+              "value": "resume:Sensor Fusion"
+            },
+            {
+              "id": "resume:gnc",
+              "label": "gnc",
+              "value": "resume:gnc"
+            },
+            {
+              "id": "resume:Fusion",
+              "label": "Fusion",
+              "value": "resume:Fusion"
+            },
+            {
+              "id": "resume:C/C++",
+              "label": "C/C++",
+              "value": "resume:C/C++"
+            },
+            {
+              "id": "resume:Networking",
+              "label": "Networking Technologies",
+              "value": "resume:Networking"
+            },
+            {
+              "id": "resume:Ideation",
+              "label": "Ideation",
+              "value": "resume:Ideation"
+            },
+            {
+              "id": "resume:Quality Assurance",
+              "label": "Quality Assurance",
+              "value": "resume:Quality Assurance"
+            },
+            {
+              "id": "resume:Embedded Systems",
+              "label": "Embedded Systems",
+              "value": "resume:Embedded Systems"
+            },
+            {
+              "id": "resume:Grant Writing",
+              "label": "Grant Writing",
+              "value": "resume:Grant Writing"
+            },
+            {
+              "id": "resume:Computer Vision",
+              "label": "Computer Vision",
+              "value": "resume:Computer Vision"
+            },
+            {
+              "id": "resume:Git",
+              "label": "Git",
+              "value": "resume:Git"
+            },
+            {
+              "id": "resume:Drones",
+              "label": "Drones",
+              "value": "resume:Drones"
+            },
+            {
+              "id": "resume:Robotics",
+              "label": "Robotics",
+              "value": "resume:Robotics"
+            },
+            {
+              "id": "resume:Equity",
+              "label": "Equity",
+              "value": "resume:Equity"
+            },
+            {
+              "id": "resume:Localization",
+              "label": "Localization",
+              "value": "resume:Localization"
+            },
+            {
+              "id": "resume:Artificial Intelligence",
+              "label": "Artificial Intelligence",
+              "value": "resume:Artificial Intelligence"
+            }
+          ],
+          "requiredSkills": [
+            {
+              "id": "resume:Vehicles",
+              "label": "Vehicles",
+              "value": "resume:Vehicles"
+            },
+            {
+              "id": "resume:Radar",
+              "label": "Radar",
+              "value": "resume:Radar"
+            },
+            {
+              "id": "resume:Mobile",
+              "label": "Mobile",
+              "value": "resume:Mobile"
+            }
+          ],
+          "preferredSkills": [
+            {
+              "id": "resume:3D",
+              "label": "3D",
+              "value": "resume:3D"
+            },
+            {
+              "id": "resume:Front-end Development",
+              "label": "Frontend Web Development",
+              "value": "resume:Front-end Development"
+            },
+            {
+              "id": "resume:Physics",
+              "label": "Physics",
+              "value": "resume:Physics"
+            },
+            {
+              "id": "resume:dynamic system",
+              "label": "Dynamic Systems",
+              "value": "resume:dynamic system"
+            },
+            {
+              "id": "resume:Optical Flow",
+              "label": "Optical Flow",
+              "value": "resume:Optical Flow"
+            },
+            {
+              "id": "resume:Kalman filtering",
+              "label": "Kalman filtering",
+              "value": "resume:Kalman filtering"
+            },
+            {
+              "id": "resume:Aerospace",
+              "label": "Aerospace",
+              "value": "resume:Aerospace"
+            },
+            {
+              "id": "resume:Information Retrieval",
+              "label": "Information Retrieval",
+              "value": "resume:Information Retrieval"
+            },
+            {
+              "id": "resume:Test Automation",
+              "label": "Test Automation",
+              "value": "resume:Test Automation"
+            },
+            {
+              "id": "resume:Sensors",
+              "label": "Sensors",
+              "value": "resume:Sensors"
+            },
+            {
+              "id": "resume:Modeling",
+              "label": "Modeling",
+              "value": "resume:Modeling"
+            },
+            {
+              "id": "resume:Top Secret",
+              "label": "Clearance",
+              "value": "resume:Top Secret"
+            },
+            {
+              "id": "resume:Python",
+              "label": "Python",
+              "value": "resume:Python"
+            },
+            {
+              "id": "resume:Operating Systems",
+              "label": "Operating Systems",
+              "value": "resume:Operating Systems"
+            },
+            {
+              "id": "resume:GPS",
+              "label": "GPS",
+              "value": "resume:GPS"
+            },
+            {
+              "id": "resume:CI/CD",
+              "label": "CI/CD",
+              "value": "resume:CI/CD"
+            },
+            {
+              "id": "resume:Algorithms",
+              "label": "Algorithms",
+              "value": "resume:Algorithms"
+            },
+            {
+              "id": "resume:Sensor Fusion",
+              "label": "Sensor Fusion",
+              "value": "resume:Sensor Fusion"
+            },
+            {
+              "id": "resume:gnc",
+              "label": "gnc",
+              "value": "resume:gnc"
+            },
+            {
+              "id": "resume:Fusion",
+              "label": "Fusion",
+              "value": "resume:Fusion"
+            },
+            {
+              "id": "resume:C/C++",
+              "label": "C/C++",
+              "value": "resume:C/C++"
+            },
+            {
+              "id": "resume:Networking",
+              "label": "Networking Technologies",
+              "value": "resume:Networking"
+            },
+            {
+              "id": "resume:Ideation",
+              "label": "Ideation",
+              "value": "resume:Ideation"
+            },
+            {
+              "id": "resume:Quality Assurance",
+              "label": "Quality Assurance",
+              "value": "resume:Quality Assurance"
+            },
+            {
+              "id": "resume:Embedded Systems",
+              "label": "Embedded Systems",
+              "value": "resume:Embedded Systems"
+            },
+            {
+              "id": "resume:Grant Writing",
+              "label": "Grant Writing",
+              "value": "resume:Grant Writing"
+            },
+            {
+              "id": "resume:Computer Vision",
+              "label": "Computer Vision",
+              "value": "resume:Computer Vision"
+            },
+            {
+              "id": "resume:Git",
+              "label": "Git",
+              "value": "resume:Git"
+            },
+            {
+              "id": "resume:Drones",
+              "label": "Drones",
+              "value": "resume:Drones"
+            },
+            {
+              "id": "resume:Robotics",
+              "label": "Robotics",
+              "value": "resume:Robotics"
+            },
+            {
+              "id": "resume:Equity",
+              "label": "Equity",
+              "value": "resume:Equity"
+            },
+            {
+              "id": "resume:Localization",
+              "label": "Localization",
+              "value": "resume:Localization"
+            },
+            {
+              "id": "resume:Artificial Intelligence",
+              "label": "Artificial Intelligence",
+              "value": "resume:Artificial Intelligence"
+            }
+          ],
+          "manager": false,
+          "consultant": false,
+          "contractor": false,
+          "considerLevels": [
+            [
+              5,
+              6
+            ],
+            [
+              7,
+              8
+            ]
+          ],
+          "minYearsExp": 8,
+          "regions": [
+            {
+              "id": "Pacific States",
+              "label": "Pacific States",
+              "value": "Pacific States"
+            },
+            {
+              "id": "West Coast",
+              "label": "West Coast",
+              "value": "West Coast"
+            },
+            {
+              "id": "North America",
+              "label": "North America",
+              "value": "North America"
+            },
+            {
+              "id": "Northwest",
+              "label": "Northwest",
+              "value": "Northwest"
+            }
+          ],
+          "stages": [
+            {
+              "id": "1000+ employees",
+              "label": "1000+ employees",
+              "value": "1000+ employees"
+            },
+            {
+              "id": "Growth",
+              "label": "Growth",
+              "value": "Growth"
+            }
+          ],
+          "fundingLV": {
+            "id": "Growth",
+            "label": "Growth",
+            "value": "Growth"
+          },
+          "markets": [
+            {
+              "id": "American Dynamism",
+              "label": "American Dynamism",
+              "value": "American Dynamism"
+            },
+            {
+              "id": "Enterprise",
+              "label": "Enterprise",
+              "value": "Enterprise"
+            }
+          ],
+          "timeStamp": "2026-06-09T09:59:36Z",
+          "title": "GNC Engineer",
+          "url": "https://boards.greenhouse.io/andurilindustries/jobs/5159698007?gh_jid=5159698007",
+          "jobId": "5159698007",
+          "remote": false,
+          "hybrid": false,
+          "scores": {
+            "score": 1001.1856226782419,
+            "matchScore": 0,
+            "ageScore": 0.9856226782418982,
+            "richnessScore": 2
+          },
+          "atsJobs": [],
+          "matchingTalent": {
+            "count": 0,
+            "matches": []
+          },
+          "jobSeniorities": [
+            {
+              "id": "mid",
+              "label": "Mid",
+              "value": "mid"
+            }
+          ],
+          "jobSeniorityIds": [
+            "mid"
+          ],
+          "isFeatured": false
+        }
+      },
+      "score": 4.25,
+      "matched_terms": [
+        "frontend",
+        "python"
+      ],
+      "query": {
+        "text": "research scientist machine learning python",
+        "role": "research scientist",
+        "skills": [
+          "machine learning",
+          "research",
+          "python",
+          "llm"
+        ],
+        "location": "michigan",
+        "remote": false
+      },
+      "rationale": "Matched frontend, python"
+    },
+    {
+      "job": {
+        "source": "yc",
+        "source_id": "92981",
+        "title": "Forward Deployed ML Engineer",
+        "company": "Triomics",
+        "url": "https://www.ycombinator.com/companies/triomics/jobs/NJOdpdY-forward-deployed-ml-engineer",
+        "location": "New York, NY, US",
+        "description": "AI Agents for Oncology EHRs Engineering Machine learning",
+        "tags": [
+          "Full-time",
+          "Engineering",
+          "Machine learning"
+        ],
+        "salary": "$170K - $190K",
+        "posted_at": null,
+        "raw": {
+          "id": 92981,
+          "title": "Forward Deployed ML Engineer",
+          "url": "/companies/triomics/jobs/NJOdpdY-forward-deployed-ml-engineer",
+          "applyUrl": "https://account.ycombinator.com/authenticate?continue=https%3A%2F%2Fwww.workatastartup.com%2Fapplication%3Fsignup_job_id%3D92981&defaults%5BsignUpActive%5D=true",
+          "location": "New York, NY, US",
+          "askUs": true,
+          "type": "Full-time",
+          "role": "eng",
+          "roleSpecificType": "Machine learning",
+          "prettyRole": "Engineering",
+          "salaryRange": "$170K - $190K",
+          "equityRange": "",
+          "minExperience": "1+ years",
+          "minSchoolYear": null,
+          "visa": "US citizen/visa only",
+          "skills": [],
+          "isIncomplete": false,
+          "companyUrl": "/companies/triomics",
+          "companyLogoUrl": "https://bookface-images.s3.amazonaws.com/small_logos/c8830f0fbee8d57566664d25f05fa802119f757a.png",
+          "companyName": "Triomics",
+          "companyBatchName": "W21",
+          "companyOneLiner": "AI Agents for Oncology EHRs",
+          "hiringManager": null,
+          "createdAt": "about 2 months",
+          "lastActive": "2 days",
+          "ctaText": "Apply",
+          "ctaUrl": "https://account.ycombinator.com/authenticate?continue=https%3A%2F%2Fwww.workatastartup.com%2Fapplication%3Fsignup_job_id%3D92981&defaults%5BsignUpActive%5D=true&defaults%5Bwaas_company%5D=23539"
+        }
+      },
+      "score": 4.25,
+      "matched_terms": [
+        "agents",
+        "machine learning"
+      ],
+      "query": {
+        "text": "research scientist machine learning python",
+        "role": "research scientist",
+        "skills": [
+          "machine learning",
+          "research",
+          "python",
+          "llm"
+        ],
+        "location": "michigan",
+        "remote": false
+      },
+      "rationale": "Matched agents, machine learning"
+    },
+    {
+      "job": {
+        "source": "a16z",
+        "source_id": "cc18572e-fa2f-46cb-94e9-fcac492314f8",
+        "title": "Forward Deployed Engineer (Asia-Pacific)",
+        "company": "Cape",
+        "url": "https://jobs.ashbyhq.com/Cape/cc18572e-fa2f-46cb-94e9-fcac492314f8?utm_source=jobs.a16z.com",
+        "location": "Washington, DC, United States / Washington, DC / New York, NY",
+        "description": "Engineering Engineer Engineering 100-1000 employees Growth {'id': 'resume:Mobile', 'label': 'Mobile', 'value': 'resume:Mobile'} {'id': 'resume:Prioritization Skills', 'label': 'Prioritization Skills', 'value': 'resume:Prioritization Skills'} {'id': 'resume:Privacy', 'label': 'Privacy', 'value': 'resume:Privacy'} {'id': 'resume:LEE Advocacy', 'label': 'Advocacy', 'value': 'resume:LEE Advocacy'} {'id': 'resume:Business Development', 'label': 'Business Development', 'value': 'resume:Business Development'} {'id': 'resume:Movement', 'label': 'Movement', 'value': 'resume:Movement'} {'id': 'resume:C', 'label': 'C', 'value': 'resume:C'} {'id': 'resume:Equity', 'label': 'Equity', 'value': 'resume:Equity'} {'id': 'resume:Mentorship', 'label': 'Mentorship', 'value': 'resume:Mentorship'} {'id': 'resume:National Security', 'label': 'National Security', 'value': 'resume:National Security'} {'id': 'resume:Onboarding', 'label': 'Onboarding', 'value': 'resume:Onboarding'} {'id': 'resume:Artificial Intelligence', 'label': 'Artificial Intelligence', 'value': 'resume:Artificial Intelligence'} {'id': 'resume:Wireless', 'label': 'Wireless', 'value': 'resume:Wireless'} {'id': 'resume:Luxury', 'label': 'Luxury', 'value': 'resume:Luxury'} {'id': 'resume:Service', 'label': 'Service', 'value': 'resume:Service'} {'id': 'resume:Infrastructure', 'label': 'Infrastructure', 'value': 'resume:Infrastructure'}",
+        "tags": [
+          "Engineer",
+          "Engineering",
+          "100-1000 employees",
+          "Growth",
+          "{'id': 'resume:Mobile', 'label': 'Mobile', 'value': 'resume:Mobile'}",
+          "{'id': 'resume:Prioritization Skills', 'label': 'Prioritization Skills', 'value': 'resume:Prioritization Skills'}",
+          "{'id': 'resume:Privacy', 'label': 'Privacy', 'value': 'resume:Privacy'}",
+          "{'id': 'resume:LEE Advocacy', 'label': 'Advocacy', 'value': 'resume:LEE Advocacy'}",
+          "{'id': 'resume:Business Development', 'label': 'Business Development', 'value': 'resume:Business Development'}",
+          "{'id': 'resume:Movement', 'label': 'Movement', 'value': 'resume:Movement'}",
+          "{'id': 'resume:C', 'label': 'C', 'value': 'resume:C'}",
+          "{'id': 'resume:Equity', 'label': 'Equity', 'value': 'resume:Equity'}",
+          "{'id': 'resume:Mentorship', 'label': 'Mentorship', 'value': 'resume:Mentorship'}",
+          "{'id': 'resume:National Security', 'label': 'National Security', 'value': 'resume:National Security'}",
+          "{'id': 'resume:Onboarding', 'label': 'Onboarding', 'value': 'resume:Onboarding'}",
+          "{'id': 'resume:Artificial Intelligence', 'label': 'Artificial Intelligence', 'value': 'resume:Artificial Intelligence'}",
+          "{'id': 'resume:Wireless', 'label': 'Wireless', 'value': 'resume:Wireless'}",
+          "{'id': 'resume:Luxury', 'label': 'Luxury', 'value': 'resume:Luxury'}",
+          "{'id': 'resume:Service', 'label': 'Service', 'value': 'resume:Service'}",
+          "{'id': 'resume:Infrastructure', 'label': 'Infrastructure', 'value': 'resume:Infrastructure'}"
+        ],
+        "salary": "USD 175000-235000 / Year",
+        "posted_at": "2026-06-09T00:00:00+00:00",
+        "raw": {
+          "applyUrl": "https://jobs.ashbyhq.com/Cape/cc18572e-fa2f-46cb-94e9-fcac492314f8?utm_source=jobs.a16z.com",
+          "companyDomain": "cape.co",
+          "companyLogos": {
+            "manual": {
+              "height": 160,
+              "src": "https://dzh2zima160vx.cloudfront.net/logo/0faf8dde05320d96ed7e5c98482f445f_160_160?Expires=1861920000&Signature=SZKUJJFlhp9qAfBb37~UZ92w1JKOhgm3nzE6xFCGUc7Sk2zb5tulrkEVEUqDPtLLU1i5H6xXjZ3Va~sq-XLz-rv76QpF90NLYmFEpIupBmnLnTrl1MgnHFmFASoG1DIYmeknfzgW8lioY3urNQwcjvNr4XUA3pSB3BabwtCXmKIdiqiuhpAwwZLpGbjWbggJuoA45qAs7fpx~1BLdaMIe6J~ryvj6fT-KOWX9WeG-qZn6ln50-hOK0OSuSvBBwcV71bLi1kEw-Sg92I3y~dayi9cp-rnao5VDwCqWWKpLwfYt3MwcGe-goWE2IvZlXW0vH3b6wAf4SQ8hWmaQQ6Kjg__&Key-Pair-Id=APKAII5OVX4LZ3WT422Q",
+              "width": 160
+            },
+            "linkedin": {
+              "height": 100,
+              "src": "https://dzh2zima160vx.cloudfront.net/profile/62ef50a5b7e8f35c8acdaec77a24d69e_100_100?Expires=1893456000&Signature=DAY9o1sXNlsCpoaFXDam6IHM7wHkb201B37D68F5oxJsDR4guC5YHZVC2pBGoFLcAYKunAxvYTco0nfVcpk3WP44ZUoYasXjYbxny7m7fgA~KWIE8CA0q2cmcsaggkmZ0VGzzeeBEkdAhFt1xAghXcfUHZdhXfTt2lJ2xjoVvpLpFC~iIYj46W2Pt6KH9pBM~C-78no3c4sgwgqW9x4toAV6o0JAaK9CBp6rQeDCGs~e40elF2FcCIHuw1HqKg~AZhdLEyGnyUtVr6hGblCG5aUv6XoF2Gve3JDxv4XmjV8N-2lA0tXdV5rTCoDb1HhWgI~69oHqjRxxL4D-UE373A__&Key-Pair-Id=APKAII5OVX4LZ3WT422Q",
+              "width": 100
+            }
+          },
+          "companyId": "Cape",
+          "companySlug": "cape",
+          "companyName": "Cape",
+          "companyStaffCount": 169,
+          "considerHosted": false,
+          "departments": [
+            "Engineering"
+          ],
+          "jobTypes": [
+            {
+              "id": "engineer",
+              "label": "Engineer",
+              "value": "engineer"
+            }
+          ],
+          "jobFunctions": [
+            {
+              "id": "Engineering",
+              "label": "Engineering",
+              "value": "Engineering"
+            }
+          ],
+          "locations": [
+            "Washington, DC, United States",
+            "Washington, DC",
+            "New York, NY"
+          ],
+          "normalizedLocations": [
+            {
+              "id": "Washington, District Of Columbia",
+              "label": "Washington, DC",
+              "value": "Washington, District Of Columbia"
+            },
+            {
+              "id": "New York",
+              "label": "New York",
+              "value": "New York"
+            },
+            {
+              "id": "Washington D.C. Metro Area",
+              "label": "Washington D.C. Metro Area",
+              "value": "Washington D.C. Metro Area"
+            }
+          ],
+          "salary": {
+            "period": {
+              "label": "Year",
+              "value": "year"
+            },
+            "minValue": 175000,
+            "maxValue": 235000,
+            "currency": {
+              "label": "USD",
+              "value": "USD"
+            },
+            "isOriginal": true
+          },
+          "skills": [
+            {
+              "id": "resume:Mobile",
+              "label": "Mobile",
+              "value": "resume:Mobile"
+            },
+            {
+              "id": "resume:Prioritization Skills",
+              "label": "Prioritization Skills",
+              "value": "resume:Prioritization Skills"
+            },
+            {
+              "id": "resume:Privacy",
+              "label": "Privacy",
+              "value": "resume:Privacy"
+            },
+            {
+              "id": "resume:LEE Advocacy",
+              "label": "Advocacy",
+              "value": "resume:LEE Advocacy"
+            },
+            {
+              "id": "resume:Business Development",
+              "label": "Business Development",
+              "value": "resume:Business Development"
+            },
+            {
+              "id": "resume:Movement",
+              "label": "Movement",
+              "value": "resume:Movement"
+            },
+            {
+              "id": "resume:C",
+              "label": "C",
+              "value": "resume:C"
+            },
+            {
+              "id": "resume:Equity",
+              "label": "Equity",
+              "value": "resume:Equity"
+            },
+            {
+              "id": "resume:Mentorship",
+              "label": "Mentorship",
+              "value": "resume:Mentorship"
+            },
+            {
+              "id": "resume:National Security",
+              "label": "National Security",
+              "value": "resume:National Security"
+            },
+            {
+              "id": "resume:Onboarding",
+              "label": "Onboarding",
+              "value": "resume:Onboarding"
+            },
+            {
+              "id": "resume:Artificial Intelligence",
+              "label": "Artificial Intelligence",
+              "value": "resume:Artificial Intelligence"
+            },
+            {
+              "id": "resume:Wireless",
+              "label": "Wireless",
+              "value": "resume:Wireless"
+            },
+            {
+              "id": "resume:Luxury",
+              "label": "Luxury",
+              "value": "resume:Luxury"
+            },
+            {
+              "id": "resume:Service",
+              "label": "Service",
+              "value": "resume:Service"
+            },
+            {
+              "id": "resume:Infrastructure",
+              "label": "Infrastructure",
+              "value": "resume:Infrastructure"
+            }
+          ],
+          "requiredSkills": [
+            {
+              "id": "resume:Mobile",
+              "label": "Mobile",
+              "value": "resume:Mobile"
+            },
+            {
+              "id": "resume:Prioritization Skills",
+              "label": "Prioritization Skills",
+              "value": "resume:Prioritization Skills"
+            },
+            {
+              "id": "resume:Privacy",
+              "label": "Privacy",
+              "value": "resume:Privacy"
+            }
+          ],
+          "preferredSkills": [
+            {
+              "id": "resume:LEE Advocacy",
+              "label": "Advocacy",
+              "value": "resume:LEE Advocacy"
+            },
+            {
+              "id": "resume:Business Development",
+              "label": "Business Development",
+              "value": "resume:Business Development"
+            },
+            {
+              "id": "resume:Movement",
+              "label": "Movement",
+              "value": "resume:Movement"
+            },
+            {
+              "id": "resume:C",
+              "label": "C",
+              "value": "resume:C"
+            },
+            {
+              "id": "resume:Equity",
+              "label": "Equity",
+              "value": "resume:Equity"
+            },
+            {
+              "id": "resume:Mentorship",
+              "label": "Mentorship",
+              "value": "resume:Mentorship"
+            },
+            {
+              "id": "resume:National Security",
+              "label": "National Security",
+              "value": "resume:National Security"
+            },
+            {
+              "id": "resume:Onboarding",
+              "label": "Onboarding",
+              "value": "resume:Onboarding"
+            },
+            {
+              "id": "resume:Artificial Intelligence",
+              "label": "Artificial Intelligence",
+              "value": "resume:Artificial Intelligence"
+            },
+            {
+              "id": "resume:Wireless",
+              "label": "Wireless",
+              "value": "resume:Wireless"
+            },
+            {
+              "id": "resume:Luxury",
+              "label": "Luxury",
+              "value": "resume:Luxury"
+            },
+            {
+              "id": "resume:Service",
+              "label": "Service",
+              "value": "resume:Service"
+            },
+            {
+              "id": "resume:Infrastructure",
+              "label": "Infrastructure",
+              "value": "resume:Infrastructure"
+            }
+          ],
+          "manager": false,
+          "consultant": false,
+          "contractor": false,
+          "considerLevels": [
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          "minYearsExp": 2,
+          "regions": [
+            {
+              "id": "Northeast",
+              "label": "Northeast",
+              "value": "Northeast"
+            },
+            {
+              "id": "North America",
+              "label": "North America",
+              "value": "North America"
+            },
+            {
+              "id": "Mid Atlantic",
+              "label": "Mid Atlantic",
+              "value": "Mid Atlantic"
+            },
+            {
+              "id": "East Coast",
+              "label": "East Coast",
+              "value": "East Coast"
+            }
+          ],
+          "stages": [
+            {
+              "id": "100-1000 employees",
+              "label": "100-1000 employees",
+              "value": "100-1000 employees"
+            },
+            {
+              "id": "Growth",
+              "label": "Growth",
+              "value": "Growth"
+            }
+          ],
+          "fundingLV": {
+            "id": "Growth",
+            "label": "Growth",
+            "value": "Growth"
+          },
+          "markets": [],
+          "timeStamp": "2026-06-09T00:00:00Z",
+          "title": "Forward Deployed Engineer (Asia-Pacific)",
+          "url": "https://jobs.ashbyhq.com/Cape/cc18572e-fa2f-46cb-94e9-fcac492314f8",
+          "jobId": "cc18572e-fa2f-46cb-94e9-fcac492314f8",
+          "remote": false,
+          "hybrid": true,
+          "scores": {
+            "score": 1001.1715031953098,
+            "matchScore": 0,
+            "ageScore": 0.9715031953097993,
+            "richnessScore": 2
+          },
+          "atsJobs": [],
+          "matchingTalent": {
+            "count": 0,
+            "matches": []
+          },
+          "jobSeniorities": [
+            {
+              "id": "mid",
+              "label": "Mid",
+              "value": "mid"
+            }
+          ],
+          "jobSeniorityIds": [
+            "mid"
+          ],
+          "isFeatured": false
+        }
+      },
+      "score": 3.25,
+      "matched_terms": [
+        "security",
+        "infrastructure"
+      ],
+      "query": {
+        "text": "software engineer python backend",
+        "role": "software engineer",
+        "skills": [
+          "python",
+          "backend",
+          "infrastructure",
+          "distributed systems"
+        ],
+        "location": "michigan",
+        "remote": false
+      },
+      "rationale": "Matched security, infrastructure"
+    },
+    {
+      "job": {
+        "source": "jobspy:linkedin",
+        "source_id": "li-4424009436",
+        "title": "Software Engineer",
+        "company": "Brooksource",
+        "url": "https://www.linkedin.com/jobs/view/4424009436",
+        "location": null,
+        "description": "",
+        "tags": [],
+        "salary": null,
+        "posted_at": "2026-06-03T00:00:00",
+        "raw": {
+          "id": "li-4424009436",
+          "site": "linkedin",
+          "job_url": "https://www.linkedin.com/jobs/view/4424009436",
+          "job_url_direct": null,
+          "title": "Software Engineer",
+          "company": "Brooksource",
+          "location": "",
+          "date_posted": "2026-06-03",
+          "job_type": null,
+          "salary_source": null,
+          "interval": null,
+          "min_amount": null,
+          "max_amount": null,
+          "currency": null,
+          "is_remote": false,
+          "job_level": "",
+          "job_function": null,
+          "listing_type": null,
+          "emails": null,
+          "description": null,
+          "company_industry": null,
+          "company_url": "https://www.linkedin.com/company/brooksource",
+          "company_logo": null,
+          "company_url_direct": null,
+          "company_addresses": null,
+          "company_num_employees": null,
+          "company_revenue": null,
+          "company_description": null,
+          "skills": null,
+          "experience_range": null,
+          "company_rating": null,
+          "company_reviews_count": null,
+          "vacancy_count": null,
+          "work_from_home_type": null
+        }
+      },
+      "score": 3.0,
+      "matched_terms": [
+        "software engineer"
+      ],
+      "query": {
+        "text": "software engineer python backend",
+        "role": "software engineer",
+        "skills": [
+          "python",
+          "backend",
+          "infrastructure",
+          "distributed systems"
+        ],
+        "location": "michigan",
+        "remote": false
+      },
+      "rationale": "Matched software engineer"
+    },
+    {
+      "job": {
+        "source": "jobspy:linkedin",
+        "source_id": "li-4416308415",
+        "title": "Junior Software Engineer",
+        "company": "Optomi",
+        "url": "https://www.linkedin.com/jobs/view/4416308415",
+        "location": null,
+        "description": "",
+        "tags": [],
+        "salary": null,
+        "posted_at": "2026-06-03T00:00:00",
+        "raw": {
+          "id": "li-4416308415",
+          "site": "linkedin",
+          "job_url": "https://www.linkedin.com/jobs/view/4416308415",
+          "job_url_direct": null,
+          "title": "Junior Software Engineer",
+          "company": "Optomi",
+          "location": "",
+          "date_posted": "2026-06-03",
+          "job_type": null,
+          "salary_source": null,
+          "interval": null,
+          "min_amount": null,
+          "max_amount": null,
+          "currency": null,
+          "is_remote": false,
+          "job_level": "",
+          "job_function": null,
+          "listing_type": null,
+          "emails": null,
+          "description": null,
+          "company_industry": null,
+          "company_url": "https://www.linkedin.com/company/optomi",
+          "company_logo": null,
+          "company_url_direct": null,
+          "company_addresses": null,
+          "company_num_employees": null,
+          "company_revenue": null,
+          "company_description": null,
+          "skills": null,
+          "experience_range": null,
+          "company_rating": null,
+          "company_reviews_count": null,
+          "vacancy_count": null,
+          "work_from_home_type": null
+        }
+      },
+      "score": 3.0,
+      "matched_terms": [
+        "software engineer"
+      ],
+      "query": {
+        "text": "software engineer python backend",
+        "role": "software engineer",
+        "skills": [
+          "python",
+          "backend",
+          "infrastructure",
+          "distributed systems"
+        ],
+        "location": "michigan",
+        "remote": false
+      },
+      "rationale": "Matched software engineer"
+    },
+    {
+      "job": {
+        "source": "yc",
+        "source_id": "91866",
+        "title": "Senior/Staff Backend Engineer",
+        "company": "BlueCargo",
+        "url": "https://www.ycombinator.com/companies/bluecargo/jobs/4UzRNNM-senior-staff-backend-engineer",
+        "location": "New York, NY, US / Culver City, CA, US / Remote (US)",
+        "description": "The automated solution for complex freight transactions. Engineering Backend Django",
+        "tags": [
+          "Full-time",
+          "Engineering",
+          "Backend",
+          "Django"
+        ],
+        "salary": "$160K - $220K",
+        "posted_at": null,
+        "raw": {
+          "id": 91866,
+          "title": "Senior/Staff Backend Engineer",
+          "url": "/companies/bluecargo/jobs/4UzRNNM-senior-staff-backend-engineer",
+          "applyUrl": "https://account.ycombinator.com/authenticate?continue=https%3A%2F%2Fwww.workatastartup.com%2Fapplication%3Fsignup_job_id%3D91866&defaults%5BsignUpActive%5D=true",
+          "location": "New York, NY, US / Culver City, CA, US / Remote (US)",
+          "askUs": true,
+          "type": "Full-time",
+          "role": "eng",
+          "roleSpecificType": "Backend",
+          "prettyRole": "Engineering",
+          "salaryRange": "$160K - $220K",
+          "equityRange": "",
+          "minExperience": "6+ years",
+          "minSchoolYear": null,
+          "visa": "US citizen/visa only",
+          "skills": [
+            "Django"
+          ],
+          "isIncomplete": false,
+          "companyUrl": "/companies/bluecargo",
+          "companyLogoUrl": "https://bookface-images.s3.amazonaws.com/small_logos/96b73225a7fdc8841c526bb16e3bc4cb32073599.png",
+          "companyName": "BlueCargo",
+          "companyBatchName": "S18",
+          "companyOneLiner": "The automated solution for complex freight transactions.",
+          "hiringManager": null,
+          "createdAt": "3 months",
+          "lastActive": "7 days",
+          "ctaText": "Apply",
+          "ctaUrl": "https://account.ycombinator.com/authenticate?continue=https%3A%2F%2Fwww.workatastartup.com%2Fapplication%3Fsignup_job_id%3D91866&defaults%5BsignUpActive%5D=true&defaults%5Bwaas_company%5D=1969"
+        }
+      },
+      "score": 2.25,
+      "matched_terms": [
+        "backend"
+      ],
+      "query": {
+        "text": "research scientist machine learning python",
+        "role": "research scientist",
+        "skills": [
+          "machine learning",
+          "research",
+          "python",
+          "llm"
+        ],
+        "location": "michigan",
+        "remote": false
+      },
+      "rationale": "Matched backend"
+    },
+    {
+      "job": {
+        "source": "yc",
+        "source_id": "53662",
+        "title": "Full Stack Developer - Bountiful ",
+        "company": "Bountiful",
+        "url": "https://www.ycombinator.com/companies/bountiful/jobs/QWdOU88-full-stack-developer-bountiful",
+        "location": "San Francisco, CA, US",
+        "description": "An Operating System for agriculture. Engineering Full stack Docker",
+        "tags": [
+          "Full-time",
+          "Engineering",
+          "Full stack",
+          "Docker"
+        ],
+        "salary": "$165K - $195K",
+        "posted_at": null,
+        "raw": {
+          "id": 53662,
+          "title": "Full Stack Developer - Bountiful ",
+          "url": "/companies/bountiful/jobs/QWdOU88-full-stack-developer-bountiful",
+          "applyUrl": "https://account.ycombinator.com/authenticate?continue=https%3A%2F%2Fwww.workatastartup.com%2Fapplication%3Fsignup_job_id%3D53662&defaults%5BsignUpActive%5D=true",
+          "location": "San Francisco, CA, US",
+          "askUs": true,
+          "type": "Full-time",
+          "role": "eng",
+          "roleSpecificType": "Full stack",
+          "prettyRole": "Engineering",
+          "salaryRange": "$165K - $195K",
+          "equityRange": "1.00%",
+          "minExperience": "6+ years",
+          "minSchoolYear": null,
+          "visa": "US citizen/visa only",
+          "skills": [
+            "Docker"
+          ],
+          "isIncomplete": false,
+          "companyUrl": "/companies/bountiful",
+          "companyLogoUrl": "https://bookface-images.s3.amazonaws.com/small_logos/40bd701518c1492966677e92d610182861a00a02.png",
+          "companyName": "Bountiful",
+          "companyBatchName": "W17",
+          "companyOneLiner": "An Operating System for agriculture.",
+          "hiringManager": null,
+          "createdAt": "about 4 years",
+          "lastActive": "8 days",
+          "ctaText": "Apply",
+          "ctaUrl": "https://account.ycombinator.com/authenticate?continue=https%3A%2F%2Fwww.workatastartup.com%2Fapplication%3Fsignup_job_id%3D53662&defaults%5BsignUpActive%5D=true&defaults%5Bwaas_company%5D=1444"
+        }
+      },
+      "score": 2.25,
+      "matched_terms": [
+        "full stack"
+      ],
+      "query": {
+        "text": "research scientist machine learning python",
+        "role": "research scientist",
+        "skills": [
+          "machine learning",
+          "research",
+          "python",
+          "llm"
+        ],
+        "location": "michigan",
+        "remote": false
+      },
+      "rationale": "Matched full stack"
+    },
+    {
+      "job": {
+        "source": "yc",
+        "source_id": "67974",
+        "title": "Senior Full Stack Engineer",
+        "company": "LiveFlow",
+        "url": "https://www.ycombinator.com/companies/liveflow/jobs/yQSiOcS-senior-full-stack-engineer",
+        "location": "London, England, GB / New York, NY, US / San Francisco, CA, US",
+        "description": "The Unified AI-ERP & FP&A Platform Engineering Full stack",
+        "tags": [
+          "Full-time",
+          "Engineering",
+          "Full stack"
+        ],
+        "salary": "$100K - $200K",
+        "posted_at": null,
+        "raw": {
+          "id": 67974,
+          "title": "Senior Full Stack Engineer",
+          "url": "/companies/liveflow/jobs/yQSiOcS-senior-full-stack-engineer",
+          "applyUrl": "https://account.ycombinator.com/authenticate?continue=https%3A%2F%2Fwww.workatastartup.com%2Fapplication%3Fsignup_job_id%3D67974&defaults%5BsignUpActive%5D=true",
+          "location": "London, England, GB / New York, NY, US / San Francisco, CA, US",
+          "askUs": true,
+          "type": "Full-time",
+          "role": "eng",
+          "roleSpecificType": "Full stack",
+          "prettyRole": "Engineering",
+          "salaryRange": "$100K - $200K",
+          "equityRange": "",
+          "minExperience": "3+ years",
+          "minSchoolYear": null,
+          "visa": "US citizen/visa only",
+          "skills": [],
+          "isIncomplete": false,
+          "companyUrl": "/companies/liveflow",
+          "companyLogoUrl": "https://bookface-images.s3.amazonaws.com/small_logos/f98bea3f929dc1e5ae170d9423f432e2f8a35726.png",
+          "companyName": "LiveFlow",
+          "companyBatchName": "W21",
+          "companyOneLiner": "The Unified AI-ERP & FP&A Platform",
+          "hiringManager": null,
+          "createdAt": "almost 2 years",
+          "lastActive": "about 7 hours",
+          "ctaText": "Apply",
+          "ctaUrl": "https://account.ycombinator.com/authenticate?continue=https%3A%2F%2Fwww.workatastartup.com%2Fapplication%3Fsignup_job_id%3D67974&defaults%5BsignUpActive%5D=true&defaults%5Bwaas_company%5D=22906"
+        }
+      },
+      "score": 2.25,
+      "matched_terms": [
+        "full stack"
+      ],
+      "query": {
+        "text": "research scientist machine learning python",
+        "role": "research scientist",
+        "skills": [
+          "machine learning",
+          "research",
+          "python",
+          "llm"
+        ],
+        "location": "michigan",
+        "remote": false
+      },
+      "rationale": "Matched full stack"
+    },
+    {
+      "job": {
+        "source": "yc",
+        "source_id": "95189",
+        "title": "Senior Full-Stack Engineer, Payments (Remote \u00b7 US + LATAM \u00b7 Engineering)",
+        "company": "Palla",
+        "url": "https://www.ycombinator.com/companies/palla/jobs/taIayvt-senior-full-stack-engineer-payments-remote-us-latam-engineering",
+        "location": "Remote (US)",
+        "description": "P2P Cross border payments Engineering Full stack Kubernetes",
+        "tags": [
+          "Full-time",
+          "Engineering",
+          "Full stack",
+          "Kubernetes"
+        ],
+        "salary": "$80K - $200K",
+        "posted_at": null,
+        "raw": {
+          "id": 95189,
+          "title": "Senior Full-Stack Engineer, Payments (Remote \u00b7 US + LATAM \u00b7 Engineering)",
+          "url": "/companies/palla/jobs/taIayvt-senior-full-stack-engineer-payments-remote-us-latam-engineering",
+          "applyUrl": "https://account.ycombinator.com/authenticate?continue=https%3A%2F%2Fwww.workatastartup.com%2Fapplication%3Fsignup_job_id%3D95189&defaults%5BsignUpActive%5D=true",
+          "location": "Remote (US)",
+          "askUs": false,
+          "type": "Full-time",
+          "role": "eng",
+          "roleSpecificType": "Full stack",
+          "prettyRole": "Engineering",
+          "salaryRange": "$80K - $200K",
+          "equityRange": "",
+          "minExperience": "6+ years",
+          "minSchoolYear": null,
+          "visa": "US citizen/visa only",
+          "skills": [
+            "Kubernetes"
+          ],
+          "isIncomplete": false,
+          "companyUrl": "/companies/palla",
+          "companyLogoUrl": "https://bookface-images.s3.amazonaws.com/small_logos/3f1d92ba064533486991db02e1726ce77eae0eba.png",
+          "companyName": "Palla",
+          "companyBatchName": "S21",
+          "companyOneLiner": "P2P Cross border payments",
+          "hiringManager": null,
+          "createdAt": "19 days",
+          "lastActive": "6 days",
+          "ctaText": "Apply",
+          "ctaUrl": "https://account.ycombinator.com/authenticate?continue=https%3A%2F%2Fwww.workatastartup.com%2Fapplication%3Fsignup_job_id%3D95189&defaults%5BsignUpActive%5D=true&defaults%5Bwaas_company%5D=23776"
+        }
+      },
+      "score": 2.25,
+      "matched_terms": [
+        "full stack"
+      ],
+      "query": {
+        "text": "research scientist machine learning python",
+        "role": "research scientist",
+        "skills": [
+          "machine learning",
+          "research",
+          "python",
+          "llm"
+        ],
+        "location": "michigan",
+        "remote": false
+      },
+      "rationale": "Matched full stack"
+    },
+    {
+      "job": {
+        "source": "yc",
+        "source_id": "46511",
+        "title": "Full Stack Engineer",
+        "company": "Runway",
+        "url": "https://www.ycombinator.com/companies/runway/jobs/0s9VB2H-full-stack-engineer",
+        "location": "US / GB / AU / ES / FR / MX / DK / SE / IT / PL / CZ / PT / BE / NL / CA / FI / EE / BR / Remote (US; GB; AU; ES; FR; MX; DK; SE; IT; PL; CZ; PT; BE; NL; CA; FI; EE; BR)",
+        "description": "Easier and more reliable mobile app releases for teams. Engineering Full stack TypeScript",
+        "tags": [
+          "Full-time",
+          "Engineering",
+          "Full stack",
+          "TypeScript"
+        ],
+        "salary": "$80K - $150K",
+        "posted_at": null,
+        "raw": {
+          "id": 46511,
+          "title": "Full Stack Engineer",
+          "url": "/companies/runway/jobs/0s9VB2H-full-stack-engineer",
+          "applyUrl": "https://account.ycombinator.com/authenticate?continue=https%3A%2F%2Fwww.workatastartup.com%2Fapplication%3Fsignup_job_id%3D46511&defaults%5BsignUpActive%5D=true",
+          "location": "US / GB / AU / ES / FR / MX / DK / SE / IT / PL / CZ / PT / BE / NL / CA / FI / EE / BR / Remote (US; GB; AU; ES; FR; MX; DK; SE; IT; PL; CZ; PT; BE; NL; CA; FI; EE; BR)",
+          "askUs": true,
+          "type": "Full-time",
+          "role": "eng",
+          "roleSpecificType": "Full stack",
+          "prettyRole": "Engineering",
+          "salaryRange": "$80K - $150K",
+          "equityRange": "0.05% - 0.15%",
+          "minExperience": "6+ years",
+          "minSchoolYear": null,
+          "visa": "US citizenship/visa not required",
+          "skills": [
+            "TypeScript"
+          ],
+          "isIncomplete": false,
+          "companyUrl": "/companies/runway",
+          "companyLogoUrl": "https://bookface-images.s3.amazonaws.com/small_logos/a792f803f1d7ccad7da795b30ca7b07eb81a1cdc.png",
+          "companyName": "Runway",
+          "companyBatchName": "W21",
+          "companyOneLiner": "Easier and more reliable mobile app releases for teams.",
+          "hiringManager": null,
+          "createdAt": "over 4 years",
+          "lastActive": "about 3 hours",
+          "ctaText": "Apply",
+          "ctaUrl": "https://account.ycombinator.com/authenticate?continue=https%3A%2F%2Fwww.workatastartup.com%2Fapplication%3Fsignup_job_id%3D46511&defaults%5BsignUpActive%5D=true&defaults%5Bwaas_company%5D=22591"
+        }
+      },
+      "score": 2.25,
+      "matched_terms": [
+        "full stack"
+      ],
+      "query": {
+        "text": "research scientist machine learning python",
+        "role": "research scientist",
+        "skills": [
+          "machine learning",
+          "research",
+          "python",
+          "llm"
+        ],
+        "location": "michigan",
+        "remote": false
+      },
+      "rationale": "Matched full stack"
+    },
+    {
+      "job": {
+        "source": "yc",
+        "source_id": "95123",
+        "title": "Founding AI Engineer",
+        "company": "Voiceops",
+        "url": "https://www.ycombinator.com/companies/voiceops/jobs/Gtlq7oz-founding-ai-engineer",
+        "location": "New York, NY, US",
+        "description": "We help B2C companies learn from every customer interaction Engineering Full stack LLMs",
+        "tags": [
+          "Full-time",
+          "Engineering",
+          "Full stack",
+          "LLMs"
+        ],
+        "salary": "$200K - $250K",
+        "posted_at": null,
+        "raw": {
+          "id": 95123,
+          "title": "Founding AI Engineer",
+          "url": "/companies/voiceops/jobs/Gtlq7oz-founding-ai-engineer",
+          "applyUrl": "https://account.ycombinator.com/authenticate?continue=https%3A%2F%2Fwww.workatastartup.com%2Fapplication%3Fsignup_job_id%3D95123&defaults%5BsignUpActive%5D=true",
+          "location": "New York, NY, US",
+          "askUs": true,
+          "type": "Full-time",
+          "role": "eng",
+          "roleSpecificType": "Full stack",
+          "prettyRole": "Engineering",
+          "salaryRange": "$200K - $250K",
+          "equityRange": "0.10% - 0.50%",
+          "minExperience": "3+ years",
+          "minSchoolYear": null,
+          "visa": "Will sponsor",
+          "skills": [
+            "LLMs"
+          ],
+          "isIncomplete": false,
+          "companyUrl": "/companies/voiceops",
+          "companyLogoUrl": "https://bookface-images.s3.amazonaws.com/small_logos/e326734ce45c54c41f0c6a0f3e7509a5edb06d56.png",
+          "companyName": "Voiceops",
+          "companyBatchName": "W17",
+          "companyOneLiner": "We help B2C companies learn from every customer interaction",
+          "hiringManager": null,
+          "createdAt": "20 days",
+          "lastActive": "2 days",
+          "ctaText": "Apply",
+          "ctaUrl": "https://account.ycombinator.com/authenticate?continue=https%3A%2F%2Fwww.workatastartup.com%2Fapplication%3Fsignup_job_id%3D95123&defaults%5BsignUpActive%5D=true&defaults%5Bwaas_company%5D=1438"
+        }
+      },
+      "score": 2.25,
+      "matched_terms": [
+        "full stack"
+      ],
+      "query": {
+        "text": "research scientist machine learning python",
+        "role": "research scientist",
+        "skills": [
+          "machine learning",
+          "research",
+          "python",
+          "llm"
+        ],
+        "location": "michigan",
+        "remote": false
+      },
+      "rationale": "Matched full stack"
+    },
+    {
+      "job": {
+        "source": "jobspy:linkedin",
+        "source_id": "li-4406396746",
+        "title": "Senior Strategic Partnerships Manager, AI and Agentic Commerce",
+        "company": "Forter",
+        "url": "https://www.linkedin.com/jobs/view/4406396746",
+        "location": null,
+        "description": "",
+        "tags": [],
+        "salary": null,
+        "posted_at": "2026-06-07T00:00:00",
+        "raw": {
+          "id": "li-4406396746",
+          "site": "linkedin",
+          "job_url": "https://www.linkedin.com/jobs/view/4406396746",
+          "job_url_direct": null,
+          "title": "Senior Strategic Partnerships Manager, AI and Agentic Commerce",
+          "company": "Forter",
+          "location": "",
+          "date_posted": "2026-06-07",
+          "job_type": null,
+          "salary_source": null,
+          "interval": null,
+          "min_amount": null,
+          "max_amount": null,
+          "currency": null,
+          "is_remote": false,
+          "job_level": "",
+          "job_function": null,
+          "listing_type": null,
+          "emails": null,
+          "description": null,
+          "company_industry": null,
+          "company_url": "https://www.linkedin.com/company/forter",
+          "company_logo": null,
+          "company_url_direct": null,
+          "company_addresses": null,
+          "company_num_employees": null,
+          "company_revenue": null,
+          "company_description": null,
+          "skills": null,
+          "experience_range": null,
+          "company_rating": null,
+          "company_reviews_count": null,
+          "vacancy_count": null,
+          "work_from_home_type": null
+        }
+      },
+      "score": 2.0,
+      "matched_terms": [
+        "agentic"
+      ],
+      "query": {
+        "text": "llm agentic",
+        "role": null,
+        "skills": [
+          "llm",
+          "agentic"
+        ],
+        "location": null,
+        "remote": true
+      },
+      "rationale": "Matched agentic"
+    },
+    {
+      "job": {
+        "source": "jobspy:linkedin",
+        "source_id": "li-4424704715",
+        "title": "Machine Learning Developer (Freelance)",
+        "company": "Mindrift",
+        "url": "https://www.linkedin.com/jobs/view/4424704715",
+        "location": "Michigan, United States",
+        "description": "",
+        "tags": [],
+        "salary": null,
+        "posted_at": "2026-06-05T00:00:00",
+        "raw": {
+          "id": "li-4424704715",
+          "site": "linkedin",
+          "job_url": "https://www.linkedin.com/jobs/view/4424704715",
+          "job_url_direct": null,
+          "title": "Machine Learning Developer (Freelance)",
+          "company": "Mindrift",
+          "location": "Michigan, United States",
+          "date_posted": "2026-06-05",
+          "job_type": null,
+          "salary_source": null,
+          "interval": null,
+          "min_amount": null,
+          "max_amount": null,
+          "currency": null,
+          "is_remote": false,
+          "job_level": "",
+          "job_function": null,
+          "listing_type": null,
+          "emails": null,
+          "description": null,
+          "company_industry": null,
+          "company_url": "https://www.linkedin.com/company/mindrift-ai",
+          "company_logo": null,
+          "company_url_direct": null,
+          "company_addresses": null,
+          "company_num_employees": null,
+          "company_revenue": null,
+          "company_description": null,
+          "skills": null,
+          "experience_range": null,
+          "company_rating": null,
+          "company_reviews_count": null,
+          "vacancy_count": null,
+          "work_from_home_type": null
+        }
+      },
+      "score": 2.0,
+      "matched_terms": [
+        "machine learning"
+      ],
+      "query": {
+        "text": "machine learning engineer python llm",
+        "role": "machine learning engineer",
+        "skills": [
+          "machine learning",
+          "python",
+          "llm",
+          "agentic memory"
+        ],
+        "location": "michigan",
+        "remote": false
+      },
+      "rationale": "Matched machine learning"
+    },
+    {
+      "job": {
+        "source": "jobspy:linkedin",
+        "source_id": "li-4385547125",
+        "title": "Senior Applied Scientist, Agentic AI",
+        "company": "Zillow",
+        "url": "https://www.linkedin.com/jobs/view/4385547125",
+        "location": null,
+        "description": "",
+        "tags": [],
+        "salary": null,
+        "posted_at": "2026-06-08T00:00:00",
+        "raw": {
+          "id": "li-4385547125",
+          "site": "linkedin",
+          "job_url": "https://www.linkedin.com/jobs/view/4385547125",
+          "job_url_direct": null,
+          "title": "Senior Applied Scientist, Agentic AI",
+          "company": "Zillow",
+          "location": "",
+          "date_posted": "2026-06-08",
+          "job_type": null,
+          "salary_source": null,
+          "interval": null,
+          "min_amount": null,
+          "max_amount": null,
+          "currency": null,
+          "is_remote": false,
+          "job_level": "",
+          "job_function": null,
+          "listing_type": null,
+          "emails": null,
+          "description": null,
+          "company_industry": null,
+          "company_url": "https://www.linkedin.com/company/zillow",
+          "company_logo": null,
+          "company_url_direct": null,
+          "company_addresses": null,
+          "company_num_employees": null,
+          "company_revenue": null,
+          "company_description": null,
+          "skills": null,
+          "experience_range": null,
+          "company_rating": null,
+          "company_reviews_count": null,
+          "vacancy_count": null,
+          "work_from_home_type": null
+        }
+      },
+      "score": 2.0,
+      "matched_terms": [
+        "agentic"
+      ],
+      "query": {
+        "text": "llm agentic",
+        "role": null,
+        "skills": [
+          "llm",
+          "agentic"
+        ],
+        "location": null,
+        "remote": true
+      },
+      "rationale": "Matched agentic"
+    }
+  ],
+  "source_errors": [],
+  "storage": null
+}

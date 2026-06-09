@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jobhunter"
+version = "0.1.0"
+description = "Agentic job hunting demo ecosystem with profile preprocessing and platform adapters."
+requires-python = ">=3.9"
+readme = "README.md"
+authors = [{ name = "Jobhunter Contributors" }]
+dependencies = []
+
+[project.optional-dependencies]
+jobspy = ["python-jobspy>=1.1; python_version >= '3.10'"]
+postgres = ["psycopg[binary]>=3.1"]
+graph = ["kuzu>=0.11"]
+
+[project.scripts]
+jobhunter = "jobhunter.cli:main"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+
+[tool.setuptools.packages.find]
+include = ["jobhunter*"]

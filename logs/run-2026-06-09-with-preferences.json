@@ -1,0 +1,906 @@
+{
+  "profile": {
+    "raw_text": "Zhikai Chen\nMichigan State University\nEast Lansing\nhttps://github.com/CurryTang\nGitHub profile self-introduction:\nHi there \ud83d\udc4b\n\nI'm currently a CS PhD student at Michigan State University. My CV\n\n Research & Projects\n\n 1. DL Infra, Agent, Long Context Modeling (2026-present)\nCurrently working on new directions.\n\n Publications \n Exploring Cross-Scenario Generality of Agentic Memory Systems: Diagnostics and a Strong Baseline Zhikai Chen , Jialiang Gu, Junyu Yin, Xianxuan Long, Shenglai Zeng, Xiaoze Liu, Kai Guo, Keren Zhou, Jiliang Tang; arXiv 2026\n Do Proactive Agents Really Need an LLM to Decide When to Wake and What to Anchor? Xiaoze Liu, Ruowang Zhang, Amir H. Abdi, Michel Galley, Zhikai Chen , Siheng Xiong, Xiaoqian Wang, Jing Gao; arXiv 2026\n\n Projects \n Amadeus: AI-powered research assistant for paper discovery, reading, and analysis\n Slack GPU Monitor: A slack bot to manage your server's GPU.\n\n Writings \n A tutorial on DL Infra (Chinese version)\n Notes on optimization\n\n 2. Relational Deep Learning (2025-present)\n\n OpenRFM: Dissecting Relational In-Context Learning Zhikai Chen , Junyu Yin, Jialiang Gu, Siheng Xiong, Xiaoze Liu, Ruowang Zhang, Keren Zhou, Kai Guo; arXiv 2026\n RFMBench: Towards Principled Benchmarking of Relational Foundation Models.pdf) Zhikai Chen , Han Xie, Jian Zhang, Haiyang Yu, Huzefa Rangwala, Xiang Song; preprint 2026\n AutoG: Towards automatic graph construction from tabular data Zhikai Chen , Han Xie, Jian Zhang, Xiang Song, Jiliang Tang, Huzefa Rangwala, George Karypis; ICLR 2025 (poster) Code\n A Pre-training Framework for Relational Data with Information-theoretic Principles Quang Truong, Zhikai Chen , Mingxuan Ju, Tong Zhao, Neil Shah, Jiliang Tang, NeurIPS 2025\n Relatron: Automating Relational Machine Learning over Relational Databases, ICLR 2026 Zhikai Chen , Han Xie, Jian Zhang, Jiliang Tang, Xiang Song, Huzefa Rangwala Paper Code\n\n 3. Graph Foundation Models and Large Language Models (2023-2025)\n\n Note: In the past, I worked on graph foundation models (especially on text-attributed graphs) for a while, these related libraries won't be maintained any more. I personally don't recommend newcomers working on these settings and datasets.\n\n Graph Foundation Models Haitao Mao\\ , Zhikai Chen\\ , Wenzhuo Tang, Jianan Zhao, Yao Ma, Tong Zhao, Neil Shah, Michael Galkin, Jiliang Tang 2024 [Paper lists]; ICML 2024 (Spotlight); means equal contribution\n Text-space Graph Foundation Models: Comprehensive Benchmarks and New Insights Zhikai Chen , Haitao Mao, Jingzhe Liu, Yu Song, Bingheng Li, Wei Jin, Bahare Fatemi, Anton Tsitsulin, Bryan Perozzi, Hui Liu, Jiliang Tang Code; NeurIPS 2024 Datasets and Benchmarks Track (poster)\n Exploring the Potential of Large Language Models (LLMs) in Learning on Graphs\npreprint version journal version, Zhikai Chen , Haitao Mao, Hang Li, Wei Jin, Hongzhi Wen, Xiaochi Wei, Shuaiqiang Wang, Dawei Yin, Wenqi Fan, Hui Liu, Jiliang Tang 2023 Code; SIGKDD Explorations and NeurIPS GLFrontiers 2023\n Label-free Node Classification on Graphs with Large Language Models (LLMS), Zhikai Chen , Haitao Mao, Hongzhi Wen, Haoyu Han, Wei Jin, Haiyang Zhang, Hui Liu, Jiliang Tang Code; ICLR 2024(poster)\n Neural Scaling Laws on Graphs Jingzhe Liu, Haitao Mao, Zhikai Chen , Tong Zhao, Neil Shah, Jiliang Tang; LOG 2024\n A Pure Transformer Pretraining Framework on Text-attributed Graphs Yu Song, Haitao Mao, Jiachen Xiao, Jingzhe Liu, Zhikai Chen , Wei Jin, Carl Yang, Jiliang Tang, Hui Liu, LOG 2024\n\n 4. Security and Information Security (2021-2022)\n\n Projects \n Fake News Detection\n\n Publications \n Leveraging diversity-aware context attention networks for fake news detection on social platforms\n\n 5. Full-stack Development (2018-present)\n\n Projects \n Blog System: Backend Management, Frontend\n Scheme Interpreter\n QEMU-based Toy Operating System\n An Android controller-app, you may use your mobile to control a screen remotely.\nRecent public GitHub repositories, sorted by pushed time:\nRepository: CurryTang; Pushed: 2026-06-04T01:34:53Z; Updated: 2026-06-04T01:34:56Z\nRepository: slack-gpu-monitor; Language: JavaScript; Pushed: 2026-04-04T16:47:33Z; Updated: 2026-04-04T16:47:38Z\nRepository: Amadeus; Language: JavaScript; Description: Your personal AI research assistant that automatically reads, summarizes, organizes, and acts on academic papers.; Pushed: 2026-03-25T16:56:44Z; Updated: 2026-05-01T10:22:29Z\nRepository: MLSYS_tutorial; Language: JavaScript; Description: A newbie-friendly intro to MLSYS topics like kernel design, LLM inference, LLM post-training; Pushed: 2026-03-09T02:10:21Z; Updated: 2026-05-03T04:02:27Z\nRepository: imagebed; Description: Image hosting for blog posts and notes; Pushed: 2026-03-07T03:51:11Z; Updated: 2026-03-07T03:51:14Z\nRepository: Graph-LLM; Language: Python; Description: Exploring the Potential of Large Language Models (LLMs) in Learning on Graphs; Pushed: 2025-03-10T05:30:05Z; Updated: 2026-05-26T07:43:10Z\nRepository: TSGFM; Language: Python; Description: NIPS 24: Text-space Graph Foundation Models: Comprehensive Benchmarks and New Insights; Pushed: 2024-12-21T22:59:23Z; Updated: 2026-05-21T14:46:00Z\nRepository: gfm_webpage; Language: HTML; Pushed: 2024-07-23T05:38:16Z; Updated: 2024-07-23T05:38:19Z\nRepository: LLM4Graph; Language: Python; Description: Ongoing project: a library for graph foundation model; Pushed: 2024-02-07T00:00:19Z; Updated: 2024-06-23T06:27:27Z\nRepository: LLMGNN; Language: Python; Description: Label-free Node Classification on Graphs with Large Language Models (LLMS); Pushed: 2023-11-24T06:49:21Z; Updated: 2026-03-13T17:27:32Z\nRepository: Awesome-efficient-and-scalable-graph; Pushed: 2023-11-03T19:22:36Z; Updated: 2024-12-05T07:15:57Z\nRepository: Towards-graph-foundation-models; Pushed: 2023-10-23T19:23:49Z; Updated: 2026-03-22T11:00:43Z\nRepository: awesome-fake-news-detection; Description: Collection of fake news detection methods and a practical evaluation framework; Pushed: 2023-06-15T07:40:06Z; Updated: 2025-02-19T10:19:56Z\nGitHub languages: Python, JavaScript, HTML",
+    "name": "Zhikai Chen",
+    "headline": "Research Scientist",
+    "roles": [
+      "research scientist",
+      "machine learning engineer",
+      "software engineer",
+      "research engineer"
+    ],
+    "skills": [
+      "agentic memory",
+      "agentic",
+      "memory systems",
+      "proactive agents",
+      "agents",
+      "llm",
+      "graph",
+      "tabular data",
+      "relational in-context learning",
+      "relational foundation models",
+      "machine learning",
+      "javascript",
+      "research",
+      "dl infra",
+      "long context modeling",
+      "long context",
+      "gpu",
+      "optimization",
+      "relational deep learning",
+      "deep learning",
+      "graphs",
+      "node",
+      "security",
+      "full stack",
+      "backend",
+      "frontend",
+      "mlsys",
+      "llm inference",
+      "post-training",
+      "python"
+    ],
+    "locations": [
+      "michigan",
+      "east lansing",
+      "united states"
+    ],
+    "links": [
+      "https://github.com/CurryTang"
+    ],
+    "seniority": "intern",
+    "keywords": [
+      "iclr",
+      "abdi",
+      "academic",
+      "acts",
+      "amir",
+      "anchor",
+      "assistant",
+      "autog",
+      "automatic",
+      "automatically",
+      "awesome-fake-news-detection",
+      "collection",
+      "large",
+      "llms",
+      "neurips",
+      "poster",
+      "version",
+      "construction",
+      "contribution",
+      "cross-scenario"
+    ],
+    "preferences": {
+      "focus_highlights": [],
+      "target_roles": [
+        "machine learning engineer",
+        "research scientist",
+        "research engineer"
+      ],
+      "preferred_locations": [
+        "Remote US",
+        "United States"
+      ],
+      "remote": true,
+      "job_types": [],
+      "company_stages": [],
+      "industries": [
+        "AI",
+        "developer tools"
+      ],
+      "min_salary": null,
+      "visa_sponsorship": null,
+      "sources": [],
+      "excluded_terms": [],
+      "result_count": null,
+      "output_format": null,
+      "notes": null
+    },
+    "evidence": {
+      "heuristics": {
+        "roles": [
+          "research scientist",
+          "machine learning engineer",
+          "software engineer",
+          "research engineer"
+        ],
+        "skills": [
+          "agentic memory",
+          "agentic",
+          "memory systems",
+          "proactive agents",
+          "agents",
+          "llm",
+          "graph",
+          "tabular data",
+          "relational in-context learning",
+          "relational foundation models",
+          "machine learning",
+          "javascript",
+          "research",
+          "dl infra",
+          "long context modeling",
+          "long context",
+          "gpu",
+          "optimization",
+          "relational deep learning",
+          "deep learning",
+          "graphs",
+          "node",
+          "security",
+          "full stack",
+          "backend",
+          "frontend",
+          "mlsys",
+          "llm inference",
+          "post-training",
+          "python"
+        ],
+        "locations": [
+          "michigan",
+          "east lansing",
+          "united states"
+        ],
+        "seniority": "intern"
+      },
+      "portfolio_highlights": [
+        {
+          "text": "Exploring Cross-Scenario Generality of Agentic Memory Systems: Diagnostics and a Strong Baseline Zhikai Chen , Jialiang Gu, Junyu Yin, Xianxuan Long, Shenglai Zeng, Xiaoze Liu, Kai Guo, Keren Zhou, Jiliang Tang; arXiv 2026",
+          "score": 11.75,
+          "reasons": [
+            "dated_work",
+            "publication_or_venue",
+            "technical_relevance"
+          ]
+        },
+        {
+          "text": "Do Proactive Agents Really Need an LLM to Decide When to Wake and What to Anchor? Xiaoze Liu, Ruowang Zhang, Amir H. Abdi, Michel Galley, Zhikai Chen , Siheng Xiong, Xiaoqian Wang, Jing Gao; arXiv 2026",
+          "score": 11.75,
+          "reasons": [
+            "dated_work",
+            "publication_or_venue",
+            "technical_relevance"
+          ]
+        },
+        {
+          "text": "A Pre-training Framework for Relational Data with Information-theoretic Principles Quang Truong, Zhikai Chen , Mingxuan Ju, Tong Zhao, Neil Shah, Jiliang Tang, NeurIPS 2025",
+          "score": 10.0,
+          "reasons": [
+            "dated_work",
+            "publication_or_venue",
+            "project_or_system",
+            "technical_relevance"
+          ]
+        },
+        {
+          "text": "AutoG: Towards automatic graph construction from tabular data Zhikai Chen , Han Xie, Jian Zhang, Xiang Song, Jiliang Tang, Huzefa Rangwala, George Karypis; ICLR 2025 (poster) Code",
+          "score": 8.75,
+          "reasons": [
+            "dated_work",
+            "publication_or_venue",
+            "technical_relevance"
+          ]
+        },
+        {
+          "text": "OpenRFM: Dissecting Relational In-Context Learning Zhikai Chen , Junyu Yin, Jialiang Gu, Siheng Xiong, Xiaoze Liu, Ruowang Zhang, Keren Zhou, Kai Guo; arXiv 2026",
+          "score": 7.75,
+          "reasons": [
+            "dated_work",
+            "publication_or_venue"
+          ]
+        },
+        {
+          "text": "RFMBench: Towards Principled Benchmarking of Relational Foundation Models.pdf) Zhikai Chen , Han Xie, Jian Zhang, Haiyang Yu, Huzefa Rangwala, Xiang Song; preprint 2026",
+          "score": 7.75,
+          "reasons": [
+            "dated_work",
+            "publication_or_venue"
+          ]
+        },
+        {
+          "text": "Relatron: Automating Relational Machine Learning over Relational Databases, ICLR 2026 Zhikai Chen , Han Xie, Jian Zhang, Jiliang Tang, Xiang Song, Huzefa Rangwala Paper Code",
+          "score": 7.75,
+          "reasons": [
+            "dated_work",
+            "publication_or_venue"
+          ]
+        },
+        {
+          "text": "Repository: Amadeus; Language: JavaScript; Description: Your personal AI research assistant that automatically reads, summarizes, organizes, and acts on academic papers.; Pushed: 2026-03-25T16:56:44Z; Updated: 2026-05-01T10:22:29Z",
+          "score": 5.0,
+          "reasons": [
+            "dated_work",
+            "project_or_system",
+            "technical_relevance"
+          ]
+        },
+        {
+          "text": "Repository: awesome-fake-news-detection; Description: Collection of fake news detection methods and a practical evaluation framework; Pushed: 2023-06-15T07:40:06Z; Updated: 2025-02-19T10:19:56Z",
+          "score": 4.0,
+          "reasons": [
+            "dated_work",
+            "project_or_system"
+          ]
+        },
+        {
+          "text": "Graph Foundation Models Haitao Mao\\ , Zhikai Chen\\ , Wenzhuo Tang, Jianan Zhao, Yao Ma, Tong Zhao, Neil Shah, Michael Galkin, Jiliang Tang 2024 [Paper lists]; ICML 2024 (Spotlight); means equal contribution",
+          "score": 3.75,
+          "reasons": [
+            "dated_work",
+            "publication_or_venue"
+          ]
+        }
+      ]
+    }
+  },
+  "adaptive_questions": [
+    {
+      "id": "focus_highlights",
+      "prompt": "Which portfolio strengths should I emphasize most?",
+      "field": "focus_highlights",
+      "reason": "Your materials contain several strong points; choosing a focus improves query design and ranking.",
+      "examples": [
+        "Exploring Cross-Scenario Generality of Agentic Memory Systems: Diagnostics and a Strong Baseline",
+        "Do Proactive Agents Really Need an LLM to Decide When to Wake and What to Anchor?",
+        "A Pre-training Framework for Relational Data with Information-theoretic Principles",
+        "AutoG: Towards automatic graph construction from tabular data"
+      ]
+    },
+    {
+      "id": "company_stages",
+      "prompt": "What company stages do you prefer?",
+      "field": "company_stages",
+      "reason": "Startup boards expose stage and funding signals.",
+      "examples": [
+        "seed",
+        "series a",
+        "growth",
+        "public-company ok"
+      ]
+    },
+    {
+      "id": "result_count",
+      "prompt": "How many jobs should I return?",
+      "field": "result_count",
+      "reason": "Result count controls search breadth and how much detail to include.",
+      "examples": [
+        "10",
+        "25",
+        "50"
+      ]
+    },
+    {
+      "id": "output_format",
+      "prompt": "What output format should I use? TSV is the default.",
+      "field": "output_format",
+      "reason": "TSV is the default because it is easy to paste into spreadsheets and databases.",
+      "examples": [
+        "tsv",
+        "json",
+        "markdown"
+      ]
+    },
+    {
+      "id": "min_salary",
+      "prompt": "What minimum base salary should I use when available?",
+      "field": "min_salary",
+      "reason": "Some platforms expose salary ranges.",
+      "examples": [
+        "$120000",
+        "$160000",
+        "no minimum"
+      ]
+    },
+    {
+      "id": "visa_sponsorship",
+      "prompt": "Do you need visa sponsorship?",
+      "field": "visa_sponsorship",
+      "reason": "Some postings include visa constraints.",
+      "examples": [
+        "yes",
+        "no"
+      ]
+    }
+  ],
+  "matches": [
+    {
+      "job": {
+        "source": "hackernews",
+        "source_id": "48357792",
+        "title": "Several of our critical founding hires came through this forum, and we currently have 3 open roles! Olli Health Built by",
+        "company": "Olli Health",
+        "url": "https://news.ycombinator.com/item?id=48357792",
+        "location": null,
+        "description": "Olli Health | Remote (US/CA) w/ Quarterly Travel | Full-Time | ollihealth.ai Hi HN - Several of our critical founding hires came through this forum, and we currently have 3 open roles! Olli Health Built by home health experts and seasoned product managers and engineers from Amazon, Google, Cohere Health, and Arrive Health, Olli Health streamlines ICD-10 coding and in-home documentation with industry-leading speed and accuracy, freeing nurses to focus on patients while helping agencies maximize revenue, reduce compliance risk, and scale efficiently. We\u2019re backed by top healthtech and AI-focused VCs (Cannage Capital, Arkitekt Ventures, and Tau Ventures) and Olli Health was recently profiled in Home Health Care News ( https://homehealthcarenews.com/2025/11/home-health-ai-platfo... , Post-Acute Care's leading publication). We are motivated by the opportunity for impact, and driven to ensure that our parents, friends, (and ourselves!) will continue to have access to quality healthcare in the home. Roles Senior AI Engineer | $180k-220k: Own end-to-end LLM product surfaces in a clinical/HIPAA environment, running rigorous evals and experiments across prompts, retrieval, and agents while shipping fast with strong Python chops and NLP fundamentals. Senior Software Engineer, Scribe & Integrations | $160k-190k: Ship production React Native apps with strong TypeScript/PostgreSQL chops to own the full stack end-to-end, wrangling messy EHR data integrations and turning fuzzy clinical workflows into fast-shipped, observable features. Senior Software Engineer, Platform | $160k-190k: Stack - Python (FastAPI/Django/Flask), React, PostgreSQL, and AWS to own platform architecture and IC delivery on a small team while mentoring engineers and setting the quality bar across a fast-moving healthcare codebase. Requirements for all roles: 5+ YoE | Startup experience | Auth to work in US See our website for details on each: https://www.ollihomehealth.ai/careers",
+        "tags": [
+          "who-is-hiring"
+        ],
+        "salary": null,
+        "posted_at": "2026-06-01T15:04:14+00:00",
+        "raw": {
+          "_highlightResult": {
+            "author": {
+              "matchLevel": "none",
+              "matchedWords": [],
+              "value": "onejgordon"
+            },
+            "comment_text": {
+              "fullyHighlighted": false,
+              "matchLevel": "full",
+              "matchedWords": [
+                "ai",
+                "engineer",
+                "llm",
+                "agents"
+              ],
+              "value": "Olli Health | Remote (US/CA) w/ Quarterly Travel | Full-Time | ollihealth.<em>ai</em><p>Hi HN -<p>Several of our critical founding hires came through this forum, and we currently have 3 open roles!<p>Olli Health<p>Built by home health experts and seasoned product managers and <em>engineers</em> from Amazon, Google, Cohere Health, and Arrive Health, Olli Health streamlines ICD-10 coding and in-home documentation with industry-leading speed and accuracy, freeing nurses to focus on patients while helping agencies maximize revenue, reduce compliance risk, and scale efficiently.<p>We\u2019re backed by top healthtech and <em>AI</em>-focused VCs (Cannage Capital, Arkitekt Ventures, and Tau Ventures) and Olli Health was recently profiled in Home Health Care News (<a href=\"https://homehealthcarenews.com/2025/11/home-health-ai-platform-olli-health-raises-10m/\" rel=\"nofollow\">https://homehealthcarenews.com/2025/11/home-health-<em>ai</em>-platfo...</a>, Post-Acute Care's leading publication).<p>We are motivated by the opportunity for impact, and driven to ensure that our parents, friends, (and ourselves!) will continue to have access to quality healthcare in the home.<p>Roles<p>Senior <em>AI</em> <em>Engineer</em> | $180k-220k: Own end-to-end <em>LLM</em> product surfaces in a clinical/HIPAA environment, running rigorous evals and experiments across prompts, retrieval, and <em>agents</em> while shipping fast with strong Python chops and NLP fundamentals.<p>Senior Software <em>Engineer</em>, Scribe &amp; Integrations | $160k-190k: Ship production React Native apps with strong TypeScript/PostgreSQL chops to own the full stack end-to-end, wrangling messy EHR data integrations and turning fuzzy clinical workflows into fast-shipped, observable features.<p>Senior Software <em>Engineer</em>, Platform | $160k-190k: Stack - Python (FastAPI/Django/Flask), React, PostgreSQL, and AWS to own platform architecture and IC delivery on a small team while mentoring <em>engineers</em> and setting the quality bar across a fast-moving healthcare codebase.<p>Requirements for all roles: 5+ YoE | Startup experience | Auth to work in US<p>See our website for details on each: <a href=\"https://www.ollihomehealth.ai/careers\" rel=\"nofollow\">https://www.ollihomehealth.<em>ai</em>/careers</a>"
+            },
+            "story_title": {
+              "matchLevel": "none",
+              "matchedWords": [],
+              "value": "Ask HN: Who is hiring? (June 2026)"
+            }
+          },
+          "_tags": [
+            "comment",
+            "author_onejgordon",
+            "story_48357725"
+          ],
+          "author": "onejgordon",
+          "children": [
+            48433272,
+            48433273
+          ],
+          "comment_text": "Olli Health | Remote (US&#x2F;CA) w&#x2F; Quarterly Travel | Full-Time | ollihealth.ai<p>Hi HN -<p>Several of our critical founding hires came through this forum, and we currently have 3 open roles!<p>Olli Health<p>Built by home health experts and seasoned product managers and engineers from Amazon, Google, Cohere Health, and Arrive Health, Olli Health streamlines ICD-10 coding and in-home documentation with industry-leading speed and accuracy, freeing nurses to focus on patients while helping agencies maximize revenue, reduce compliance risk, and scale efficiently.<p>We\u2019re backed by top healthtech and AI-focused VCs (Cannage Capital, Arkitekt Ventures, and Tau Ventures) and Olli Health was recently profiled in Home Health Care News (<a href=\"https:&#x2F;&#x2F;homehealthcarenews.com&#x2F;2025&#x2F;11&#x2F;home-health-ai-platform-olli-health-raises-10m&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;homehealthcarenews.com&#x2F;2025&#x2F;11&#x2F;home-health-ai-platfo...</a>, Post-Acute Care&#x27;s leading publication).<p>We are motivated by the opportunity for impact, and driven to ensure that our parents, friends, (and ourselves!) will continue to have access to quality healthcare in the home.<p>Roles<p>Senior AI Engineer | $180k-220k: Own end-to-end LLM product surfaces in a clinical&#x2F;HIPAA environment, running rigorous evals and experiments across prompts, retrieval, and agents while shipping fast with strong Python chops and NLP fundamentals.<p>Senior Software Engineer, Scribe &amp; Integrations | $160k-190k: Ship production React Native apps with strong TypeScript&#x2F;PostgreSQL chops to own the full stack end-to-end, wrangling messy EHR data integrations and turning fuzzy clinical workflows into fast-shipped, observable features.<p>Senior Software Engineer, Platform | $160k-190k: Stack - Python (FastAPI&#x2F;Django&#x2F;Flask), React, PostgreSQL, and AWS to own platform architecture and IC delivery on a small team while mentoring engineers and setting the quality bar across a fast-moving healthcare codebase.<p>Requirements for all roles: 5+ YoE | Startup experience | Auth to work in US<p>See our website for details on each: <a href=\"https:&#x2F;&#x2F;www.ollihomehealth.ai&#x2F;careers\" rel=\"nofollow\">https:&#x2F;&#x2F;www.ollihomehealth.ai&#x2F;careers</a>",
+          "created_at": "2026-06-01T15:04:14Z",
+          "created_at_i": 1780326254,
+          "objectID": "48357792",
+          "parent_id": 48357725,
+          "story_id": 48357725,
+          "story_title": "Ask HN: Who is hiring? (June 2026)",
+          "updated_at": "2026-06-07T09:37:56Z"
+        }
+      },
+      "score": 16.75,
+      "matched_terms": [
+        "ai engineer",
+        "software engineer",
+        "agents",
+        "llm",
+        "full stack",
+        "python",
+        "remote preferred",
+        "AI"
+      ],
+      "query": {
+        "text": "ai engineer llm agents",
+        "role": "machine learning engineer",
+        "skills": [
+          "llm",
+          "agents"
+        ],
+        "location": "Remote US",
+        "remote": true
+      },
+      "rationale": "Matched ai engineer, software engineer, agents, llm, full stack, python, remote preferred, AI"
+    },
+    {
+      "job": {
+        "source": "hackernews",
+        "source_id": "48385146",
+        "title": "Lead AI Engineer + Agent Builder + Platform Engineer",
+        "company": "Catalyst\u00b7Wayfare AI",
+        "url": "https://news.ycombinator.com/item?id=48385146",
+        "location": null,
+        "description": "Catalyst\u00b7Wayfare AI | Lead AI Engineer + Agent Builder + Platform Engineer | Remote (US) | Full-time / Part-time / Contract | https://catalystwayfare.ai/careers AI transformation firm shipping production AI systems for mid-market enterprises in regulated and technical domains \u2014 finance, energy, industrials, healthcare. We do not stop at PowerPoint AI strategy. We ship working systems alongside our clients' engineering teams. Small teams, deep expertise, real autonomy on real work. Hiring: [1] Lead AI Engineer, Agentic Systems \u2014 Embedded technical lead on a multi-agent orchestration build for one of the country's leading power engineering firms. Architect the engine; design the patterns we replicate at the next client. 6+ yrs eng, 2+ shipping LLM/agentic systems in production. Strong Python; opinions on agent frameworks. Monthly US travel to one major metro. https://catalystwayfare.ai/jd-lead [2] AI Engineer, Agent Builder \u2014 Hands-on builder embedded on the same engagement. End-to-end ownership of individual capability agents \u2014 prompts, tools, retrieval, evals, monitoring. 3\u20135 yrs strong Python, real production LLM API experience, shipped at least one agent system end-to-end. 1099 contract, ~30\u201340 hrs/wk. Occasional US travel. https://catalystwayfare.ai/jd-builder [3]Platform Manager (Engineering), Trust.ML \u2014 Founding platform engineer on our productized governance, evaluation, and deployment surface. Own the roadmap, write the code, set the operational posture (SLOs, on-call, audit). 5+ yrs, prior engineer-in-charge experience. Quarterly US travel. Compensation competitive with senior platform roles at venture-funded AI infrastructure companies; equity reflects the founding nature of the seat. https://catalystwayfare.ai/jd-platform Stack: Claude + OpenAI + Gemini + Perplexity APIs in production, open-source models when the math points there. Cursor and Claude Code daily. Vercel, Neon, Sentry. Evals as first-class artifacts. Apply: per each JD's instructions, to talent+hn@cwai.co. Short cover note matters more than a resume.",
+        "tags": [
+          "who-is-hiring"
+        ],
+        "salary": null,
+        "posted_at": "2026-06-03T15:08:14+00:00",
+        "raw": {
+          "_highlightResult": {
+            "author": {
+              "matchLevel": "none",
+              "matchedWords": [],
+              "value": "catalystwayfare"
+            },
+            "comment_text": {
+              "fullyHighlighted": false,
+              "matchLevel": "full",
+              "matchedWords": [
+                "ai",
+                "engineer",
+                "llm",
+                "agents"
+              ],
+              "value": "Catalyst\u00b7Wayfare <em>AI</em> | Lead <em>AI</em> <em>Engineer</em> + <em>Agent</em> Builder + Platform <em>Engineer</em> | Remote (US) | Full-time / Part-time / Contract | <a href=\"https://catalystwayfare.ai/careers\" rel=\"nofollow\">https://catalystwayfare.<em>ai</em>/careers</a><p><em>AI</em> transformation firm shipping production <em>AI</em> systems for mid-market enterprises in regulated and technical domains \u2014 finance, energy, industrials, healthcare. We do not stop at PowerPoint <em>AI</em> strategy. We ship working systems alongside our clients' engineering teams. Small teams, deep expertise, real autonomy on real work.<p>Hiring:<p>[1] Lead <em>AI</em> <em>Engineer</em>, Agentic Systems \u2014 Embedded technical lead on a multi-<em>agent</em> orchestration build for one of the country's leading power engineering firms. Architect the engine; design the patterns we replicate at the next client. 6+ yrs eng, 2+ shipping <em>LLM</em>/agentic systems in production. Strong Python; opinions on <em>agent</em> frameworks. Monthly US travel to one major metro. <a href=\"https://catalystwayfare.ai/jd-lead\" rel=\"nofollow\">https://catalystwayfare.<em>ai</em>/jd-lead</a><p>[2] <em>AI</em> <em>Engineer</em>, <em>Agent</em> Builder \u2014 Hands-on builder embedded on the same engagement. End-to-end ownership of individual capability <em>agents</em> \u2014 prompts, tools, retrieval, evals, monitoring. 3\u20135 yrs strong Python, real production <em>LLM</em> API experience, shipped at least one <em>agent</em> system end-to-end. 1099 contract, ~30\u201340 hrs/wk. Occasional US travel. <a href=\"https://catalystwayfare.ai/jd-builder\" rel=\"nofollow\">https://catalystwayfare.<em>ai</em>/jd-builder</a><p>[3]Platform Manager (Engineering), Trust.ML \u2014 Founding platform <em>engineer</em> on our productized governance, evaluation, and deployment surface. Own the roadmap, write the code, set the operational posture (SLOs, on-call, audit). 5+ yrs, prior <em>engineer</em>-in-charge experience. Quarterly US travel. Compensation competitive with senior platform roles at venture-funded <em>AI</em> infrastructure companies; equity reflects the founding nature of the seat. <a href=\"https://catalystwayfare.ai/jd-platform\" rel=\"nofollow\">https://catalystwayfare.<em>ai</em>/jd-platform</a><p>Stack: Claude + OpenAI + Gemini + Perplexity APIs in production, open-source models when the math points there. Cursor and Claude Code daily. Vercel, Neon, Sentry. Evals as first-class artifacts.<p>Apply: per each JD's instructions, to talent+hn@cwai.co. Short cover note matters more than a resume."
+            },
+            "story_title": {
+              "matchLevel": "none",
+              "matchedWords": [],
+              "value": "Ask HN: Who is hiring? (June 2026)"
+            }
+          },
+          "_tags": [
+            "comment",
+            "author_catalystwayfare",
+            "story_48357725"
+          ],
+          "author": "catalystwayfare",
+          "comment_text": "Catalyst\u00b7Wayfare AI | Lead AI Engineer + Agent Builder + Platform Engineer | Remote (US) | Full-time &#x2F; Part-time &#x2F; Contract | <a href=\"https:&#x2F;&#x2F;catalystwayfare.ai&#x2F;careers\" rel=\"nofollow\">https:&#x2F;&#x2F;catalystwayfare.ai&#x2F;careers</a><p>AI transformation firm shipping production AI systems for mid-market enterprises in regulated and technical domains \u2014 finance, energy, industrials, healthcare. We do not stop at PowerPoint AI strategy. We ship working systems alongside our clients&#x27; engineering teams. Small teams, deep expertise, real autonomy on real work.<p>Hiring:<p>[1] Lead AI Engineer, Agentic Systems \u2014 Embedded technical lead on a multi-agent orchestration build for one of the country&#x27;s leading power engineering firms. Architect the engine; design the patterns we replicate at the next client. 6+ yrs eng, 2+ shipping LLM&#x2F;agentic systems in production. Strong Python; opinions on agent frameworks. Monthly US travel to one major metro. <a href=\"https:&#x2F;&#x2F;catalystwayfare.ai&#x2F;jd-lead\" rel=\"nofollow\">https:&#x2F;&#x2F;catalystwayfare.ai&#x2F;jd-lead</a><p>[2] AI Engineer, Agent Builder \u2014 Hands-on builder embedded on the same engagement. End-to-end ownership of individual capability agents \u2014 prompts, tools, retrieval, evals, monitoring. 3\u20135 yrs strong Python, real production LLM API experience, shipped at least one agent system end-to-end. 1099 contract, ~30\u201340 hrs&#x2F;wk. Occasional US travel. <a href=\"https:&#x2F;&#x2F;catalystwayfare.ai&#x2F;jd-builder\" rel=\"nofollow\">https:&#x2F;&#x2F;catalystwayfare.ai&#x2F;jd-builder</a><p>[3]Platform Manager (Engineering), Trust.ML \u2014 Founding platform engineer on our productized governance, evaluation, and deployment surface. Own the roadmap, write the code, set the operational posture (SLOs, on-call, audit). 5+ yrs, prior engineer-in-charge experience. Quarterly US travel. Compensation competitive with senior platform roles at venture-funded AI infrastructure companies; equity reflects the founding nature of the seat. <a href=\"https:&#x2F;&#x2F;catalystwayfare.ai&#x2F;jd-platform\" rel=\"nofollow\">https:&#x2F;&#x2F;catalystwayfare.ai&#x2F;jd-platform</a><p>Stack: Claude + OpenAI + Gemini + Perplexity APIs in production, open-source models when the math points there. Cursor and Claude Code daily. Vercel, Neon, Sentry. Evals as first-class artifacts.<p>Apply: per each JD&#x27;s instructions, to talent+hn@cwai.co. Short cover note matters more than a resume.",
+          "created_at": "2026-06-03T15:08:14Z",
+          "created_at_i": 1780499294,
+          "objectID": "48385146",
+          "parent_id": 48357725,
+          "story_id": 48357725,
+          "story_title": "Ask HN: Who is hiring? (June 2026)",
+          "updated_at": "2026-06-03T19:49:29Z"
+        }
+      },
+      "score": 13.75,
+      "matched_terms": [
+        "ai engineer",
+        "agentic",
+        "agents",
+        "llm",
+        "python",
+        "remote preferred",
+        "AI"
+      ],
+      "query": {
+        "text": "ai engineer llm agents",
+        "role": "machine learning engineer",
+        "skills": [
+          "llm",
+          "agents"
+        ],
+        "location": "Remote US",
+        "remote": true
+      },
+      "rationale": "Matched ai engineer, agentic, agents, llm, python, remote preferred, AI"
+    },
+    {
+      "job": {
+        "source": "hackernews",
+        "source_id": "48363998",
+        "title": "Research Engineer / Full-Stack Engineer / Infrastructure Engineer We are Nof1, an AI research lab applying AI to trading",
+        "company": "Nof1",
+        "url": "https://news.ycombinator.com/item?id=48363998",
+        "location": null,
+        "description": "Nof1 | NYC (Onsite) | Full-time | Research Engineer / Full-Stack Engineer / Infrastructure Engineer We are Nof1, an AI research lab applying AI to trading and forecasting. We recently closed a $15M funding round and are looking for senior engineers and researchers excited about building agentic systems for financial markets. Some of the work we're doing: * Agentic research systems (including Alpha Arena) * Market, alternative, and real-time data pipelines * Backtesting and simulation frameworks * Multi-agent systems and forecasting infrastructure We hire for capability over specific technologies. Our stack includes Python, React, Firestore, Postgres, and AWS. We're generally looking for engineers and researchers with 5-7+ years of experience in agentic systems, large-scale data infrastructure, quantitative trading, machine learning, or consumer products. Email: recruiting [at] thenof1.com",
+        "tags": [
+          "who-is-hiring"
+        ],
+        "salary": null,
+        "posted_at": "2026-06-01T23:37:23+00:00",
+        "raw": {
+          "_highlightResult": {
+            "author": {
+              "matchLevel": "none",
+              "matchedWords": [],
+              "value": "gorzogo"
+            },
+            "comment_text": {
+              "fullyHighlighted": false,
+              "matchLevel": "full",
+              "matchedWords": [
+                "research",
+                "engineer",
+                "machine",
+                "learning",
+                "python"
+              ],
+              "value": "Nof1 | NYC (Onsite) | Full-time | <em>Research</em> <em>Engineer</em> / Full-Stack <em>Engineer</em> / Infrastructure <em>Engineer</em><p>We are Nof1, an AI <em>research</em> lab applying AI to trading and forecasting. We recently closed a $15M funding round and are looking for senior engineers and researchers excited about building agentic systems for financial markets.<p>Some of the work we're doing:<p>* Agentic <em>research</em> systems (including Alpha Arena)\n* Market, alternative, and real-time data pipelines\n* Backtesting and simulation frameworks\n* Multi-agent systems and forecasting infrastructure<p>We hire for capability over specific technologies. Our stack includes <em>Python</em>, React, Firestore, Postgres, and AWS.<p>We're generally looking for engineers and researchers with 5-7+ years of experience in agentic systems, large-scale data infrastructure, quantitative trading, <em>machine</em> <em>learning</em>, or consumer products.<p>Email: recruiting [at] thenof1.com"
+            },
+            "story_title": {
+              "matchLevel": "none",
+              "matchedWords": [],
+              "value": "Ask HN: Who is hiring? (June 2026)"
+            }
+          },
+          "_tags": [
+            "comment",
+            "author_gorzogo",
+            "story_48357725"
+          ],
+          "author": "gorzogo",
+          "comment_text": "Nof1 | NYC (Onsite) | Full-time | Research Engineer &#x2F; Full-Stack Engineer &#x2F; Infrastructure Engineer<p>We are Nof1, an AI research lab applying AI to trading and forecasting. We recently closed a $15M funding round and are looking for senior engineers and researchers excited about building agentic systems for financial markets.<p>Some of the work we&#x27;re doing:<p>* Agentic research systems (including Alpha Arena)\n* Market, alternative, and real-time data pipelines\n* Backtesting and simulation frameworks\n* Multi-agent systems and forecasting infrastructure<p>We hire for capability over specific technologies. Our stack includes Python, React, Firestore, Postgres, and AWS.<p>We&#x27;re generally looking for engineers and researchers with 5-7+ years of experience in agentic systems, large-scale data infrastructure, quantitative trading, machine learning, or consumer products.<p>Email: recruiting [at] thenof1.com",
+          "created_at": "2026-06-01T23:37:23Z",
+          "created_at_i": 1780357043,
+          "objectID": "48363998",
+          "parent_id": 48357725,
+          "story_id": 48357725,
+          "story_title": "Ask HN: Who is hiring? (June 2026)",
+          "updated_at": "2026-06-01T23:41:50Z"
+        }
+      },
+      "score": 13.25,
+      "matched_terms": [
+        "research engineer",
+        "agentic",
+        "machine learning",
+        "research",
+        "python",
+        "AI"
+      ],
+      "query": {
+        "text": "research engineer machine learning python",
+        "role": "research engineer",
+        "skills": [
+          "machine learning",
+          "research",
+          "python",
+          "llm"
+        ],
+        "location": "Remote US",
+        "remote": true
+      },
+      "rationale": "Matched research engineer, agentic, machine learning, research, python, AI"
+    },
+    {
+      "job": {
+        "source": "hackernews",
+        "source_id": "48365790",
+        "title": "Forward Deployed Engineer + Senior Applied AI Engineer (Agentic Systems)",
+        "company": "Puntt AI",
+        "url": "https://news.ycombinator.com/item?id=48365790",
+        "location": null,
+        "description": "Puntt AI | Forward Deployed Engineer + Senior Applied AI Engineer (Agentic Systems) | Onsite SF | Full-time Puntt AI is the system of record for enterprise marketing compliance. Our AI agents turn hours of manual brand and packaging review into minutes of automated precision. Danone, Nestl\u00e9, and Kenvue are live customers. The product works. Now we scale. Forward Deployed Engineer | $190k + equity https://wellfound.com/l/2CiVyv The FDE is the person in the room when an enterprise customer shows you their actual broken process. You run discovery, figure out what's really going wrong, configure and ship against it, and bring that signal back to product in a way the team can actually use. You work directly alongside our CEO in live enterprise cycles. What you learn shapes what we build next. Best fit: solutions engineering, field engineering, or technical founder background. You've been in enterprise rooms, you get to the real problem fast, and you can build the thing that proves the fix. Full stack, AI-native, 7+ years. Senior Applied AI Engineer | $185k-$210k + 0.75%-1.25% equity https://wellfound.com/l/2C3WzL This role owns the agentic core -- multi-agent orchestration, RAG and retrieval, stateful async workflows (Temporal), and the eval frameworks that make compliance AI trustworthy at scale. If you've spent real time thinking about failure modes, observability, and what reliable actually means when LLMs are in the loop, that's who we're looking for. 5-7+ years production engineering. 1-2+ years building with LLMs in real applications. Strong Python. Hands-on RAG.",
+        "tags": [
+          "who-is-hiring"
+        ],
+        "salary": null,
+        "posted_at": "2026-06-02T03:49:55+00:00",
+        "raw": {
+          "_highlightResult": {
+            "author": {
+              "matchLevel": "none",
+              "matchedWords": [],
+              "value": "StephK"
+            },
+            "comment_text": {
+              "fullyHighlighted": false,
+              "matchLevel": "full",
+              "matchedWords": [
+                "ai",
+                "engineer",
+                "llm",
+                "agents"
+              ],
+              "value": "Puntt <em>AI</em> | Forward Deployed <em>Engineer</em> + Senior Applied <em>AI</em> <em>Engineer</em> (Agentic Systems) | Onsite SF | Full-time<p>Puntt <em>AI</em> is the system of record for enterprise marketing compliance. Our <em>AI</em> <em>agents</em> turn hours of manual brand and packaging review into minutes of automated precision. Danone, Nestl\u00e9, and Kenvue are live customers. The product works. Now we scale.<p>Forward Deployed <em>Engineer</em> | $190k + equity\n<a href=\"https://wellfound.com/l/2CiVyv\" rel=\"nofollow\">https://wellfound.com/l/2CiVyv</a><p>The FDE is the person in the room when an enterprise customer shows you their actual broken process. You run discovery, figure out what's really going wrong, configure and ship against it, and bring that signal back to product in a way the team can actually use. You work directly alongside our CEO in live enterprise cycles. What you learn shapes what we build next.<p>Best fit: solutions engineering, field engineering, or technical founder background. You've been in enterprise rooms, you get to the real problem fast, and you can build the thing that proves the fix. Full stack, <em>AI</em>-native, 7+ years.<p>Senior Applied <em>AI</em> <em>Engineer</em> | $185k-$210k + 0.75%-1.25% equity\n<a href=\"https://wellfound.com/l/2C3WzL\" rel=\"nofollow\">https://wellfound.com/l/2C3WzL</a><p>This role owns the agentic core -- multi-agent orchestration, RAG and retrieval, stateful async workflows (Temporal), and the eval frameworks that make compliance <em>AI</em> trustworthy at scale. If you've spent real time thinking about failure modes, observability, and what reliable actually means when <em>LLMs</em> are in the loop, that's who we're looking for.<p>5-7+ years production engineering. 1-2+ years building with <em>LLMs</em> in real applications. Strong Python. Hands-on RAG."
+            },
+            "story_title": {
+              "matchLevel": "none",
+              "matchedWords": [],
+              "value": "Ask HN: Who is hiring? (June 2026)"
+            }
+          },
+          "_tags": [
+            "comment",
+            "author_StephK",
+            "story_48357725"
+          ],
+          "author": "StephK",
+          "comment_text": "Puntt AI | Forward Deployed Engineer + Senior Applied AI Engineer (Agentic Systems) | Onsite SF | Full-time<p>Puntt AI is the system of record for enterprise marketing compliance. Our AI agents turn hours of manual brand and packaging review into minutes of automated precision. Danone, Nestl\u00e9, and Kenvue are live customers. The product works. Now we scale.<p>Forward Deployed Engineer | $190k + equity\n<a href=\"https:&#x2F;&#x2F;wellfound.com&#x2F;l&#x2F;2CiVyv\" rel=\"nofollow\">https:&#x2F;&#x2F;wellfound.com&#x2F;l&#x2F;2CiVyv</a><p>The FDE is the person in the room when an enterprise customer shows you their actual broken process. You run discovery, figure out what&#x27;s really going wrong, configure and ship against it, and bring that signal back to product in a way the team can actually use. You work directly alongside our CEO in live enterprise cycles. What you learn shapes what we build next.<p>Best fit: solutions engineering, field engineering, or technical founder background. You&#x27;ve been in enterprise rooms, you get to the real problem fast, and you can build the thing that proves the fix. Full stack, AI-native, 7+ years.<p>Senior Applied AI Engineer | $185k-$210k + 0.75%-1.25% equity\n<a href=\"https:&#x2F;&#x2F;wellfound.com&#x2F;l&#x2F;2C3WzL\" rel=\"nofollow\">https:&#x2F;&#x2F;wellfound.com&#x2F;l&#x2F;2C3WzL</a><p>This role owns the agentic core -- multi-agent orchestration, RAG and retrieval, stateful async workflows (Temporal), and the eval frameworks that make compliance AI trustworthy at scale. If you&#x27;ve spent real time thinking about failure modes, observability, and what reliable actually means when LLMs are in the loop, that&#x27;s who we&#x27;re looking for.<p>5-7+ years production engineering. 1-2+ years building with LLMs in real applications. Strong Python. Hands-on RAG.",
+          "created_at": "2026-06-02T03:49:55Z",
+          "created_at_i": 1780372195,
+          "objectID": "48365790",
+          "parent_id": 48357725,
+          "story_id": 48357725,
+          "story_title": "Ask HN: Who is hiring? (June 2026)",
+          "updated_at": "2026-06-02T13:47:23Z"
+        }
+      },
+      "score": 12.75,
+      "matched_terms": [
+        "ai engineer",
+        "agentic",
+        "agents",
+        "full stack",
+        "python",
+        "AI"
+      ],
+      "query": {
+        "text": "ai engineer llm agents",
+        "role": "machine learning engineer",
+        "skills": [
+          "llm",
+          "agents"
+        ],
+        "location": "Remote US",
+        "remote": true
+      },
+      "rationale": "Matched ai engineer, agentic, agents, full stack, python, AI"
+    },
+    {
+      "job": {
+        "source": "hackernews",
+        "source_id": "48358370",
+        "title": "Founding Full Stack / Applied AI Engineer",
+        "company": "Cora AI",
+        "url": "https://news.ycombinator.com/item?id=48358370",
+        "location": null,
+        "description": "Cora AI | Founding Full Stack / Applied AI Engineer | REMOTE (US ONLY, LA/SF preferred) | Full-time | $190\u2013250k + early equity We build customer success agents and account intelligence that do the actual manual work \u2014 so CS teams can focus on the relationship-driven work that drives growth. You'll be one of the first engineers. You'll ship voice agents, multi-agent orchestration, RAG pipelines, evals, and account intelligence features that touch real customers on day one. What we're looking for: - You build with AI IDEs (Cursor, Claude Code) as a force multiplier \u2014 not occasionally, as your default - You've shipped something with LLMs in production (agents, RAG, evals \u2014 not just wrappers) - Comfortable owning a feature from idea to production without a lot of hand-holding - Based in the US \u2014 SF Bay Area or LA strongly preferred Why Cora: - Work on cutting-edge applied AI: voice agents, knowledge graphs, multi-agent systems, evals, simulations, and more - Real users, real impact, high autonomy - Fast, fair interview loop \u2014 no BS - Fully covered healthcare for you and your dependents - 401(k) plan - Flexible time off Learn more: https://www.cora.ai/ Interested? Email careers [at] cora.ai \u2014 these go straight to me, and I read every one.",
+        "tags": [
+          "who-is-hiring"
+        ],
+        "salary": null,
+        "posted_at": "2026-06-01T15:41:41+00:00",
+        "raw": {
+          "_highlightResult": {
+            "author": {
+              "matchLevel": "none",
+              "matchedWords": [],
+              "value": "jesalg"
+            },
+            "comment_text": {
+              "fullyHighlighted": false,
+              "matchLevel": "full",
+              "matchedWords": [
+                "ai",
+                "engineer",
+                "llm",
+                "agents"
+              ],
+              "value": "Cora <em>AI</em> | Founding Full Stack / Applied <em>AI</em> <em>Engineer</em> | REMOTE (US ONLY, LA/SF preferred) | Full-time | $190\u2013250k + early equity<p>We build customer success <em>agents</em> and account intelligence that do the actual manual work \u2014 so CS teams can focus on the relationship-driven work that drives growth.<p>You'll be one of the first engineers. You'll ship voice <em>agents</em>, multi-agent orchestration, RAG pipelines, evals, and account intelligence features that touch real customers on day one.<p>What we're looking for:<p>- You build with <em>AI</em> IDEs (Cursor, Claude Code) as a force multiplier \u2014 not occasionally, as your default<p>- You've shipped something with <em>LLMs</em> in production (<em>agents</em>, RAG, evals \u2014 not just wrappers)<p>- Comfortable owning a feature from idea to production without a lot of hand-holding<p>- Based in the US \u2014 SF Bay Area or LA strongly preferred<p>Why Cora:<p>- Work on cutting-edge applied <em>AI</em>: voice <em>agents</em>, knowledge graphs, multi-agent systems, evals, simulations, and more<p>- Real users, real impact, high autonomy<p>- Fast, fair interview loop \u2014 no BS<p>- Fully covered healthcare for you and your dependents<p>- 401(k) plan<p>- Flexible time off<p>Learn more: <a href=\"https://www.cora.ai/\" rel=\"nofollow\">https://www.cora.<em>ai</em>/</a><p>Interested? Email careers [at] cora.<em>ai</em> \u2014 these go straight to me, and I read every one."
+            },
+            "story_title": {
+              "matchLevel": "none",
+              "matchedWords": [],
+              "value": "Ask HN: Who is hiring? (June 2026)"
+            }
+          },
+          "_tags": [
+            "comment",
+            "author_jesalg",
+            "story_48357725"
+          ],
+          "author": "jesalg",
+          "comment_text": "Cora AI | Founding Full Stack &#x2F; Applied AI Engineer | REMOTE (US ONLY, LA&#x2F;SF preferred) | Full-time | $190\u2013250k + early equity<p>We build customer success agents and account intelligence that do the actual manual work \u2014 so CS teams can focus on the relationship-driven work that drives growth.<p>You&#x27;ll be one of the first engineers. You&#x27;ll ship voice agents, multi-agent orchestration, RAG pipelines, evals, and account intelligence features that touch real customers on day one.<p>What we&#x27;re looking for:<p>- You build with AI IDEs (Cursor, Claude Code) as a force multiplier \u2014 not occasionally, as your default<p>- You&#x27;ve shipped something with LLMs in production (agents, RAG, evals \u2014 not just wrappers)<p>- Comfortable owning a feature from idea to production without a lot of hand-holding<p>- Based in the US \u2014 SF Bay Area or LA strongly preferred<p>Why Cora:<p>- Work on cutting-edge applied AI: voice agents, knowledge graphs, multi-agent systems, evals, simulations, and more<p>- Real users, real impact, high autonomy<p>- Fast, fair interview loop \u2014 no BS<p>- Fully covered healthcare for you and your dependents<p>- 401(k) plan<p>- Flexible time off<p>Learn more: <a href=\"https:&#x2F;&#x2F;www.cora.ai&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;www.cora.ai&#x2F;</a><p>Interested? Email careers [at] cora.ai \u2014 these go straight to me, and I read every one.",
+          "created_at": "2026-06-01T15:41:41Z",
+          "created_at_i": 1780328501,
+          "objectID": "48358370",
+          "parent_id": 48357725,
+          "story_id": 48357725,
+          "story_title": "Ask HN: Who is hiring? (June 2026)",
+          "updated_at": "2026-06-01T17:32:36Z"
+        }
+      },
+      "score": 11.75,
+      "matched_terms": [
+        "ai engineer",
+        "agents",
+        "graphs",
+        "full stack",
+        "remote preferred",
+        "AI"
+      ],
+      "query": {
+        "text": "ai engineer llm agents",
+        "role": "machine learning engineer",
+        "skills": [
+          "llm",
+          "agents"
+        ],
+        "location": "Remote US",
+        "remote": true
+      },
+      "rationale": "Matched ai engineer, agents, graphs, full stack, remote preferred, AI"
+    },
+    {
+      "job": {
+        "source": "hackernews",
+        "source_id": "48364782",
+        "title": "Machine Learning (ML) Engineer",
+        "company": "Beatdapp",
+        "url": "https://news.ycombinator.com/item?id=48364782",
+        "location": null,
+        "description": "Beatdapp | Machine Learning (ML) Engineer | Vancouver, Canada | ONSITE (Hybrid) | Full-time Beatdapp is a ~50-person startup delivering audio and streaming integrity technology to media platforms. We process data at TB/PB scale to protect the royalty ecosystem, generate authentic recommendations, and detect AI-generated content. We are looking for an experienced ML engineer (+3 years) to work on our inference systems and data platform. In this role, you will be executing ML engineering, cloud platform/infrastructure design, and building ML model inference systems. You'll be a good fit if you have deep experience across different data stores, distributed systems, caching, and data transfer protocols. Our team manages and maintains integrated software systems, including inference containers, data processing pipelines, and feature stores/generation platforms. Stack: Multi-cloud (AWS, GCP), Docker, Airflow, Python, MLflow, BigQuery, SQL, S3, GCS, GitHub Actions, Terraform. The team is collaborative, and low-ego - we're looking for talented engineers who are comfortable working on projects that move at the pace of weeks rather than months and who love learning. Nice-to-haves include experience with audio/media systems, signal processing/spectograms, speech detection systems, computer vision, GPU hardware development, and event streaming systems. Full posting: https://beatdapp.breezy.hr/p/fcefc290c7b0-ml-engineer-ii-inf... Or reach me directly: kevin [at] beatdapp.com",
+        "tags": [
+          "who-is-hiring"
+        ],
+        "salary": null,
+        "posted_at": "2026-06-02T01:25:29+00:00",
+        "raw": {
+          "_highlightResult": {
+            "author": {
+              "matchLevel": "none",
+              "matchedWords": [],
+              "value": "kachow6"
+            },
+            "comment_text": {
+              "fullyHighlighted": false,
+              "matchLevel": "full",
+              "matchedWords": [
+                "machine",
+                "learning",
+                "engineer",
+                "python"
+              ],
+              "value": "Beatdapp | <em>Machine</em> <em>Learning</em> (ML) <em>Engineer</em> | Vancouver, Canada | ONSITE (Hybrid) | Full-time<p>Beatdapp is a ~50-person startup delivering audio and streaming integrity technology to media platforms. We process data at TB/PB scale to protect the royalty ecosystem, generate authentic recommendations, and detect AI-generated content.<p>We are looking for an experienced ML <em>engineer</em> (+3 years) to work on our inference systems and data platform. In this role, you will be executing ML engineering, cloud platform/infrastructure design, and building ML model inference systems. You'll be a good fit if you have deep experience across different data stores, distributed systems, caching, and data transfer protocols. Our team manages and maintains integrated software systems, including inference containers, data processing pipelines, and feature stores/generation platforms.<p>Stack: Multi-cloud (AWS, GCP), Docker, Airflow, <em>Python</em>, MLflow, BigQuery, SQL, S3, GCS, GitHub Actions, Terraform.<p>The team is collaborative, and low-ego - we're looking for talented engineers who are comfortable working on projects that move at the pace of weeks rather than months and who love <em>learning</em>. Nice-to-haves include experience with audio/media systems, signal processing/spectograms, speech detection systems, computer vision, GPU hardware development, and event streaming systems.<p>Full posting: <a href=\"https://beatdapp.breezy.hr/p/fcefc290c7b0-ml-engineer-ii-inference-platform\" rel=\"nofollow\">https://beatdapp.breezy.hr/p/fcefc290c7b0-ml-<em>engineer</em>-ii-inf...</a><p>Or reach me directly: kevin [at] beatdapp.com"
+            },
+            "story_title": {
+              "matchLevel": "none",
+              "matchedWords": [],
+              "value": "Ask HN: Who is hiring? (June 2026)"
+            }
+          },
+          "_tags": [
+            "comment",
+            "author_kachow6",
+            "story_48357725"
+          ],
+          "author": "kachow6",
+          "comment_text": "Beatdapp | Machine Learning (ML) Engineer | Vancouver, Canada | ONSITE (Hybrid) | Full-time<p>Beatdapp is a ~50-person startup delivering audio and streaming integrity technology to media platforms. We process data at TB&#x2F;PB scale to protect the royalty ecosystem, generate authentic recommendations, and detect AI-generated content.<p>We are looking for an experienced ML engineer (+3 years) to work on our inference systems and data platform. In this role, you will be executing ML engineering, cloud platform&#x2F;infrastructure design, and building ML model inference systems. You&#x27;ll be a good fit if you have deep experience across different data stores, distributed systems, caching, and data transfer protocols. Our team manages and maintains integrated software systems, including inference containers, data processing pipelines, and feature stores&#x2F;generation platforms.<p>Stack: Multi-cloud (AWS, GCP), Docker, Airflow, Python, MLflow, BigQuery, SQL, S3, GCS, GitHub Actions, Terraform.<p>The team is collaborative, and low-ego - we&#x27;re looking for talented engineers who are comfortable working on projects that move at the pace of weeks rather than months and who love learning. Nice-to-haves include experience with audio&#x2F;media systems, signal processing&#x2F;spectograms, speech detection systems, computer vision, GPU hardware development, and event streaming systems.<p>Full posting: <a href=\"https:&#x2F;&#x2F;beatdapp.breezy.hr&#x2F;p&#x2F;fcefc290c7b0-ml-engineer-ii-inference-platform\" rel=\"nofollow\">https:&#x2F;&#x2F;beatdapp.breezy.hr&#x2F;p&#x2F;fcefc290c7b0-ml-engineer-ii-inf...</a><p>Or reach me directly: kevin [at] beatdapp.com",
+          "created_at": "2026-06-02T01:25:29Z",
+          "created_at_i": 1780363529,
+          "objectID": "48364782",
+          "parent_id": 48357725,
+          "story_id": 48357725,
+          "story_title": "Ask HN: Who is hiring? (June 2026)",
+          "updated_at": "2026-06-02T01:26:51Z"
+        }
+      },
+      "score": 10.75,
+      "matched_terms": [
+        "ml engineer",
+        "machine learning",
+        "gpu",
+        "python",
+        "AI"
+      ],
+      "query": {
+        "text": "machine learning engineer python",
+        "role": "machine learning engineer",
+        "skills": [
+          "python",
+          "machine learning"
+        ],
+        "location": "Remote US",
+        "remote": true
+      },
+      "rationale": "Matched ml engineer, machine learning, gpu, python, AI"
+    },
+    {
+      "job": {
+        "source": "yc",
+        "source_id": "92981",
+        "title": "Forward Deployed ML Engineer",
+        "company": "Triomics",
+        "url": "https://www.ycombinator.com/companies/triomics/jobs/NJOdpdY-forward-deployed-ml-engineer",
+        "location": "New York, NY, US",
+        "description": "AI Agents for Oncology EHRs Engineering Machine learning",
+        "tags": [
+          "Full-time",
+          "Engineering",
+          "Machine learning"
+        ],
+        "salary": "$170K - $190K",
+        "posted_at": null,
+        "raw": {
+          "id": 92981,
+          "title": "Forward Deployed ML Engineer",
+          "url": "/companies/triomics/jobs/NJOdpdY-forward-deployed-ml-engineer",
+          "applyUrl": "https://account.ycombinator.com/authenticate?continue=https%3A%2F%2Fwww.workatastartup.com%2Fapplication%3Fsignup_job_id%3D92981&defaults%5BsignUpActive%5D=true",
+          "location": "New York, NY, US",
+          "askUs": true,
+          "type": "Full-time",
+          "role": "eng",
+          "roleSpecificType": "Machine learning",
+          "prettyRole": "Engineering",
+          "salaryRange": "$170K - $190K",
+          "equityRange": "",
+          "minExperience": "1+ years",
+          "minSchoolYear": null,
+          "visa": "US citizen/visa only",
+          "skills": [],
+          "isIncomplete": false,
+          "companyUrl": "/companies/triomics",
+          "companyLogoUrl": "https://bookface-images.s3.amazonaws.com/small_logos/c8830f0fbee8d57566664d25f05fa802119f757a.png",
+          "companyName": "Triomics",
+          "companyBatchName": "W21",
+          "companyOneLiner": "AI Agents for Oncology EHRs",
+          "hiringManager": null,
+          "createdAt": "about 2 months",
+          "lastActive": "2 days",
+          "ctaText": "Apply",
+          "ctaUrl": "https://account.ycombinator.com/authenticate?continue=https%3A%2F%2Fwww.workatastartup.com%2Fapplication%3Fsignup_job_id%3D92981&defaults%5BsignUpActive%5D=true&defaults%5Bwaas_company%5D=23539"
+        }
+      },
+      "score": 9.0,
+      "matched_terms": [
+        "ml engineer",
+        "agents",
+        "machine learning",
+        "AI"
+      ],
+      "query": {
+        "text": "machine learning engineer python llm",
+        "role": "machine learning engineer",
+        "skills": [
+          "machine learning",
+          "python",
+          "llm",
+          "agentic memory"
+        ],
+        "location": "Remote US",
+        "remote": true
+      },
+      "rationale": "Matched ml engineer, agents, machine learning, AI"
+    },
+    {
+      "job": {
+        "source": "yc",
+        "source_id": "95123",
+        "title": "Founding AI Engineer",
+        "company": "Voiceops",
+        "url": "https://www.ycombinator.com/companies/voiceops/jobs/Gtlq7oz-founding-ai-engineer",
+        "location": "New York, NY, US",
+        "description": "We help B2C companies learn from every customer interaction Engineering Full stack LLMs",
+        "tags": [
+          "Full-time",
+          "Engineering",
+          "Full stack",
+          "LLMs"
+        ],
+        "salary": "$200K - $250K",
+        "posted_at": null,
+        "raw": {
+          "id": 95123,
+          "title": "Founding AI Engineer",
+          "url": "/companies/voiceops/jobs/Gtlq7oz-founding-ai-engineer",
+          "applyUrl": "https://account.ycombinator.com/authenticate?continue=https%3A%2F%2Fwww.workatastartup.com%2Fapplication%3Fsignup_job_id%3D95123&defaults%5BsignUpActive%5D=true",
+          "location": "New York, NY, US",
+          "askUs": true,
+          "type": "Full-time",
+          "role": "eng",
+          "roleSpecificType": "Full stack",
+          "prettyRole": "Engineering",
+          "salaryRange": "$200K - $250K",
+          "equityRange": "0.10% - 0.50%",
+          "minExperience": "3+ years",
+          "minSchoolYear": null,
+          "visa": "Will sponsor",
+          "skills": [
+            "LLMs"
+          ],
+          "isIncomplete": false,
+          "companyUrl": "/companies/voiceops",
+          "companyLogoUrl": "https://bookface-images.s3.amazonaws.com/small_logos/e326734ce45c54c41f0c6a0f3e7509a5edb06d56.png",
+          "companyName": "Voiceops",
+          "companyBatchName": "W17",
+          "companyOneLiner": "We help B2C companies learn from every customer interaction",
+          "hiringManager": null,
+          "createdAt": "20 days",
+          "lastActive": "2 days",
+          "ctaText": "Apply",
+          "ctaUrl": "https://account.ycombinator.com/authenticate?continue=https%3A%2F%2Fwww.workatastartup.com%2Fapplication%3Fsignup_job_id%3D95123&defaults%5BsignUpActive%5D=true&defaults%5Bwaas_company%5D=1438"
+        }
+      },
+      "score": 7.0,
+      "matched_terms": [
+        "ai engineer",
+        "full stack",
+        "AI"
+      ],
+      "query": {
+        "text": "machine learning engineer python llm",
+        "role": "machine learning engineer",
+        "skills": [
+          "machine learning",
+          "python",
+          "llm",
+          "agentic memory"
+        ],
+        "location": "Remote US",
+        "remote": true
+      },
+      "rationale": "Matched ai engineer, full stack, AI"
+    }
+  ],
+  "source_errors": [],
+  "storage": null
+}
