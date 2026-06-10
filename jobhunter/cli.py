@@ -33,7 +33,7 @@ from jobhunter.trace import TrajectoryLogger
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Run the jobhunter demo search agent.")
-    parser.add_argument("--input", required=True, help="Resume text/file path/homepage URL/GitHub profile URL.")
+    parser.add_argument("--input", help="Resume text/file path/homepage URL/GitHub profile URL.")
     parser.add_argument("--sources", default="remotive", help="Comma-separated sources: remotive,hackernews.")
     parser.add_argument("--offline", action="store_true", help="Use deterministic offline sample jobs.")
     parser.add_argument("--limit", type=int, default=10, help="Maximum ranked jobs to print.")
@@ -68,10 +68,26 @@ def main(argv: list[str] | None = None) -> int:
     )
     parser.add_argument("--show-questions", action="store_true", help="Show adaptive missing-preference questions.")
     parser.add_argument(
+        "--list-a16z-companies",
+        action="store_true",
+        help="List a16z portfolio companies (name, open jobs, markets) and exit. Combine with --a16z-market.",
+    )
+    parser.add_argument(
+        "--a16z-market",
+        help="Scope a16z to one or more portfolio markets (comma-separated): AI, Enterprise, Consumer, Crypto/Web3, Fintech, Bio Health, Games, American Dynamism.",
+    )
+    parser.add_argument(
         "--trajectory-log",
         help="JSONL file that records the search trajectory: profile, queries, per-source fetches, errors, and ranked results.",
     )
     args = parser.parse_args(argv)
+
+    a16z_markets = _parse_markets(args.a16z_market)
+    if args.list_a16z_companies:
+        _print_a16z_companies(a16z_markets)
+        return 0
+    if not args.input:
+        raise SystemExit("--input is required (resume file, text, homepage URL, or GitHub profile URL)")
 
     tracer = TrajectoryLogger(args.trajectory_log)
     raw = load_input(args.input)
@@ -89,7 +105,7 @@ def main(argv: list[str] | None = None) -> int:
         preferences=asdict(profile.preferences),
     )
     questions = adaptive_preference_questions(profile, preferences)
-    platforms = [OfflineDemoPlatform()] if args.offline else _build_platforms(args.sources)
+    platforms = [OfflineDemoPlatform()] if args.offline else _build_platforms(args.sources, a16z_markets=a16z_markets)
     result_limit = preferences.result_count or args.limit
     storage_summary = None
     store_url = _resolve_store_url(args.store_url, args.store_db)
@@ -211,7 +227,7 @@ def _resolve_output_format(*, args_json: bool, args_html: bool, show_questions: 
     return preferences.output_format or "tsv"
 
 
-def _build_platforms(value: str) -> list[JobPlatform]:
+def _build_platforms(value: str, *, a16z_markets: tuple[str, ...] = ()) -> list[JobPlatform]:
     platforms: list[JobPlatform] = []
     names = ["hackernews" if part.strip().lower() == "hn" else part.strip().lower() for part in value.split(",") if part.strip()]
     try:
@@ -220,7 +236,31 @@ def _build_platforms(value: str) -> list[JobPlatform]:
         raise SystemExit(str(exc)) from exc
     if not platforms:
         raise SystemExit("no sources selected")
+    if a16z_markets:
+        from jobhunter.sources.a16z import A16ZPlatform
+
+        platforms = [
+            A16ZPlatform(markets=a16z_markets) if isinstance(p, A16ZPlatform) else p for p in platforms
+        ]
     return platforms
+
+
+def _parse_markets(value: str | None) -> tuple[str, ...]:
+    if not value:
+        return ()
+    return tuple(part.strip() for part in value.split(",") if part.strip())
+
+
+def _print_a16z_companies(markets: tuple[str, ...]) -> None:
+    from jobhunter.sources.a16z import A16ZPlatform
+
+    companies = A16ZPlatform().list_companies(markets=markets or None, min_jobs=1)
+    scope = f" in {', '.join(markets)}" if markets else ""
+    print(f"a16z portfolio companies{scope}: {len(companies)} with open jobs")
+    print(f"{'jobs':>5}  {'remote':>6}  {'company':32}  markets")
+    for c in companies:
+        name = (c["name"] or c["slug"] or "?")[:32]
+        print(f"{c['num_jobs']:>5}  {c['num_remote_jobs']:>6}  {name:32}  {', '.join(c['markets'][:3])}")
 
 
 def _source_names(value: str, *, offline: bool) -> tuple[str, ...]:

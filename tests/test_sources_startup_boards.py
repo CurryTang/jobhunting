@@ -115,3 +115,39 @@ def test_a16z_paginates_with_sequence_cursor(monkeypatch):
 
     assert calls == [None, "CURSOR2"]  # page 1 no cursor, page 2 uses it, then stops (short page)
     assert len(jobs) == 101
+
+
+def test_a16z_market_scoping_adds_query_filter(monkeypatch):
+    captured = {}
+
+    def fake_urlopen(request, timeout):
+        import json as _json
+        captured["query"] = _json.loads(request.data.decode())["query"]
+        return FakeResponse(_json.dumps({"jobs": [], "meta": {}}))
+
+    monkeypatch.setattr("urllib.request.urlopen", fake_urlopen)
+    A16ZPlatform(markets=("AI", "Enterprise"))._fetch_all_jobs()
+    assert captured["query"]["markets"] == ["AI", "Enterprise"]
+    assert captured["query"]["jobFunctions"] == ["Engineering", "Research"]
+
+
+def test_a16z_list_companies_filters_by_market_and_jobs(monkeypatch):
+    payload = {
+        "companies": [
+            {"name": "Databricks", "slug": "databricks", "numJobs": 778, "numRemoteJobs": 131, "markets": ["AI", "Enterprise"]},
+            {"name": "Anduril", "slug": "anduril", "numJobs": 2033, "numRemoteJobs": 18, "markets": ["American Dynamism"]},
+            {"name": "TinyCo", "slug": "tiny", "numJobs": 0, "numRemoteJobs": 0, "markets": ["AI"]},
+        ],
+        "meta": {},
+    }
+
+    def fake_urlopen(request, timeout):
+        import json as _json
+        return FakeResponse(_json.dumps(payload))
+
+    monkeypatch.setattr("urllib.request.urlopen", fake_urlopen)
+    companies = A16ZPlatform().list_companies(markets=("AI",), min_jobs=1)
+
+    names = [c["name"] for c in companies]
+    assert names == ["Databricks"]  # Anduril lacks AI market, TinyCo has 0 jobs
+    assert companies[0]["num_remote_jobs"] == 131
