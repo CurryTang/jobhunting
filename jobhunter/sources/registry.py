@@ -50,7 +50,7 @@ PLATFORM_REGISTRY: dict[str, PlatformSpec] = {
         name="a16z",
         status="implemented",
         access="public Consider JSON endpoint",
-        notes="Uses the public /api-boards/search-jobs endpoint backing jobs.a16z.com.",
+        notes="Uses /api-boards/search-jobs (Consider) with jobFunctions=Engineering,Research + cursor pagination to sample ~500 of the board's ~15k jobs across ~770 portfolio companies.",
         factory=A16ZPlatform,
     ),
     "yc": PlatformSpec(

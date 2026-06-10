@@ -16,10 +16,15 @@ class A16ZPlatform(JobPlatform):
     name = "a16z"
     search_url = "https://jobs.a16z.com/api-boards/search-jobs"
     board_id = "andreessen-horowitz"
+    # The board holds ~15k jobs across ~770 portfolio companies. Server-side
+    # job-function filtering narrows it to the technical pool (~6.6k) before
+    # cursor pagination, so we sample relevant roles rather than the board head.
+    JOB_FUNCTIONS = ("Engineering", "Research")
 
-    def __init__(self, *, timeout: float = 20.0, fetch_size: int = 50) -> None:
+    def __init__(self, *, timeout: float = 20.0, max_pages: int = 5, page_size: int = 100) -> None:
         self.timeout = timeout
-        self.fetch_size = fetch_size
+        self.max_pages = max_pages
+        self.page_size = min(page_size, 100)
         self._jobs_cache: list[JobPosting] | None = None
 
     def search(
@@ -29,9 +34,8 @@ class A16ZPlatform(JobPlatform):
         *,
         limit: int = 20,
     ) -> list[JobPosting]:
-        # The endpoint is queried with an empty filter (it returns the board
-        # head regardless), so fetch once per run and filter locally so each
-        # generated query surfaces different relevant postings.
+        # Fetch the technical pool once per run (paginated), then filter
+        # locally so each generated query surfaces different relevant postings.
         jobs = self._fetch_all_jobs()
         matched = filter_and_rank(jobs, query, limit=limit)
         return matched or jobs[:limit]
@@ -39,10 +43,28 @@ class A16ZPlatform(JobPlatform):
     def _fetch_all_jobs(self) -> list[JobPosting]:
         if self._jobs_cache is not None:
             return self._jobs_cache
+        jobs: list[JobPosting] = []
+        sequence: str | None = None
+        for _ in range(self.max_pages):
+            data = self._fetch_page(sequence)
+            page = data.get("jobs", []) if isinstance(data, dict) else []
+            if not page:
+                break
+            jobs.extend(self._normalize_job(job) for job in page)
+            sequence = (data.get("meta") or {}).get("sequence") if isinstance(data, dict) else None
+            if not sequence or len(page) < self.page_size:
+                break
+        self._jobs_cache = jobs
+        return self._jobs_cache
+
+    def _fetch_page(self, sequence: str | None) -> dict[str, Any]:
+        meta: dict[str, Any] = {"size": self.page_size}
+        if sequence:
+            meta["sequence"] = sequence
         payload = {
-            "meta": {"size": min(max(self.fetch_size, 50), 50)},
+            "meta": meta,
             "board": {"id": self.board_id, "isParent": True},
-            "query": {},
+            "query": {"jobFunctions": list(self.JOB_FUNCTIONS)},
             "grouped": False,
             "parentSlug": self.board_id,
         }
@@ -54,13 +76,11 @@ class A16ZPlatform(JobPlatform):
                 "Content-Type": "application/json",
                 "Origin": "https://jobs.a16z.com",
                 "Referer": "https://jobs.a16z.com/jobs",
-                "User-Agent": "jobhunter-demo/0.1 (+https://example.local)",
+                "User-Agent": "Mozilla/5.0 (jobhunter)",
             },
         )
         with urllib.request.urlopen(request, timeout=self.timeout) as response:
-            data = json.loads(response.read().decode("utf-8"))
-        self._jobs_cache = [self._normalize_job(job) for job in data.get("jobs", [])]
-        return self._jobs_cache
+            return json.loads(response.read().decode("utf-8"))
 
     def _normalize_job(self, job: dict[str, Any]) -> JobPosting:
         salary = _format_salary(job.get("salary"))

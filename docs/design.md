@@ -41,3 +41,16 @@ a16z is integrated through the public Consider endpoint used by `jobs.a16z.com`:
 - Add a richer resume parser for PDF/DOCX inputs.
 - Add application tracking, cover-letter drafts, and outreach notes.
 - Add optional LLM profile extraction and query rewriting behind the same data contracts.
+
+## a16z (Consider) backend endpoints
+
+`jobs.a16z.com` is powered by Consider. Two real POST endpoints back it (GET
+paths just return the SPA shell):
+
+- `POST /api-boards/search-jobs` — ~15,475 jobs across the portfolio.
+  - Body: `{"meta":{"size":<=100,"sequence":<cursor>},"board":{"id":"andreessen-horowitz","isParent":true},"query":{...},"grouped":false,"parentSlug":"andreessen-horowitz"}`.
+  - Pagination is cursor-based: read `meta.sequence` from a response and send it back in the next `meta.sequence` (an `from` offset does NOT work).
+  - Server-side filter: `query.jobFunctions` accepts `"Engineering"` (~6,607) and `"Research"` (~48). Free-text query fields are ignored. `query.remoteOnly:"true"` (~4,013).
+  - The adapter filters to Engineering+Research and pages to ~500 jobs, then ranks locally.
+- `POST /api-boards/search-companies` — ~769 portfolio companies (the `/companies` page).
+  - Same board/meta envelope. Each company carries `name`, `slug`, `numJobs`, `numRemoteJobs`, `numInternships`, `markets`, `skills`, `stages`, `staffCount`, `officeLocations`.

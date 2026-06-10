@@ -94,3 +94,24 @@ def test_yc_platform_extracts_embedded_jobs(monkeypatch):
     assert jobs[0].title == "AI / ML Engineer"
     assert jobs[0].company == "Acme"
     assert jobs[0].url == "https://www.ycombinator.com/companies/acme/jobs/1-ai-ml-engineer"
+
+
+def test_a16z_paginates_with_sequence_cursor(monkeypatch):
+    pages = [
+        {"jobs": [{"jobId": f"p1-{i}", "title": "Machine Learning Engineer", "companyName": "Co", "applyUrl": "https://e.com/1"} for i in range(100)], "meta": {"sequence": "CURSOR2"}},
+        {"jobs": [{"jobId": "p2-0", "title": "Research Engineer", "companyName": "Lab", "applyUrl": "https://e.com/2"}], "meta": {}},
+    ]
+    calls = []
+
+    def fake_urlopen(request, timeout):
+        import json as _json
+        body = _json.loads(request.data.decode())
+        calls.append(body["meta"].get("sequence"))
+        return FakeResponse(_json.dumps(pages[len(calls) - 1]))
+
+    monkeypatch.setattr("urllib.request.urlopen", fake_urlopen)
+    platform = A16ZPlatform(max_pages=5)
+    jobs = platform._fetch_all_jobs()
+
+    assert calls == [None, "CURSOR2"]  # page 1 no cursor, page 2 uses it, then stops (short page)
+    assert len(jobs) == 101
