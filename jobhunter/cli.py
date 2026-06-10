@@ -13,6 +13,7 @@ from jobhunter.cache import ProgressiveJobCache
 from jobhunter.graph import KuzuJobGraphStore, apply_graph_boosts
 from jobhunter.models import JobPreferences
 from jobhunter.outreach import build_outreach_message, resolve_apply_url
+from jobhunter.report import render_html
 from jobhunter.preferences import (
     adaptive_preference_questions,
     load_preferences,
@@ -37,6 +38,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--offline", action="store_true", help="Use deterministic offline sample jobs.")
     parser.add_argument("--limit", type=int, default=10, help="Maximum ranked jobs to print.")
     parser.add_argument("--json", action="store_true", help="Emit JSON instead of a compact text table.")
+    parser.add_argument("--html", action="store_true", help="Emit a self-contained HTML page of ranked jobs with apply links and outreach messages.")
     parser.add_argument(
         "--store-url",
         help=(
@@ -142,8 +144,12 @@ def main(argv: list[str] | None = None) -> int:
                 source_errors=source_errors,
             )
 
-    output_format = _resolve_output_format(args_json=args.json, show_questions=args.show_questions, preferences=preferences)
-    if output_format == "json":
+    output_format = _resolve_output_format(
+        args_json=args.json, args_html=args.html, show_questions=args.show_questions, preferences=preferences
+    )
+    if output_format == "html":
+        print(render_html(profile, matches, source_errors=source_errors, questions=questions))
+    elif output_format == "json":
         print(
             json.dumps(
                 {
@@ -195,9 +201,11 @@ def _resolve_store_url(store_url: str | None, store_db: str | None) -> str | Non
     return os.environ.get("JOBHUNTER_DATABASE_URL") or None
 
 
-def _resolve_output_format(*, args_json: bool, show_questions: bool, preferences: JobPreferences) -> str:
+def _resolve_output_format(*, args_json: bool, args_html: bool, show_questions: bool, preferences: JobPreferences) -> str:
     if args_json:
         return "json"
+    if args_html:
+        return "html"
     if show_questions and preferences.output_format is None:
         return "markdown"
     return preferences.output_format or "tsv"

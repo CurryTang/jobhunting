@@ -24,3 +24,6 @@ docs/search-results/
 docs/agentic-trajectories/
 uv.lock
 .uv/
+
+# Generated HTML output (contains real profile/job data)
+*.html

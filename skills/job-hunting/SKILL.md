@@ -60,6 +60,7 @@ Use this skill when a user wants help searching for jobs from a resume, homepage
 6. Present results.
    - Lead with ranked jobs, company, source, location, salary if available, URL, and why it matched.
    - Every result carries `apply_url` (direct application link) and `outreach_message` (a profile-tailored greeting); surface both so the user can apply and reach out immediately, and offer to refine the message tone per company.
+   - Offer an HTML view (`--html > jobs.html`) when the user wants something nicer than a table: it produces a self-contained, browsable page with apply buttons, matched-term chips, a filter box, and one-click-copy outreach messages. Save it to a file and tell the user the path (or open it).
    - Always report: which sources contributed and which returned nothing or errored, freshness caveats (e.g. YC postings carry no dates), and any assumptions made on the user's behalf.
    - Call out source limitations, especially for unstructured HN comments or platforms without public APIs.
    - Offer concrete follow-ups: verify shortlisted jobs are still open before applying, export the shortlist (TSV/JSON), draft tailored resume bullets or outreach notes for top matches, add sources, or record preferences for the next run.

@@ -85,6 +85,8 @@ Results default to TSV (paste straight into a spreadsheet). Each row carries:
 - `matched_terms` and a one-line rationale explaining *why* it matched you
 - `outreach_message` — a short, sendable greeting generated from your profile: who you are, which of your matched skills fit this role, and your portfolio link
 
+Prefer a browsable page over a table? Ask for **HTML output** (`--html`) and you get a self-contained `jobs.html` — one card per job with an Apply button, matched-skill chips, a live filter box, and a one-click "Copy" button on each outreach message. It opens straight from disk with no internet needed.
+
 Every live search also writes a JSONL **trajectory log** (profile → planned queries → per-source fetch/keep counts → errors → final ranking), and the skill runs a **quality evaluator** that scores the run on four metrics — platform diversity, freshness (posting age plus live "is this still open?" URL checks), profile match, and duplication — and iterates if any metric needs attention.
 
 ## Privacy & Footprint

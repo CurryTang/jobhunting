@@ -114,9 +114,9 @@ def adaptive_preference_questions(
             PreferenceQuestion(
                 id="output_format",
                 field="output_format",
-                prompt="What output format should I use? TSV is the default.",
-                reason="TSV is the default because it is easy to paste into spreadsheets and databases.",
-                examples=("tsv", "json", "markdown"),
+                prompt="What output format should I use? TSV is the default; HTML gives a browsable page.",
+                reason="TSV pastes into spreadsheets; HTML is a self-contained page with apply buttons and copy-able outreach messages.",
+                examples=("tsv", "html", "json", "markdown"),
             )
         )
     if prefs.min_salary is None:
@@ -232,7 +232,7 @@ def _format_value(value: Any) -> str | None:
     if value is None or value == "":
         return None
     normalized = str(value).strip().lower()
-    if normalized in {"tsv", "json", "markdown", "md"}:
+    if normalized in {"tsv", "json", "markdown", "md", "html"}:
         return "markdown" if normalized == "md" else normalized
     return "tsv"
 
