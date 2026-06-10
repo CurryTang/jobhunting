@@ -8,6 +8,7 @@ version = "0.1.0"
 description = "Agentic job hunting demo ecosystem with profile preprocessing and platform adapters."
 requires-python = ">=3.9"
 readme = "README.md"
+license = "MIT"
 authors = [{ name = "Jobhunter Contributors" }]
 dependencies = []
 

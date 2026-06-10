@@ -22,3 +22,5 @@ dist/
 logs/
 docs/search-results/
 docs/agentic-trajectories/
+uv.lock
+.uv/

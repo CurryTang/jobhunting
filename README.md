@@ -9,17 +9,13 @@ An agent skill that turns Claude Code (or Codex) into a personal job-hunting ass
 5. Hand you an application-ready table: every row has the **direct apply link** and a **personalized outreach message** you can send as-is.
 6. Self-check the results with a built-in quality evaluator (platform diversity, freshness, profile match, duplication) before presenting them.
 
-## Use It in Claude Code
+## Install as a Claude Code Plugin
 
-Install once:
+This repo is a Claude Code plugin marketplace. Install it in two commands inside Claude Code:
 
-```bash
-git clone <this-repo> jobhunting && cd jobhunting
-python3.11 -m venv .venv && .venv/bin/pip install -e ".[jobspy]"
-
-# Make the skill available to Claude Code (user-level):
-mkdir -p ~/.claude/skills
-ln -s "$(pwd)/skills/job-hunting" ~/.claude/skills/job-hunting
+```text
+/plugin marketplace add CurryTang/jobhunting
+/plugin install job-hunting@CurryTang
 ```
 
 Then just ask, in any of these forms:
@@ -30,14 +26,24 @@ $job-hunting /path/to/resume.pdf
 Help me find machine learning jobs — my profile is https://github.com/yourname
 ```
 
-The skill instructs the agent to analyze your material first, present the inferred profile, ask its intake questions, and only then search. If you want it fully autonomous, say so ("search immediately with your best guesses") and it will state its assumptions instead of asking.
+The skill analyzes your material first, presents the inferred profile, asks a few intake questions (full-time vs internship, target roles, locations…), and only then searches. If you want it fully autonomous, say so ("search immediately with your best guesses") and it will state its assumptions instead of asking.
+
+## Python Is Configured Automatically
+
+**You do not set up Python, a virtualenv, or pip.** The skill ships a launcher (`scripts/jobhunter`) that finds a Python 3.10+ runtime on your machine and runs the engine directly. The core engine is pure Python standard library — zero dependencies — so it works with nothing installed.
+
+- If any `python3.10`+ is on your PATH, that's all it needs.
+- The one optional dependency — `python-jobspy`, used only by the LinkedIn source — is provisioned on demand through [`uv`](https://docs.astral.sh/uv/) in an isolated, cached environment. If `uv` isn't installed, every source except LinkedIn still works.
+- If you have no Python at all but do have `uv`, the launcher lets `uv` download a suitable Python on the fly.
+
+That's the whole setup story. The tables below are only for tuning, not required.
 
 ## Use It in Codex
 
 Codex does not auto-discover skill files, so point it at the workflow. Either add one line to your `AGENTS.md`:
 
 ```text
-When the user asks for job-hunting help, follow skills/job-hunting/SKILL.md in this repo.
+When the user asks for job-hunting help, follow skills/job-hunting/SKILL.md in this repo, and run the engine via scripts/jobhunter.
 ```
 
 or invoke it directly in a prompt:
@@ -46,12 +52,8 @@ or invoke it directly in a prompt:
 Read skills/job-hunting/SKILL.md and run that workflow for https://github.com/yourname
 ```
 
-## Environment Preparation
+## Optional Tuning
 
-The skill drives a small bundled engine; the agent runs it for you. You only prepare the environment:
-
-- **Python 3.10+** (3.11 recommended). `pip install -e .` from the repo root — the core has zero dependencies.
-- **Optional extras**: `.[jobspy]` enables the LinkedIn source (Python 3.10+ only; LinkedIn rate-limits aggressively), `.[postgres]` enables Postgres storage, `.[graph]` enables the Kuzu graph boost.
 - **Environment variables** (all optional — everything works with none set):
 
 | Variable | Purpose |
@@ -97,9 +99,11 @@ Every live search also writes a JSONL **trajectory log** (profile → planned qu
 
 ## Repository Layout
 
+- `.claude-plugin/` — plugin and marketplace manifests for Claude Code.
 - `skills/job-hunting/SKILL.md` — the agent-facing skill: intake, preference questions, source selection, search, quality verification, presentation, and follow-ups.
+- `scripts/jobhunter` / `scripts/evaluate` — zero-config launchers that resolve a Python 3.10+ runtime automatically; the skill invokes these.
 - `jobhunter/` — the search engine the skill drives (profile builder, query planner, ranking agent, platform adapters, optional storage/cache/graph).
-- `scripts/evaluate_run.py` — the run-quality evaluator.
+- `scripts/evaluate_run.py` — the run-quality evaluator (invoked through `scripts/evaluate`).
 - `examples/` — sample resume input for offline demos.
 - `docs/` — architecture and storage design notes.
-- `tests/` — test suite (`.venv/bin/python -m pytest`).
+- `tests/` — test suite. Contributors: `python -m pytest` (or `uv run pytest`).

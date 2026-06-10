@@ -1,0 +1,14 @@
+{
+  "name": "CurryTang",
+  "owner": {
+    "name": "CurryTang"
+  },
+  "plugins": [
+    {
+      "name": "job-hunting",
+      "source": "./",
+      "description": "Turn Claude Code into a personal job-hunting assistant: build a candidate profile from a resume or GitHub, search many job boards and company career pages in one pass, rank explainable matches, and produce an application-ready table with direct apply links and personalized outreach messages.",
+      "version": "0.1.0"
+    }
+  ]
+}

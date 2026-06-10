@@ -1,0 +1,19 @@
+{
+  "name": "job-hunting",
+  "description": "Turn Claude Code into a personal job-hunting assistant: build a candidate profile from a resume or GitHub, search many job boards and company career pages in one pass, rank explainable matches, and produce an application-ready table with direct apply links and personalized outreach messages.",
+  "version": "0.1.0",
+  "author": {
+    "name": "CurryTang"
+  },
+  "repository": "https://github.com/CurryTang/jobhunting",
+  "homepage": "https://github.com/CurryTang/jobhunting#readme",
+  "license": "MIT",
+  "keywords": [
+    "job-search",
+    "job-hunting",
+    "resume",
+    "career",
+    "recruiting",
+    "outreach"
+  ]
+}

@@ -1,0 +1,68 @@
+#!/usr/bin/env bash
+#
+# Zero-config launcher for the jobhunter engine.
+#
+# Users never create a venv or run pip. The job-board engine is pure Python
+# standard library, so any Python 3.10+ runs it with nothing installed. The
+# only optional dependency (python-jobspy, for the LinkedIn source) is
+# provisioned on demand through uv in an isolated, cached environment.
+#
+# Resolution order:
+#   1. LinkedIn requested + uv present -> uv supplies Python + python-jobspy.
+#   2. Any system Python >=3.10        -> run the zero-dependency core directly.
+#   3. uv present                      -> let uv download a Python 3.10+.
+#
+set -euo pipefail
+
+# Repo/plugin root = parent of this script's directory (follow symlinks so it
+# works wherever the plugin is installed, including ~/.claude/plugins/...).
+SOURCE="${BASH_SOURCE[0]}"
+while [ -L "$SOURCE" ]; do
+  DIR="$(cd -P "$(dirname "$SOURCE")" >/dev/null 2>&1 && pwd)"
+  SOURCE="$(readlink "$SOURCE")"
+  [[ $SOURCE != /* ]] && SOURCE="$DIR/$SOURCE"
+done
+SCRIPT_DIR="$(cd -P "$(dirname "$SOURCE")" >/dev/null 2>&1 && pwd)"
+ROOT="$(cd "$SCRIPT_DIR/.." >/dev/null 2>&1 && pwd)"
+
+# Does this invocation use the LinkedIn source (the only one needing an extra)?
+needs_jobspy=0
+prev=""
+for arg in "$@"; do
+  if [ "$prev" = "--sources" ] && [[ ",$arg," == *",linkedin,"* ]]; then
+    needs_jobspy=1
+  fi
+  prev="$arg"
+done
+
+py_ok() {  # $1 = interpreter path; succeeds when version >= 3.10
+  "$1" -c 'import sys; raise SystemExit(0 if sys.version_info[:2] >= (3, 10) else 1)' >/dev/null 2>&1
+}
+
+# 1. LinkedIn path: uv gives an isolated Python 3.11 + python-jobspy; our pure
+#    stdlib package loads via PYTHONPATH, so nothing is built or installed.
+if [ "$needs_jobspy" = 1 ] && command -v uv >/dev/null 2>&1; then
+  exec env PYTHONPATH="$ROOT${PYTHONPATH:+:$PYTHONPATH}" \
+    uv run --quiet --python 3.11 --with "python-jobspy>=1.1" python -m jobhunter "$@"
+fi
+
+# 2. Core path: any Python >=3.10 runs the engine with zero install.
+for cand in python3.13 python3.12 python3.11 python3.10 python3 python; do
+  if command -v "$cand" >/dev/null 2>&1 && py_ok "$cand"; then
+    if [ "$needs_jobspy" = 1 ] && ! "$cand" -c 'import jobspy' >/dev/null 2>&1; then
+      echo "jobhunter: the LinkedIn source needs python-jobspy and uv was not found." >&2
+      echo "           Install uv (https://docs.astral.sh/uv/) or run: pip install python-jobspy" >&2
+      echo "           Continuing without LinkedIn; all other sources work." >&2
+    fi
+    exec env PYTHONPATH="$ROOT${PYTHONPATH:+:$PYTHONPATH}" "$cand" -m jobhunter "$@"
+  fi
+done
+
+# 3. No suitable system Python: uv can download one on the fly.
+if command -v uv >/dev/null 2>&1; then
+  exec env PYTHONPATH="$ROOT${PYTHONPATH:+:$PYTHONPATH}" \
+    uv run --quiet --python 3.11 python -m jobhunter "$@"
+fi
+
+echo "jobhunter: no Python 3.10+ found. Install Python 3.10+ or uv (https://docs.astral.sh/uv/)." >&2
+exit 1

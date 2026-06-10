@@ -53,7 +53,7 @@ Use this skill when a user wants help searching for jobs from a resume, homepage
    - Retry loop: if fewer results than requested came back, or fewer than 3 sources contributed, rerun with broader queries (`--agentic-search`), higher `--per-query-limit`, more `--max-queries`, or relaxed target roles before reporting a sparse list.
 
 5. Verify quality before presenting.
-   - Run `python scripts/evaluate_run.py <run.json> --check-urls --report <eval.md>` on the JSON output.
+   - Run `"$CLAUDE_PLUGIN_ROOT/scripts/evaluate" <run.json> --check-urls --report <eval.md>` on the JSON output.
    - The evaluator scores four metrics: platform diversity, freshness (posting age + live URL checks), profile match, and duplication.
    - If a metric reports NEEDS ATTENTION, iterate (broaden sources, tighten preferences, drop stale results) rather than presenting a weak list.
 
@@ -68,44 +68,54 @@ Use this skill when a user wants help searching for jobs from a resume, homepage
 
 Persistence is disabled by default; runs are stateless. To record jobs and search runs across sessions, set `JOBHUNTER_DATABASE_URL` (SQLite or Postgres) in the environment before running — see the README's storage section. Never require storage for a basic search.
 
+## Running the Engine
+
+Always invoke the engine through the bundled launcher, never a bare `python`:
+
+```bash
+"$CLAUDE_PLUGIN_ROOT/scripts/jobhunter" <args>
+```
+
+`CLAUDE_PLUGIN_ROOT` is set by Claude Code to this skill's install directory. When it is unset (e.g. running from a clone), use the repo-relative path `scripts/jobhunter`. The launcher is zero-config: it finds a Python 3.10+ runtime automatically and runs the dependency-free engine with no venv and no pip. The user never sets up Python. The only optional dependency (python-jobspy, for the LinkedIn source) is provisioned on demand through `uv`; if `uv` is missing, every source except LinkedIn still works. The quality evaluator has its own matching launcher at `scripts/evaluate`.
+
 ## Useful Commands
 
 Offline deterministic demo:
 
 ```bash
-python -m jobhunter --input examples/resume.md --offline --limit 5
+"$CLAUDE_PLUGIN_ROOT/scripts/jobhunter" --input examples/resume.md --offline --limit 5
 ```
 
 Live Remotive demo:
 
 ```bash
-python -m jobhunter --input examples/resume.md --sources remotive --limit 5
+"$CLAUDE_PLUGIN_ROOT/scripts/jobhunter" --input examples/resume.md --sources remotive --limit 5
 ```
 
-Startup boards:
+Startup boards and direct company pages:
 
 ```bash
-python -m jobhunter --input examples/resume.md --sources a16z,yc --limit 10
+"$CLAUDE_PLUGIN_ROOT/scripts/jobhunter" --input examples/resume.md --sources a16z,yc,companies --limit 10
 ```
 
 Preference questions and recorded answers:
 
 ```bash
-python -m jobhunter --input examples/resume.md --offline --show-questions
-python -m jobhunter --input examples/resume.md --preferences-file .jobhunter/preferences.json --set-preference focus_highlights="agentic memory,long context modeling" --set-preference target_roles="quantitative researcher,research scientist" --set-preference preferred_locations="Remote US,New York" --set-preference remote=true --sources a16z,yc
+"$CLAUDE_PLUGIN_ROOT/scripts/jobhunter" --input examples/resume.md --offline --show-questions
+"$CLAUDE_PLUGIN_ROOT/scripts/jobhunter" --input examples/resume.md --preferences-file .jobhunter/preferences.json --set-preference job_types="full-time" --set-preference target_roles="research scientist,machine learning engineer" --set-preference preferred_locations="Remote US,New York" --set-preference remote=true --sources a16z,yc,companies
 ```
 
-JSON output:
+JSON output and quality evaluation:
 
 ```bash
-python -m jobhunter --input examples/resume.md --offline --json
+"$CLAUDE_PLUGIN_ROOT/scripts/jobhunter" --input examples/resume.md --sources remotive,companies --json > run.json
+"$CLAUDE_PLUGIN_ROOT/scripts/evaluate" run.json --check-urls --report eval.md
 ```
 
-LinkedIn through JobSpy:
+LinkedIn (python-jobspy is auto-provisioned via uv; no manual install):
 
 ```bash
-python -m pip install -U ".[jobspy]"
-python -m jobhunter --input examples/resume.md --sources linkedin --limit 10
+"$CLAUDE_PLUGIN_ROOT/scripts/jobhunter" --input examples/resume.md --sources linkedin --limit 10
 ```
 
 ## Skill Invocation Examples

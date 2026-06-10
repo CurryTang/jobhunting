@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+#
+# Zero-config launcher for the run-quality evaluator. Same Python resolution
+# as scripts/jobhunter; the evaluator is pure standard library, so any
+# Python 3.10+ runs it with no venv and no pip.
+#
+set -euo pipefail
+
+SOURCE="${BASH_SOURCE[0]}"
+while [ -L "$SOURCE" ]; do
+  DIR="$(cd -P "$(dirname "$SOURCE")" >/dev/null 2>&1 && pwd)"
+  SOURCE="$(readlink "$SOURCE")"
+  [[ $SOURCE != /* ]] && SOURCE="$DIR/$SOURCE"
+done
+SCRIPT_DIR="$(cd -P "$(dirname "$SOURCE")" >/dev/null 2>&1 && pwd)"
+ROOT="$(cd "$SCRIPT_DIR/.." >/dev/null 2>&1 && pwd)"
+
+py_ok() {
+  "$1" -c 'import sys; raise SystemExit(0 if sys.version_info[:2] >= (3, 10) else 1)' >/dev/null 2>&1
+}
+
+for cand in python3.13 python3.12 python3.11 python3.10 python3 python; do
+  if command -v "$cand" >/dev/null 2>&1 && py_ok "$cand"; then
+    exec env PYTHONPATH="$ROOT${PYTHONPATH:+:$PYTHONPATH}" "$cand" "$SCRIPT_DIR/evaluate_run.py" "$@"
+  fi
+done
+
+if command -v uv >/dev/null 2>&1; then
+  exec env PYTHONPATH="$ROOT${PYTHONPATH:+:$PYTHONPATH}" \
+    uv run --quiet --python 3.11 python "$SCRIPT_DIR/evaluate_run.py" "$@"
+fi
+
+echo "evaluate: no Python 3.10+ found. Install Python 3.10+ or uv (https://docs.astral.sh/uv/)." >&2
+exit 1
