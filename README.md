@@ -110,5 +110,4 @@ Every live search also writes a JSONL **trajectory log** (profile → planned qu
 - `jobhunter/` — the search engine the skill drives (profile builder, query planner, ranking agent, platform adapters, optional storage/cache/graph).
 - `scripts/evaluate_run.py` — the run-quality evaluator (invoked through `scripts/evaluate`).
 - `examples/` — sample resume input for offline demos.
-- `docs/` — architecture and storage design notes.
 - `tests/` — test suite. Contributors: `python -m pytest` (or `uv run pytest`).

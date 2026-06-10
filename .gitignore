@@ -27,3 +27,6 @@ uv.lock
 
 # Generated HTML output (contains real profile/job data)
 *.html
+
+# Design/docs kept local, not on GitHub
+docs/
