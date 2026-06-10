@@ -1,28 +1,57 @@
 from __future__ import annotations
 
+import os
+import re
+import time
 from datetime import datetime
 from typing import Any
 
 from jobhunter.models import JobPosting, SearchQuery, UserProfile
 from jobhunter.sources.base import JobPlatform
+from jobhunter.sources.common import filter_and_rank
+
+
+def _norm(value: str) -> str:
+    return re.sub(r"\s+", " ", value.lower()).strip()
 
 
 class JobSpyPlatform(JobPlatform):
-    """Adapter for python-jobspy-backed job boards."""
+    """Adapter for python-jobspy-backed job boards.
+
+    LinkedIn rate-limits rapid repeated calls hard, so this adapter does NOT
+    scrape once per generated query. Instead it scrapes each distinct search
+    term at most once per run (with a small retry on an empty result), pools
+    the postings, and filters that pool locally for every query. That turns
+    ~10 throttled scrapes into a handful of productive ones.
+    """
 
     def __init__(
         self,
         *,
         site_name: str = "linkedin",
-        results_wanted: int = 20,
-        hours_old: int | None = 168,
+        results_wanted: int = 50,
+        hours_old: int | None = 336,
         fetch_linkedin_description: bool = False,
+        max_calls: int = 6,
+        retry_on_empty: bool = True,
+        retry_delay: float = 3.0,
+        proxies: list[str] | None = None,
     ) -> None:
         self.site_name = site_name
         self.name = f"jobspy:{site_name}"
         self.results_wanted = results_wanted
         self.hours_old = hours_old
         self.fetch_linkedin_description = fetch_linkedin_description
+        self.max_calls = max_calls
+        self.retry_on_empty = retry_on_empty
+        self.retry_delay = retry_delay
+        # LinkedIn rate-limits by IP. Proxies (JOBHUNTER_LINKEDIN_PROXIES, a
+        # comma list of host:port or user:pass@host:port) are the reliable fix.
+        self.proxies = proxies if proxies is not None else _proxies_from_env()
+        self._pool: list[JobPosting] = []
+        self._pool_keys: set[str] = set()
+        self._scraped: set[str] = set()
+        self._calls = 0
 
     def search(
         self,
@@ -31,13 +60,26 @@ class JobSpyPlatform(JobPlatform):
         *,
         limit: int = 20,
     ) -> list[JobPosting]:
-        scrape_jobs = _load_scrape_jobs()
         location = _choose_location(query, profile)
+        term = _jobspy_query_text(query)
+        cache_key = f"{_norm(term)}|{_norm(location or '')}"
+        if cache_key not in self._scraped and self._calls < self.max_calls:
+            self._scraped.add(cache_key)
+            self._calls += 1
+            for posting in self._scrape(term, location, query):
+                key = posting.source_id or posting.url
+                if key and key not in self._pool_keys:
+                    self._pool_keys.add(key)
+                    self._pool.append(posting)
+        return filter_and_rank(self._pool, query, limit=limit)
+
+    def _scrape(self, term: str, location: str | None, query: SearchQuery) -> list[JobPosting]:
+        scrape_jobs = _load_scrape_jobs()
         kwargs: dict[str, Any] = {
             "site_name": [self.site_name],
-            "search_term": _jobspy_query_text(query),
+            "search_term": term,
             "location": location,
-            "results_wanted": min(limit, self.results_wanted),
+            "results_wanted": self.results_wanted,
             "verbose": 0,
         }
         if query.remote is not None:
@@ -46,10 +88,25 @@ class JobSpyPlatform(JobPlatform):
             kwargs["hours_old"] = self.hours_old
         if self.site_name == "linkedin":
             kwargs["linkedin_fetch_description"] = self.fetch_linkedin_description
+        if self.proxies:
+            kwargs["proxies"] = self.proxies
 
-        jobs = scrape_jobs(**kwargs)
-        records = _records_from_jobspy_result(jobs)
-        return [self._normalize_record(record) for record in records[:limit]]
+        records = self._call_with_retry(scrape_jobs, kwargs)
+        return [self._normalize_record(record) for record in records]
+
+    def _call_with_retry(self, scrape_jobs, kwargs: dict[str, Any]) -> list[dict[str, Any]]:
+        try:
+            records = _records_from_jobspy_result(scrape_jobs(**kwargs))
+        except Exception:  # noqa: BLE001 - transient scraper/network failure.
+            records = []
+        if records or not self.retry_on_empty:
+            return records
+        # An empty LinkedIn result is usually a soft rate-limit; back off once.
+        time.sleep(self.retry_delay)
+        try:
+            return _records_from_jobspy_result(scrape_jobs(**kwargs))
+        except Exception:  # noqa: BLE001
+            return []
 
     def _normalize_record(self, record: dict[str, Any]) -> JobPosting:
         source_id = str(record.get("id") or record.get("job_id") or record.get("job_url") or "")
@@ -86,6 +143,14 @@ def _load_scrape_jobs():
             "Install it with `pip install -U python-jobspy` and run with Python >=3.10."
         ) from exc
     return scrape_jobs
+
+
+def _proxies_from_env() -> list[str] | None:
+    raw = os.environ.get("JOBHUNTER_LINKEDIN_PROXIES", "").strip()
+    if not raw:
+        return None
+    proxies = [part.strip() for part in raw.split(",") if part.strip()]
+    return proxies or None
 
 
 def _jobspy_query_text(query: SearchQuery) -> str:

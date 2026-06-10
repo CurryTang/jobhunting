@@ -84,6 +84,46 @@ def test_greenhouse_fetches_each_board_once_and_skips_404(monkeypatch):
     assert "python" in jobs[0].description
 
 
+def test_ashby_normalizes_and_filters(monkeypatch):
+    from jobhunter.sources.ashby import AshbyPlatform
+
+    payload = {
+        "jobs": [
+            {
+                "id": "a1",
+                "title": "Research Engineer, Machine Learning",
+                "descriptionPlain": "Build LLM systems with python.",
+                "location": "San Francisco",
+                "isRemote": True,
+                "isListed": True,
+                "department": "Research",
+                "employmentType": "FullTime",
+                "publishedAt": "2026-03-12T16:38:15.322+00:00",
+                "jobUrl": "https://jobs.ashbyhq.com/openai/a1",
+                "applyUrl": "https://jobs.ashbyhq.com/openai/a1/application",
+            },
+            {
+                "id": "a2",
+                "title": "Office Manager",
+                "descriptionPlain": "Run the office.",
+                "location": "San Francisco",
+                "isListed": True,
+            },
+        ]
+    }
+    monkeypatch.setattr("jobhunter.sources.ashby.fetch_json", lambda url, **kwargs: payload)
+
+    jobs = AshbyPlatform(slugs=("openai",)).search(QUERY, PROFILE, limit=10)
+
+    assert len(jobs) == 1
+    job = jobs[0]
+    assert job.source == "company:openai"
+    assert job.company == "Openai"
+    assert job.location == "Remote - San Francisco"
+    assert job.raw["applyUrl"].endswith("/application")
+    assert job.posted_at is not None
+
+
 def test_lever_normalizes_postings(monkeypatch):
     payload = [
         {

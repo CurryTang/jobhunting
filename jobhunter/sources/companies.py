@@ -15,24 +15,173 @@ from jobhunter.models import JobPosting, SearchQuery, UserProfile
 from jobhunter.sources.base import JobPlatform
 from jobhunter.sources.common import fetch_json, filter_and_rank, strip_html
 
-# Pre-default company pages searched when the user does not configure a list.
-# Override with JOBHUNTER_COMPANIES="amazon,google,greenhouse:anthropic" or a
-# JSON list file at .jobhunter/companies.json (or JOBHUNTER_COMPANIES_FILE).
-DEFAULT_COMPANIES: tuple[str, ...] = ("amazon", "google", "meta")
+# Curated registry of companies with a verified public career API, mapping a
+# friendly name to its provider. Providers: amazon/google/uber (built-in),
+# greenhouse:/lever:/ashby:<slug> (delegated). Users type the friendly name
+# (e.g. "openai", "stripe") and never need to know which ATS a company uses.
+COMPANY_REGISTRY: dict[str, str] = {
+    "abnormalsecurity": "greenhouse:abnormalsecurity",
+    "abridge": "ashby:abridge",
+    "affirm": "greenhouse:affirm",
+    "airbnb": "greenhouse:airbnb",
+    "airtable": "greenhouse:airtable",
+    "akunacapital": "greenhouse:akunacapital",
+    "amazon": "amazon",
+    "angellist": "lever:angellist",
+    "anthropic": "greenhouse:anthropic",
+    "anyscale": "ashby:anyscale",
+    "asana": "greenhouse:asana",
+    "baseten": "ashby:baseten",
+    "betterment": "greenhouse:betterment",
+    "brex": "greenhouse:brex",
+    "browserbase": "ashby:browserbase",
+    "calendly": "greenhouse:calendly",
+    "carta": "greenhouse:carta",
+    "celonis": "greenhouse:celonis",
+    "checkr": "greenhouse:checkr",
+    "chime": "greenhouse:chime",
+    "clickhouse": "greenhouse:clickhouse",
+    "cloudflare": "greenhouse:cloudflare",
+    "cockroachlabs": "greenhouse:cockroachlabs",
+    "cohere": "ashby:cohere",
+    "coinbase": "greenhouse:coinbase",
+    "consensys": "greenhouse:consensys",
+    "coupang": "greenhouse:coupang",
+    "crusoe": "ashby:crusoe",
+    "cursor": "ashby:cursor",
+    "databricks": "greenhouse:databricks",
+    "datadog": "greenhouse:datadog",
+    "decagon": "ashby:decagon",
+    "discord": "greenhouse:discord",
+    "dropbox": "greenhouse:dropbox",
+    "elastic": "greenhouse:elastic",
+    "elevenlabs": "ashby:elevenlabs",
+    "faire": "greenhouse:faire",
+    "figma": "greenhouse:figma",
+    "fivetran": "greenhouse:fivetran",
+    "flowtraders": "greenhouse:flowtraders",
+    "flexport": "greenhouse:flexport",
+    "gemini": "greenhouse:gemini",
+    "gitlab": "greenhouse:gitlab",
+    "gocardless": "greenhouse:gocardless",
+    "google": "google",
+    "gusto": "greenhouse:gusto",
+    "harvey": "ashby:harvey",
+    "hedra": "ashby:hedra",
+    "imc": "greenhouse:imc",
+    "instacart": "greenhouse:instacart",
+    "janestreet": "greenhouse:janestreet",
+    "jumptrading": "greenhouse:jumptrading",
+    "lambda": "ashby:lambda",
+    "langchain": "ashby:langchain",
+    "linear": "ashby:linear",
+    "llamaindex": "ashby:llamaindex",
+    "lyft": "greenhouse:lyft",
+    "marqeta": "greenhouse:marqeta",
+    "mercor": "ashby:mercor",
+    "mercury": "greenhouse:mercury",
+    "mistral": "lever:mistral",
+    "modal": "ashby:modal",
+    "mongodb": "greenhouse:mongodb",
+    "netflix": "lever:netflix",
+    "netlify": "greenhouse:netlify",
+    "notion": "ashby:notion",
+    "nubank": "greenhouse:nubank",
+    "nuro": "greenhouse:nuro",
+    "okta": "greenhouse:okta",
+    "oldmissioncapital": "greenhouse:oldmissioncapital",
+    "openai": "ashby:openai",
+    "palantir": "lever:palantir",
+    "pathai": "greenhouse:pathai",
+    "perplexity": "ashby:perplexity",
+    "pika": "ashby:pika",
+    "pinterest": "greenhouse:pinterest",
+    "plaid": "lever:plaid",
+    "planetscale": "greenhouse:planetscale",
+    "point72": "greenhouse:point72",
+    "postman": "greenhouse:postman",
+    "ramp": "ashby:ramp",
+    "reddit": "greenhouse:reddit",
+    "robinhood": "greenhouse:robinhood",
+    "roblox": "greenhouse:roblox",
+    "rubrik": "greenhouse:rubrik",
+    "samsara": "greenhouse:samsara",
+    "scaleai": "greenhouse:scaleai",
+    "shieldai": "lever:shieldai",
+    "sierra": "ashby:sierra",
+    "snowflake": "ashby:snowflake",
+    "sofi": "greenhouse:sofi",
+    "spacex": "greenhouse:spacex",
+    "squarespace": "greenhouse:squarespace",
+    "starburst": "greenhouse:starburst",
+    "stockx": "greenhouse:stockx",
+    "stripe": "greenhouse:stripe",
+    "suno": "ashby:suno",
+    "thinking-machines-lab": "ashby:thinking-machines-lab",
+    "togetherai": "greenhouse:togetherai",
+    "twitch": "greenhouse:twitch",
+    "uber": "uber",
+    "vercel": "greenhouse:vercel",
+    "verkada": "greenhouse:verkada",
+    "voleon": "lever:voleon",
+    "waymo": "greenhouse:waymo",
+    "weaviate": "ashby:weaviate",
+    "webflow": "greenhouse:webflow",
+    "writer": "ashby:writer",
+    "xai": "greenhouse:xai",
+}
 
+# Friendly aliases for companies whose canonical key is awkward to type.
+COMPANY_ALIASES: dict[str, str] = {
+    "thinkingmachines": "thinking-machines-lab",
+    "thinking-machines": "thinking-machines-lab",
+    "tml": "thinking-machines-lab",
+    "scale": "scaleai",
+    "together": "togetherai",
+    "cockroach": "cockroachlabs",
+    "jane-street": "janestreet",
+    "jane_street": "janestreet",
+    "jump-trading": "jumptrading",
+    "jump": "jumptrading",
+    "imc-trading": "imc",
+    "imctrading": "imc",
+    "akuna": "akunacapital",
+    "old-mission": "oldmissioncapital",
+}
+
+# All registered companies are searched by default — a deep sweep across every
+# verified board. Override with JOBHUNTER_COMPANIES or .jobhunter/companies.json
+# to narrow it (e.g. JOBHUNTER_COMPANIES="openai,anthropic,databricks").
+DEFAULT_COMPANIES: tuple[str, ...] = tuple(sorted(COMPANY_REGISTRY))
+
+# Companies whose careers site has no usable public JSON endpoint. They warn
+# once and are skipped so a configured list never breaks the run.
 UNSUPPORTED_NOTES = {
     "meta": "Meta careers is GraphQL-rendered with no public JSON endpoint; entry skipped.",
     "microsoft": "Microsoft careers API rejects unauthenticated requests; entry skipped.",
+    "tiktok": "TikTok careers sits behind a redirecting gateway with no stable public JSON endpoint; entry skipped.",
+    "bytedance": "ByteDance careers has no public JSON endpoint reachable without a session; entry skipped.",
+    "salesforce": "Salesforce uses Workday, which has no simple public JSON search; entry skipped.",
+    "paypal": "PayPal uses Workday, which has no simple public JSON search; entry skipped.",
+    "linkedin": "Use --sources linkedin (JobSpy) for LinkedIn; it is not a direct company board.",
+    "bloomberg": "Bloomberg careers has no public JSON board endpoint; entry skipped.",
+    "twosigma": "Two Sigma uses a custom/Workday careers site with no public JSON board; entry skipped.",
+    "two-sigma": "Two Sigma uses a custom/Workday careers site with no public JSON board; entry skipped.",
+    "citadel": "Citadel uses a custom careers site with no public JSON board; entry skipped.",
+    "citadelsecurities": "Citadel Securities uses a custom careers site with no public JSON board; entry skipped.",
+    "optiver": "Optiver's public board returns no jobs through the Greenhouse API; entry skipped.",
 }
 
 
 class CompanyBoardsPlatform(JobPlatform):
     """Search configured company career sites directly.
 
-    Built-in providers: `amazon` (amazon.jobs JSON search), `google`
-    (careers.google.com embedded payload), plus `greenhouse:<slug>` and
-    `lever:<slug>` entries that delegate to the existing board adapters.
-    Unsupported entries warn once and are skipped.
+    Defaults to a deep sweep across every company in COMPANY_REGISTRY (100+
+    verified boards). Built-in providers: `amazon` (amazon.jobs JSON search),
+    `google` (careers.google.com payload), `uber` (uber.com careers API), plus
+    `greenhouse:`/`lever:`/`ashby:<slug>` delegates. Entries can be friendly
+    registry names ("openai") or raw provider specs. Unsupported or unreachable
+    companies warn once and are skipped.
     """
 
     name = "companies"
@@ -42,15 +191,17 @@ class CompanyBoardsPlatform(JobPlatform):
         self.companies = tuple(companies) if companies else _configured_companies()
         self.company_errors: list[str] = []
         self._delegates: dict[str, JobPlatform] = {}
+        # Each supported entry is a resolved provider spec: "amazon"/"google"/
+        # "uber" or "<provider>:<slug>".
         self._supported: list[str] = []
         for entry in self.companies:
-            normalized = entry.strip().lower()
-            if not normalized:
+            spec = _resolve_company(entry)
+            if spec is None:
+                normalized = entry.strip().lower()
+                if normalized in UNSUPPORTED_NOTES:
+                    warnings.warn(f"companies source: {UNSUPPORTED_NOTES[normalized]}", stacklevel=2)
                 continue
-            if normalized in UNSUPPORTED_NOTES:
-                warnings.warn(f"companies source: {UNSUPPORTED_NOTES[normalized]}", stacklevel=2)
-                continue
-            self._supported.append(normalized)
+            self._supported.append(spec)
 
     def search(
         self,
@@ -86,13 +237,18 @@ class CompanyBoardsPlatform(JobPlatform):
             return self._search_amazon(query, limit=limit)
         if entry == "google":
             return self._search_google(query, limit=limit)
+        if entry == "uber":
+            from jobhunter.sources.uber import UberPlatform
+
+            return self._delegates.setdefault("uber", UberPlatform(timeout=self.timeout)).search(query, profile, limit=limit)
         if ":" in entry:
             provider, _, slug = entry.partition(":")
             delegate = self._delegate_for(provider.strip(), slug.strip())
             if delegate is not None:
                 return delegate.search(query, profile, limit=limit)
         raise ValueError(
-            f"unknown company entry '{entry}'. Use amazon, google, greenhouse:<slug>, or lever:<slug>."
+            f"unknown company entry '{entry}'. Use a registered name, amazon, google, uber, "
+            "greenhouse:<slug>, lever:<slug>, or ashby:<slug>."
         )
 
     def _delegate_for(self, provider: str, slug: str) -> JobPlatform | None:
@@ -107,6 +263,10 @@ class CompanyBoardsPlatform(JobPlatform):
             from jobhunter.sources.lever import LeverPlatform
 
             delegate = LeverPlatform(companies=(slug,), timeout=self.timeout)
+        elif provider == "ashby":
+            from jobhunter.sources.ashby import AshbyPlatform
+
+            delegate = AshbyPlatform(slugs=(slug,), timeout=self.timeout)
         else:
             return None
         self._delegates[key] = delegate
@@ -133,6 +293,23 @@ class CompanyBoardsPlatform(JobPlatform):
         with urllib.request.urlopen(request, timeout=self.timeout) as response:
             html = response.read().decode("utf-8", errors="replace")
         return _parse_google_jobs(html)[:limit]
+
+
+def _resolve_company(entry: str) -> str | None:
+    """Resolve a configured entry to a provider spec, or None to skip it.
+
+    Accepts a registered friendly name ("openai"), an alias ("thinkingmachines"),
+    or a raw provider spec ("greenhouse:somenewco" / "ashby:somenewco").
+    """
+
+    normalized = entry.strip().lower()
+    if not normalized or normalized in UNSUPPORTED_NOTES:
+        return None
+    if ":" in normalized:
+        provider = normalized.split(":", 1)[0]
+        return normalized if provider in {"greenhouse", "lever", "ashby"} else None
+    normalized = COMPANY_ALIASES.get(normalized, normalized)
+    return COMPANY_REGISTRY.get(normalized)
 
 
 def _provider_query(query: SearchQuery) -> str:

@@ -58,7 +58,7 @@ Read skills/job-hunting/SKILL.md and run that workflow for https://github.com/yo
 
 | Variable | Purpose |
 | --- | --- |
-| `JOBHUNTER_COMPANIES` | Companies for the direct company-page source. Default `amazon,google,meta`. Accepts `greenhouse:<slug>` / `lever:<slug>` entries for any company on those ATSes, e.g. `amazon,google,greenhouse:anthropic,lever:mistral`. |
+| `JOBHUNTER_COMPANIES` | Narrows the direct company-page source. By default it sweeps **100+ verified company boards** (OpenAI, Anthropic, xAI, SpaceX, Databricks, Snowflake, Netflix, Uber, Stripe, Pinterest, Thinking Machines Lab, and many more). Set it to a comma list of friendly names to focus, e.g. `openai,anthropic,databricks,xai`, or add a not-yet-listed board with `greenhouse:<slug>` / `lever:<slug>` / `ashby:<slug>`. |
 | `JOBHUNTER_COMPANIES_FILE` | Same as above as a JSON list file (default location `.jobhunter/companies.json`). |
 | `JOBHUNTER_GREENHOUSE_BOARDS` | Boards for the Greenhouse source. Defaults to a curated AI-lab list (Anthropic, DeepMind, xAI, Scale AI, Databricks, Together AI, Stripe, Figma). |
 | `JOBHUNTER_LEVER_COMPANIES` | Companies for the Lever source. Defaults to Mistral, Palantir, Plaid, Voleon. |
@@ -68,8 +68,8 @@ Read skills/job-hunting/SKILL.md and run that workflow for https://github.com/yo
 
 | Source | Access | Notes |
 | --- | --- | --- |
-| `companies` | Employers' own career sites | Pre-defaults amazon/google/meta; Amazon and Google answer with live postings and direct apply links; unsupported sites (meta, microsoft) are skipped with a warning. Results merge round-robin so no company crowds out the rest. |
-| `greenhouse` / `lever` | Public ATS board APIs | Postings straight from each company's board; stale slugs are skipped silently. |
+| `companies` | Employers' own career sites | Deep sweep across **100+ verified company boards** by default (Amazon, Google, Uber custom APIs + Greenhouse/Lever/Ashby for OpenAI, Anthropic, Snowflake, Netflix, Databricks, xAI, SpaceX, Stripe, Pinterest, Thinking Machines Lab, …). Each board fetched once per run, results merge round-robin. Companies without a public API (Meta, TikTok/ByteDance, Salesforce, PayPal) warn and skip. |
+| `greenhouse` / `lever` | Public ATS board APIs | Postings straight from each company's board; stale slugs are skipped silently. Tune with `JOBHUNTER_GREENHOUSE_BOARDS` / `JOBHUNTER_LEVER_COMPANIES`. |
 | `remotive` / `remoteok` | Free public APIs | Remote-job boards with dates, tags, salary ranges. |
 | `hackernews` | HN Algolia API | Current month's "Who is Hiring" thread; job-seeker comments are filtered out. |
 | `yc` / `a16z` | Public board payloads | YC startup jobs and a16z portfolio jobs. |

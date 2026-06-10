@@ -48,11 +48,23 @@ def test_companies_unsupported_entry_warns_and_skips():
     assert platform._supported == ["amazon"]
 
 
-def test_companies_unknown_entry_collected_as_error(monkeypatch):
+def test_companies_unknown_entry_is_skipped(monkeypatch):
+    # An unregistered name resolves to nothing and is skipped without crashing.
     platform = CompanyBoardsPlatform(companies=("nonsense",))
-    jobs = platform.search(QUERY, PROFILE, limit=5)
-    assert jobs == []
-    assert platform.company_errors and "nonsense" in platform.company_errors[0]
+    assert platform._supported == []
+    assert platform.search(QUERY, PROFILE, limit=5) == []
+
+
+def test_companies_registry_resolves_friendly_names_across_providers():
+    from jobhunter.sources.companies import _resolve_company
+
+    assert _resolve_company("openai") == "ashby:openai"
+    assert _resolve_company("netflix") == "lever:netflix"
+    assert _resolve_company("databricks") == "greenhouse:databricks"
+    assert _resolve_company("uber") == "uber"
+    assert _resolve_company("thinkingmachines") == "ashby:thinking-machines-lab"
+    assert _resolve_company("tiktok") is None  # unsupported, skipped
+    assert _resolve_company("greenhouse:newco") == "greenhouse:newco"  # raw spec passthrough
 
 
 def test_parse_google_jobs_extracts_entries():

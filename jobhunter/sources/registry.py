@@ -63,8 +63,8 @@ PLATFORM_REGISTRY: dict[str, PlatformSpec] = {
     "companies": PlatformSpec(
         name="companies",
         status="implemented",
-        access="direct company career sites (Amazon JSON search, Google careers payload, Greenhouse/Lever delegates)",
-        notes="Pre-default companies amazon/google/meta; configure via JOBHUNTER_COMPANIES or .jobhunter/companies.json. Unsupported sites (meta, microsoft) warn and skip.",
+        access="direct company career sites (Amazon, Google, Uber APIs + Greenhouse/Lever/Ashby delegates)",
+        notes="Deep sweep across 100+ verified company boards by default; configure via JOBHUNTER_COMPANIES or .jobhunter/companies.json. Unsupported sites (meta, tiktok, salesforce, paypal, ...) warn and skip.",
         factory=CompanyBoardsPlatform,
     ),
     "remoteok": PlatformSpec(

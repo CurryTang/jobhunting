@@ -2,9 +2,59 @@ from __future__ import annotations
 
 from datetime import datetime, timezone
 from html import escape
+from typing import Any
 
-from jobhunter.models import JobMatch, UserProfile
+from jobhunter.models import JobMatch, JobPosting, SearchQuery, UserProfile
 from jobhunter.outreach import build_outreach_message, resolve_apply_url
+
+
+def render_html_from_run(data: dict[str, Any]) -> str:
+    """Render HTML from a saved `--json` run dict, no re-fetching needed."""
+
+    profile = _profile_from_dict(data.get("profile") or {})
+    matches = [_match_from_dict(item) for item in data.get("matches") or []]
+    return render_html(profile, matches, source_errors=data.get("source_errors") or ())
+
+
+def _profile_from_dict(d: dict[str, Any]) -> UserProfile:
+    fields = {f: d.get(f) for f in ("raw_text", "name", "headline", "seniority")}
+    fields["raw_text"] = fields.get("raw_text") or ""
+    for seq in ("roles", "skills", "locations", "links", "keywords"):
+        fields[seq] = tuple(d.get(seq) or ())
+    return UserProfile(**fields)
+
+
+def _match_from_dict(item: dict[str, Any]) -> JobMatch:
+    j = item.get("job") or {}
+    posted = j.get("posted_at")
+    posted_at = None
+    if posted:
+        try:
+            posted_at = datetime.fromisoformat(str(posted).replace("Z", "+00:00"))
+        except ValueError:
+            posted_at = None
+    job = JobPosting(
+        source=j.get("source", ""),
+        source_id=j.get("source_id", ""),
+        title=j.get("title", ""),
+        company=j.get("company", ""),
+        url=j.get("url", ""),
+        location=j.get("location"),
+        description=j.get("description", ""),
+        tags=tuple(j.get("tags") or ()),
+        salary=j.get("salary"),
+        posted_at=posted_at,
+        raw=j.get("raw") or {},
+    )
+    q = item.get("query") or None
+    query = SearchQuery(text=q.get("text", "")) if isinstance(q, dict) else None
+    return JobMatch(
+        job=job,
+        score=item.get("score", 0.0),
+        matched_terms=tuple(item.get("matched_terms") or ()),
+        query=query,
+        rationale=item.get("rationale", ""),
+    )
 
 
 def render_html(
