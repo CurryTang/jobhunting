@@ -62,6 +62,8 @@ Read skills/job-hunting/SKILL.md and run that workflow for https://github.com/yo
 | `JOBHUNTER_COMPANIES_FILE` | Same as above as a JSON list file (default location `.jobhunter/companies.json`). |
 | `JOBHUNTER_GREENHOUSE_BOARDS` | Boards for the Greenhouse source. Defaults to a curated AI-lab list (Anthropic, DeepMind, xAI, Scale AI, Databricks, Together AI, Stripe, Figma). |
 | `JOBHUNTER_LEVER_COMPANIES` | Companies for the Lever source. Defaults to Mistral, Palantir, Plaid, Voleon. |
+| `JOBHUNTER_A16Z_MARKETS` | Scope the a16z source to portfolio markets: `AI`, `Enterprise`, `Consumer`, `Crypto/Web3`, `Fintech`, `Bio Health`, `Games`, `American Dynamism`. Also `--a16z-market`; list companies with `--list-a16z-companies`. |
+| `JOBHUNTER_LINKEDIN_PROXIES` | Comma list of proxies (`host:port` or `user:pass@host:port`) for the LinkedIn source — the reliable fix for its IP rate-limiting. |
 | `JOBHUNTER_DATABASE_URL` | **Optional storage, disabled by default.** Set to `sqlite://$HOME/.jobhunter/jobs.sqlite` or a `postgresql://...` URL to persist deduplicated jobs and search runs across sessions. Unset it to turn storage back off. Postgres needs the `.[postgres]` extra. |
 
 ## What the Agent Searches
@@ -73,7 +75,7 @@ Read skills/job-hunting/SKILL.md and run that workflow for https://github.com/yo
 | `remotive` / `remoteok` | Free public APIs | Remote-job boards with dates, tags, salary ranges. |
 | `hackernews` | HN Algolia API | Current month's "Who is Hiring" thread; job-seeker comments are filtered out. |
 | `yc` / `a16z` | Public board payloads | YC startup jobs and a16z portfolio jobs. |
-| `linkedin` | Optional JobSpy scraper | Needs the `.[jobspy]` extra; silently returns nothing when rate-limited, so the skill never treats an empty LinkedIn result as "no jobs". |
+| `linkedin` / `indeed` / `glassdoor` | Optional JobSpy scrapers | Need the `.[jobspy]` extra. LinkedIn pools terms + retries to soften its hard IP rate-limit (set `JOBHUNTER_LINKEDIN_PROXIES` for reliability); **Indeed and Glassdoor are broad aggregators that are far less throttled — good stand-ins when LinkedIn returns nothing**. |
 
 ## What You Get Back
 
@@ -84,6 +86,7 @@ Results default to TSV (paste straight into a spreadsheet). Each row carries:
 - `apply_url` — the direct application link (e.g. Amazon's apply endpoint, Lever's apply page)
 - `matched_terms` and a one-line rationale explaining *why* it matched you
 - `outreach_message` — a short, sendable greeting generated from your profile: who you are, which of your matched skills fit this role, and your portfolio link
+- `contact_emails` and `linkedin_contacts` — who to reach: emails pulled from the posting (HN posts often include them) plus role-based guesses (`careers@`, `recruiting@`) from the company domain, and ready-made LinkedIn people-search links for the recruiter, the team's hiring manager, and the head of the relevant function
 
 Prefer a browsable page over a table? Ask for **HTML output** (`--html`) and you get a self-contained `jobs.html` — one card per job with an Apply button, matched-skill chips, a live filter box, and a one-click "Copy" button on each outreach message. It opens straight from disk with no internet needed.
 

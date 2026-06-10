@@ -8,7 +8,11 @@ from jobhunter.sources.base import JobPlatform
 from jobhunter.sources.companies import CompanyBoardsPlatform
 from jobhunter.sources.greenhouse import GreenhousePlatform
 from jobhunter.sources.hackernews import HackerNewsWhoIsHiringPlatform
-from jobhunter.sources.jobspy import LinkedInJobSpyPlatform
+from jobhunter.sources.jobspy import (
+    GlassdoorJobSpyPlatform,
+    IndeedJobSpyPlatform,
+    LinkedInJobSpyPlatform,
+)
 from jobhunter.sources.lever import LeverPlatform
 from jobhunter.sources.remoteok import RemoteOKPlatform
 from jobhunter.sources.remotive import RemotivePlatform
@@ -43,8 +47,22 @@ PLATFORM_REGISTRY: dict[str, PlatformSpec] = {
         name="linkedin",
         status="implemented-optional",
         access="python-jobspy scraper adapter",
-        notes="Requires Python >=3.10 and optional package python-jobspy. LinkedIn can rate-limit; use responsibly.",
+        notes="Requires Python >=3.10 and optional python-jobspy. Pools+retries to soften rate-limits; set JOBHUNTER_LINKEDIN_PROXIES for reliability.",
         factory=LinkedInJobSpyPlatform,
+    ),
+    "indeed": PlatformSpec(
+        name="indeed",
+        status="implemented-optional",
+        access="python-jobspy scraper adapter",
+        notes="Broad aggregator, far less rate-limited than LinkedIn; a reliable stand-in. Requires python-jobspy.",
+        factory=IndeedJobSpyPlatform,
+    ),
+    "glassdoor": PlatformSpec(
+        name="glassdoor",
+        status="implemented-optional",
+        access="python-jobspy scraper adapter",
+        notes="Aggregator with salary data via python-jobspy.",
+        factory=GlassdoorJobSpyPlatform,
     ),
     "a16z": PlatformSpec(
         name="a16z",
@@ -87,12 +105,6 @@ PLATFORM_REGISTRY: dict[str, PlatformSpec] = {
         access="free public Lever postings API",
         notes="Direct company boards; configure companies via JOBHUNTER_LEVER_COMPANIES.",
         factory=LeverPlatform,
-    ),
-    "glassdoor": PlatformSpec(
-        name="glassdoor",
-        status="planned",
-        access="restricted partner/API access",
-        notes="Treat as restricted; implement only with permitted API credentials or user-provided exports.",
     ),
     "handshake": PlatformSpec(
         name="handshake",

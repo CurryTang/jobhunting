@@ -12,6 +12,7 @@ from jobhunter.agent import AgenticQueryPlanner, JobSearchAgent
 from jobhunter.cache import ProgressiveJobCache
 from jobhunter.graph import KuzuJobGraphStore, apply_graph_boosts
 from jobhunter.models import JobPreferences
+from jobhunter.contacts import suggest_contacts
 from jobhunter.outreach import build_outreach_message, resolve_apply_url
 from jobhunter.report import render_html
 from jobhunter.preferences import (
@@ -308,11 +309,15 @@ def _print_matches(matches) -> None:
 
 def _print_tsv(matches, profile) -> None:
     writer = (
-        "rank\tscore\ttitle\tcompany\tsource\tlocation\tsalary\turl\tapply_url\tmatched_terms\trationale\toutreach_message"
+        "rank\tscore\ttitle\tcompany\tsource\tlocation\tsalary\turl\tapply_url"
+        "\tmatched_terms\trationale\toutreach_message\tcontact_emails\tlinkedin_contacts"
     )
     print(writer)
     for index, match in enumerate(matches, start=1):
         job = match.job
+        contacts = suggest_contacts(job)
+        emails = list(contacts.emails_found) + [f"{e} (guess)" for e in contacts.inferred_emails[:2]]
+        linkedin = [f"{label}: {url}" for label, url in contacts.linkedin_searches]
         values = (
             str(index),
             str(match.score),
@@ -326,6 +331,8 @@ def _print_tsv(matches, profile) -> None:
             ", ".join(match.matched_terms),
             match.rationale,
             build_outreach_message(profile, match),
+            "; ".join(emails),
+            " | ".join(linkedin),
         )
         print("\t".join(_tsv_cell(value) for value in values))
 
@@ -362,6 +369,13 @@ def _match_to_json(match, profile) -> dict[str, Any]:
         data["job"]["posted_at"] = posted_at.isoformat()
     data["apply_url"] = resolve_apply_url(match)
     data["outreach_message"] = build_outreach_message(profile, match)
+    contacts = suggest_contacts(match.job)
+    data["contacts"] = {
+        "linkedin_searches": [{"label": label, "url": url} for label, url in contacts.linkedin_searches],
+        "emails_found": list(contacts.emails_found),
+        "inferred_emails": list(contacts.inferred_emails),
+        "company_domain": contacts.company_domain,
+    }
     return data
 
 

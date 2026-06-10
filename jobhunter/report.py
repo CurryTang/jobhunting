@@ -4,6 +4,7 @@ from datetime import datetime, timezone
 from html import escape
 from typing import Any
 
+from jobhunter.contacts import suggest_contacts
 from jobhunter.models import JobMatch, JobPosting, SearchQuery, UserProfile
 from jobhunter.outreach import build_outreach_message, resolve_apply_url
 
@@ -143,7 +144,28 @@ def _render_card(index: int, match: JobMatch, profile: UserProfile) -> str:
         </div>
         <p class="msg">{escape(message)}</p>
       </div>
+{_render_contacts(match.job)}
     </article>"""
+
+
+def _render_contacts(job) -> str:
+    contacts = suggest_contacts(job)
+    if not (contacts.linkedin_searches or contacts.emails_found or contacts.inferred_emails):
+        return ""
+    links = "".join(
+        f'<a class="contact-link" href="{escape(url)}" target="_blank" rel="noopener">in/ {escape(label)}</a>'
+        for label, url in contacts.linkedin_searches
+    )
+    email_bits = []
+    for email in contacts.emails_found:
+        email_bits.append(f'<a class="contact-link email-found" href="mailto:{escape(email)}">✉ {escape(email)}</a>')
+    for email in contacts.inferred_emails[:2]:
+        email_bits.append(f'<a class="contact-link" href="mailto:{escape(email)}" title="role-based, unverified">✉ {escape(email)}?</a>')
+    emails = "".join(email_bits)
+    return f"""      <div class="contacts">
+        <div class="contacts-head">Reach out</div>
+        <div class="contact-links">{links}{emails}</div>
+      </div>"""
 
 
 _TEMPLATE = """<!DOCTYPE html>
@@ -199,6 +221,12 @@ _TEMPLATE = """<!DOCTYPE html>
     font-size: 12px; color: var(--muted); margin-bottom: 4px; }}
   .btn-copy {{ padding: 3px 10px; font-size: 12px; }}
   .msg {{ font-size: 13px; margin: 0; white-space: pre-wrap; }}
+  .contacts {{ margin-top: 8px; border-top: 1px solid var(--line); padding-top: 8px; }}
+  .contacts-head {{ font-size: 12px; color: var(--muted); margin-bottom: 5px; }}
+  .contact-links {{ display: flex; flex-wrap: wrap; gap: 6px; }}
+  .contact-link {{ font-size: 12px; text-decoration: none; color: var(--accent);
+    border: 1px solid var(--line); border-radius: 6px; padding: 3px 8px; }}
+  .email-found {{ background: var(--chip); }}
   .empty {{ grid-column: 1 / -1; color: var(--muted); text-align: center; padding: 40px; }}
   .errors {{ max-width: 1100px; margin: 0 auto 40px; padding: 0 20px; color: var(--muted); font-size: 13px; }}
   footer {{ max-width: 1100px; margin: 0 auto; padding: 0 20px 40px; color: var(--muted); font-size: 12px; }}

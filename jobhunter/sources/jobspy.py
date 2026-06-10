@@ -134,6 +134,22 @@ class LinkedInJobSpyPlatform(JobSpyPlatform):
         super().__init__(site_name="linkedin", **kwargs)
 
 
+class IndeedJobSpyPlatform(JobSpyPlatform):
+    """JobSpy adapter for Indeed — a broad aggregator that is far less
+    aggressively rate-limited than LinkedIn, so it makes a reliable stand-in
+    when LinkedIn throttles."""
+
+    def __init__(self, **kwargs: Any) -> None:
+        super().__init__(site_name="indeed", **kwargs)
+
+
+class GlassdoorJobSpyPlatform(JobSpyPlatform):
+    """JobSpy adapter for Glassdoor."""
+
+    def __init__(self, **kwargs: Any) -> None:
+        super().__init__(site_name="glassdoor", **kwargs)
+
+
 def _load_scrape_jobs():
     try:
         from jobspy import scrape_jobs

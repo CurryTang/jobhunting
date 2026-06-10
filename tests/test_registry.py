@@ -4,13 +4,19 @@ from jobhunter.sources.registry import PLATFORM_REGISTRY, build_platforms
 
 
 def test_registry_tracks_planned_target_platforms():
-    for name in ("glassdoor", "handshake"):
-        assert PLATFORM_REGISTRY[name].status == "planned"
+    assert PLATFORM_REGISTRY["handshake"].status == "planned"
 
 
 def test_linkedin_is_optional_jobspy_platform():
     assert PLATFORM_REGISTRY["linkedin"].status == "implemented-optional"
     assert build_platforms(["linkedin"])[0].name == "jobspy:linkedin"
+
+
+def test_indeed_and_glassdoor_are_optional_jobspy_aggregators():
+    for name in ("indeed", "glassdoor"):
+        assert PLATFORM_REGISTRY[name].status == "implemented-optional"
+    assert build_platforms(["indeed"])[0].name == "jobspy:indeed"
+    assert build_platforms(["glassdoor"])[0].name == "jobspy:glassdoor"
 
 
 def test_startup_boards_are_implemented():
