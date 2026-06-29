@@ -100,7 +100,7 @@ Every live search also writes a JSONL **trajectory log** (profile → planned qu
 
 ## Community
 
-<img src="artifact/wechat-group-qrcode.jpg" alt="WeChat group QR code" width="320">
+<img src="artifact/wechat-group-qrcode-2026.jpg" alt="WeChat group QR code" width="320">
 
 ## Repository Layout
 
